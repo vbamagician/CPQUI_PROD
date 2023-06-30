@@ -1,0 +1,45 @@
+[BeforeTestRun]
+        public static void SetupAutoLiginSetup()
+        {
+            Console.WriteLine("BeforeTestRun Initiated");
+            AuthGeneratorCPQUI authGeneratorCPQUI = new();
+            AuthGeneratorCPQUI.SaveAuthJSONSessionFile();
+            Console.WriteLine("BeforeTestRun Done");
+        }
+
+using Microsoft.Playwright;
+
+namespace CPQUI
+{
+    internal class AuthGeneratorCPQUI
+    {
+        public static async void SaveAuthJSONSessionFile()
+        {
+            using var playwright = await Playwright.CreateAsync();
+
+            await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+            {
+                Headless = false,
+            });
+
+            var context = await browser.NewContextAsync();
+
+            var page = await context.NewPageAsync();
+
+            await page.GotoAsync("https://contracts.softwareone.com/login/secondary-login");
+
+            await page.GetByLabel("Username").FillAsync("helpdesk-scg.global@softwareone.com");
+
+            await page.GetByLabel("Password").FillAsync("lT60VQvBz3RcY3LSPPikPg==");
+
+            await page.GetByRole(AriaRole.Button, new() { Name = "Log in" }).ClickAsync();
+
+            await page.Locator("#ContentPlaceHolderBody_ctl01_knpyt__xlvVGG9ECA7WOZrMmHhbEeg_3LtaNZSGvIqhwwJyCUzw_2__kk").ClickAsync();
+
+            await context.StorageStateAsync(new BrowserContextStorageStateOptions
+            {
+                Path = "auth.json"
+            });
+        }
+    }
+}

@@ -1,0 +1,47 @@
+private IPage _page;
+
+        //Constructor
+        public ContactsPage(IPage page)
+        {
+            _page = page;
+            _page.SetDefaultTimeout(70000);
+        }
+
+Scenario1: Test UI stability of General Services for Azure by Importing WBS
+
+And I close Contract Unavailable Popup Window
+And I choose Time & Material from Type of Contract Question
+And I entered Contract Duration in Month as "36"
+And I click on Next Button From Definition Page
+And I choose "Days" Option from build your plan Question
+And I click on Import Button
+And I click on Choose Files Button and Choose "WBSExport.xls" File
+When I click on Upload Button
+Then I should see the sell prices of both tasks as following
+	| Task1    | Task2   |
+	| 7,328.22 | 3410.11 |
+And I click on Next Button from Scoping Page 
+And I click on Next Button from OtherCosts Page
+And I click on Next Button from CustomerPricing Page
+When I click on Finish Button from CustomerVariables Page
+Then I should see the Opprtunity Value as "EUR 10,738.33"
+
+Scenario2: Test UI stability of General Services For Azure by Manually Inserting WBS
+
+And I close Contract Unavailable Popup Window
+And I choose Time & Material from Type of Contract Question
+And I entered Contract Duration in Month as "36"
+And I click on Next Button From Definition Page
+And I choose "Days" Option from build your plan Question
+And I click on Add Button to add new Task
+And I Entered Title of the Task as "Task 1"
+And I Entered Efforts of the Task as "100"
+And I selected resource as Consultant as option number "34"
+And I selected country as "Australia (SWO_AU)" 
+When I click on Confirm Button
+Then I should thee sell price of the Task1 as "13,405.45"
+And I click on Next Button from Scoping Page 
+And I click on Next Button from OtherCosts Page
+And I click on Next Button from CustomerPricing Page
+When I click on Finish Button from CustomerVariables Page
+Then I should see the Opprtunity Value as "EUR 13,405.45" 

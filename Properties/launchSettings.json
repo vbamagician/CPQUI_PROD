@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "CPQUI": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "username": "kamal",
+        "password": "abc@123"
+      }
+    }
+  }
+}

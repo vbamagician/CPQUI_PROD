@@ -1,0 +1,36 @@
+Step 1 : Open PowerSheet window inside project
+
+Step 2 : Write following command 
+
+	pwsh bin/Debug/net6.0/playwright.ps1 codegen https://softwareone-cpq-uat.onknowledgekube.net/login/secondary-login --save-storage=auth.json
+
+Step 3 : Website will be open, and after login close the browser
+
+Step 4 : Now, use auth.json file to login automatically in web application. 
+
+
+using Microsoft.Playwright;
+using System;
+using System.Threading.Tasks;
+
+class Program
+{
+    public static async Task Main()
+    {
+        using var playwright = await Playwright.CreateAsync();
+        await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+        {
+            Headless = false,
+        });
+        var context = await browser.NewContextAsync(new BrowserNewContextOptions
+        {
+            StorageStatePath = "auth.json",
+        });
+
+        var page = await context.NewPageAsync();
+
+        await page.GotoAsync("https://softwareone-cpq-uat.onknowledgekube.net/dashboard-home/my-quotes?refresh=false");
+
+    }
+}
+ 

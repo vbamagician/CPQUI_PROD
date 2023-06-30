@@ -1,0 +1,171 @@
+using Microsoft.Playwright;
+using System;
+using System.Threading.Tasks;
+
+class Program
+{
+    public static async Task Main()
+    {
+        using var playwright = await Playwright.CreateAsync();
+        await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+        {
+            Headless = false,
+        });
+        var context = await browser.NewContextAsync();
+
+        var page = await context.NewPageAsync();
+
+        await page.GotoAsync("https://contracts.softwareone.com/login/secondary-login");
+
+        await page.GetByLabel("Username").ClickAsync();
+
+        await page.GetByLabel("Username").FillAsync("helpdesk-scg.global@softwareone.com");
+
+        await page.GetByLabel("Password").ClickAsync();
+
+        await page.GetByLabel("Password").FillAsync("lT60VQvBz3RcY3LSPPikPg==");
+
+        await page.GetByRole(AriaRole.Button, new() { Name = "Log in" }).ClickAsync();
+
+        await page.GotoAsync("https://softwareone-cpq-uat.onknowledgekube.net/dashboard-home/my-quotes?refresh=false");
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " New Contract" }).ClickAsync();
+
+        await page.GetByRole(AriaRole.Textbox).ClickAsync();
+
+        await page.GetByRole(AriaRole.Textbox).FillAsync("walmart");
+
+        await page.GetByRole(AriaRole.Textbox).PressAsync("Enter");
+
+        await page.GetByRole(AriaRole.Row, new() { Name = "00001614 Walmart 1940 Argentia Rd, Ontario L5N 1P9 Canada" }).Locator("label span").ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = "Do you want to continue without an Opportunity?" }).ClickAsync();
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl01\\$knpyt__wQjyG9LwlR6CaqhbL0prnJO7pc8HHJIq3rgILt6Dn00_2__kk\"]").ClickAsync();
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl01\\$knpyt__wQjyG9LwlR6CaqhbL0prnJO7pc8HHJIq3rgILt6Dn00_2__kk\"]").FillAsync("test");
+
+        await page.GetByRole(AriaRole.Row, new() { Name = " Dwayne \"The Rock\" Johnson Actor   " }).Locator("label span").ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " I Confirm" }).ClickAsync();
+
+        await page.GetByRole(AriaRole.Textbox).ClickAsync();
+
+        await page.GetByRole(AriaRole.Textbox).FillAsync("Security Posture Assessment Example");
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " Search" }).ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = "Get Contract" }).ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = "Configure Now" }).ClickAsync();
+
+        await page.GotoAsync("https://softwareone-cpq-uat.onknowledgekube.net/dashboard-home/security-posture-assessment?refresh=false");
+
+        await page.GetByRole(AriaRole.Textbox).ClickAsync();
+
+        await page.GetByRole(AriaRole.Textbox).ClickAsync();
+
+        await page.GetByRole(AriaRole.Textbox).FillAsync("100");
+
+        await page.GetByText("Yes").ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " Next" }).ClickAsync();
+
+        await page.GetByText("Days").ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " Update" }).ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " Next" }).ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " Next" }).ClickAsync();
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddp1a3ffO0QKS94xUtk_1yCLo_2__kk\"]").ClickAsync();
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddp1a3ffO0QKS94xUtk_1yCLo_2__kk\"]").PressAsync("CapsLock");
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddp1a3ffO0QKS94xUtk_1yCLo_2__kk\"]").FillAsync("ABCD");
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddqoSMGE4KVWRE0JX_3_3xBW58_2__kk\"]").ClickAsync();
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddqoSMGE4KVWRE0JX_3_3xBW58_2__kk\"]").FillAsync("ABCD");
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddoGiZrI5Y_3LbgcKM17Gqg4s_2__kk\"]").ClickAsync();
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddoGiZrI5Y_3LbgcKM17Gqg4s_2__kk\"]").FillAsync("ABCD");
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddhXf_3Mw_3dFBvZaDvjL6HlFI_2__kk\"]").ClickAsync();
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddkCkKi6p_11Sic8DkIvTXP6c_2__kk\"]").ClickAsync();
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddkCkKi6p_11Sic8DkIvTXP6c_2__kk\"]").ClickAsync();
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddkCkKi6p_11Sic8DkIvTXP6c_2__kk\"]").FillAsync("ABCD");
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddhXf_3Mw_3dFBvZaDvjL6HlFI_2__kk\"]").ClickAsync();
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddhXf_3Mw_3dFBvZaDvjL6HlFI_2__kk\"]").FillAsync("ABCD");
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddk3W_3hPy95oLXwVyK_317Ccg_2__kk\"]").ClickAsync();
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddk3W_3hPy95oLXwVyK_317Ccg_2__kk\"]").FillAsync("ABCD");
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddnOcltGt5WCkL0shK8LTG2U_2__kk\"]").ClickAsync();
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddnOcltGt5WCkL0shK8LTG2U_2__kk\"]").FillAsync("ABCD");
+
+        await page.Locator("textarea[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__d2nfCugR_3CMej6L9rmbddnOcltGt5WCkL0shK8LTG2U_2__kk\"]").PressAsync("Tab");
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " Next" }).ClickAsync();
+
+        await page.Locator("button[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__pEddCQ_32UWE9QAQPEMkE_3kuEVWTDbw8NDzmnH7zgHAw_2__kk\"]").ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " Save", Exact = true }).ClickAsync();
+
+        await page.Locator("button[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__pEddCQ_32UWE9QAQPEMkE_3it_3mOqgWY0EnP_12UoncKLo_2__kk\"]").ClickAsync();
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__zjeCXktXjOb8L58DK0uTcj4H68BjUsr4X7S8sgzFHa8_2__kk\"]").ClickAsync();
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__zjeCXktXjOb8L58DK0uTcj4H68BjUsr4X7S8sgzFHa8_2__kk\"]").FillAsync("BHARAKHDA KAMAL");
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__zjeCXktXjOb8L58DK0uTcj4H68BjUsr4X7S8sgzFHa8_2__kk\"]").PressAsync("Tab");
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__zjeCXktXjOb8L58DK0uTcsxhDBzm_1F7imdkQopIMPoU_2__kk\"]").FillAsync("SW");
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__zjeCXktXjOb8L58DK0uTcsxhDBzm_1F7imdkQopIMPoU_2__kk\"]").PressAsync("Tab");
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__zjeCXktXjOb8L58DK0uTckankH_3dE37yS4QgniK0hpU_2__kk\"]").PressAsync("Shift+Tab");
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__zjeCXktXjOb8L58DK0uTcsxhDBzm_1F7imdkQopIMPoU_2__kk\"]").FillAsync("SE");
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__zjeCXktXjOb8L58DK0uTcsxhDBzm_1F7imdkQopIMPoU_2__kk\"]").PressAsync("Tab");
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__zjeCXktXjOb8L58DK0uTckankH_3dE37yS4QgniK0hpU_2__kk\"]").FillAsync("9328093207");
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__zjeCXktXjOb8L58DK0uTckankH_3dE37yS4QgniK0hpU_2__kk\"]").PressAsync("Tab");
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__zjeCXktXjOb8L58DK0uTcrGDEG0uahdXx3WDbIYZV1o_2__kk\"]").FillAsync("9328093207");
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__zjeCXktXjOb8L58DK0uTcrGDEG0uahdXx3WDbIYZV1o_2__kk\"]").PressAsync("Tab");
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__CzKmVa8Z7MQQ81MUCcgTzoh68_3a9j4CyFCVXlRjIJV4_2__kk\"]").FillAsync("K@GMAIL.COM");
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl02\\$knpyt__CzKmVa8Z7MQQ81MUCcgTzoh68_3a9j4CyFCVXlRjIJV4_2__kk\"]").PressAsync("Tab");
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " Save", Exact = true }).ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " Finish" }).ClickAsync();
+
+        await page.GotoAsync("https://softwareone-cpq-uat.onknowledgekube.net/dashboard-home/my-quotes/opportunity?refresh=false");
+
+        await page.GetByText("EUR 114,212.95").ClickAsync();
+
+    }
+}
+
+
+ContentPlaceHolderBody_ctl02_knpyt__pEddCQ_32UWE9QAQPEMkE_3mpiGY4dMtxA1Ykd8gLQ_1GI_2__kk
+ContentPlaceHolderBody_ctl02_knpyt__pEddCQ_32UWE9QAQPEMkE_3mpiGY4dMtxA1Ykd8gLQ_1GI_2__kk
+ContentPlaceHolderBody_ctl02_knpyt__pEddCQ_32UWE9QAQPEMkE_3mpiGY4dMtxA1Ykd8gLQ_1GI_2__kk
+ContentPlaceHolderBody_ctl02_knpyt__pEddCQ_32UWE9QAQPEMkE_3mpiGY4dMtxA1Ykd8gLQ_1GI_2__kk
+
+ContentPlaceHolderBody_ctl02_knpyt__pEddCQ_32UWE9QAQPEMkE_3n_1zFNKQycYY_3lN7eixSkfs_2__kk

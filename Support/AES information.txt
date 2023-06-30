@@ -1,0 +1,9 @@
+Please enter a string for encryption
+2wf(R+ExyS}Q8L
+encrypted string = lT60VQvBz3RcY3LSPPikPg==
+decrypted string = 2wf(R+ExyS}Q8L
+
+Please enter a string for encryption
+GqyK@[Ozp]e_kN
+encrypted string = lT60VQvBz3RcY3LSPPikPg==
+decrypted string = GqyK@[Ozp]e_kN

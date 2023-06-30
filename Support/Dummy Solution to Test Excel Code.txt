@@ -1,0 +1,104 @@
+using Microsoft.Playwright;
+using System;
+using System.Threading.Tasks;
+
+class Program
+{
+    public static async Task Main()
+    {
+        using var playwright = await Playwright.CreateAsync();
+        await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+        {
+            Headless = false,
+        });
+        var context = await browser.NewContextAsync();
+
+        var page = await context.NewPageAsync();
+
+        await page.GotoAsync("https://contracts.softwareone.com/login/secondary-login");
+
+        await page.GetByLabel("Username").ClickAsync();
+
+        await page.GetByLabel("Username").FillAsync("helpdesk-scg.global@softwareone.com");
+
+        await page.GetByLabel("Password").ClickAsync();
+
+        await page.GetByLabel("Password").FillAsync("lT60VQvBz3RcY3LSPPikPg==");
+
+        await page.GetByRole(AriaRole.Button, new() { Name = "Log in" }).ClickAsync();
+
+        await page.GotoAsync("https://softwareone-cpq-uat.onknowledgekube.net/dashboard-home/my-quotes?refresh=false");
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " New Contract" }).ClickAsync();
+
+        await page.GetByRole(AriaRole.Textbox).ClickAsync();
+
+        await page.GetByRole(AriaRole.Textbox).FillAsync("walmart");
+
+        await page.GetByRole(AriaRole.Textbox).PressAsync("Enter");
+
+        await page.GetByRole(AriaRole.Row, new() { Name = "00001614 Walmart 1940 Argentia Rd, Ontario L5N 1P9 Canada" }).GetByRole(AriaRole.Cell).First.ClickAsync();
+
+        await page.GetByRole(AriaRole.Row, new() { Name = "00001614 Walmart 1940 Argentia Rd, Ontario L5N 1P9 Canada" }).Locator("label span").ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = "Do you want to continue without an Opportunity?" }).ClickAsync();
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl01\\$knpyt__wQjyG9LwlR6CaqhbL0prnJO7pc8HHJIq3rgILt6Dn00_2__kk\"]").ClickAsync();
+
+        await page.Locator("input[name=\"ctl00\\$ContentPlaceHolderBody\\$ctl01\\$knpyt__wQjyG9LwlR6CaqhbL0prnJO7pc8HHJIq3rgILt6Dn00_2__kk\"]").FillAsync("ExcelTest3");
+
+        await page.GetByRole(AriaRole.Row, new() { Name = " Dwayne \"The Rock\" Johnson Actor   " }).Locator("label span").ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " I Confirm" }).ClickAsync();
+
+        await page.GetByRole(AriaRole.Textbox).ClickAsync();
+
+        await page.GetByRole(AriaRole.Textbox).FillAsync("dummy");
+
+        await page.GetByRole(AriaRole.Textbox).PressAsync("Enter");
+
+        await page.GetByRole(AriaRole.Button, new() { Name = "Get Contract" }).ClickAsync();
+
+        await page.GotoAsync("https://softwareone-cpq-uat.onknowledgekube.net/dashboard-home/services-calculator?refresh=false");
+
+        var download = await page.RunAndWaitForDownloadAsync(async () =>
+        {
+            await page.GetByRole(AriaRole.Button, new() { Name = "Download" }).ClickAsync();
+        });
+
+        await page.GetByRole(AriaRole.Button, new() { Name = "Close" }).ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = "Upload" }).ClickAsync();
+
+        await page.GetByText("Choose files").ClickAsync();
+
+        var page1 = await context.NewPageAsync();
+        await page1.GotoAsync("chrome://downloads/");
+
+        await page1.GetByRole(AriaRole.Link, new() { Name = "Show in folder" }).ClickAsync();
+
+        await page1.GetByRole(AriaRole.Link, new() { Name = "Show in folder" }).ClickAsync();
+
+        await page1.GetByRole(AriaRole.Link, new() { Name = "Show in folder" }).ClickAsync();
+
+        await page1.CloseAsync();
+
+        await page.GetByText("Choose files").ClickAsync();
+
+        await page.GetByLabel("Choose files").SetInputFilesAsync(new[] { "MDRwithMicrosoftSentinelConfiguratorPricingCalculatorv04.xlsb" });
+
+        await page.GotoAsync("https://softwareone-cpq-uat.onknowledgekube.net/dashboard-home/services-calculator?refresh=false");
+
+        await page.GetByText("Business Volume: EUR 169,480.00 Licensing: EUR 0.00 Revenue: EUR 169,480.00 Thir").ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " Next" }).ClickAsync();
+
+        await page.GetByRole(AriaRole.Button, new() { Name = " Finish" }).ClickAsync();
+
+        await page.GotoAsync("https://softwareone-cpq-uat.onknowledgekube.net/dashboard-home/my-quotes/opportunity?refresh=false");
+
+        await page.GetByText("EUR 169,480.00").ClickAsync();
+
+    }
+}
+Dummy Solution to Test Excel

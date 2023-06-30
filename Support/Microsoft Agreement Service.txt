@@ -1,0 +1,99 @@
+Final Value EUR 4,696.57
+            EUR 4,696.57
+
+Service Name: Microsoft Agreement Service
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Deifnition Page]
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+definition page next button "heap-next-1"
+
+	Select Pack Managed LSP by clicking
+		//span[text()='Pack Managed LSP']/../../td[1]/label
+
+	Click on the NEXT: Button 
+
+Wait for loading screen disappear
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Scope Page]
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+scope page next button "heap-next-2"
+
+What Agreement(s) is your customer going to sign with Microsoft?
+
+	Clicking on ADD: Button
+		//button[contains(text(),'Add')]
+
+Agreement Place holder
+
+	Enrollment type: Radio Button 
+		//label[contains(text(),'EA')]
+		
+	Price Level (Selection of "A"): Radio Button 
+		//label[contains(text(),'EA')]/../../../../../../div[4]/div[2]/div[1]/ul/li[1]/label
+
+	Annual Amount: Text Box
+		//label[contains(text(),'Annual Amount')]/../..//input
+			Value: 10000
+
+	Submit: button
+		//button[contains(text(),'Submit')]
+
+	Click On Next: Button
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Customer Pricing]
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Customer Pricing next button "heap-next-3"
+
+	Click on Next: Button
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Margin as Sold]
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Customer Pricing next button "heap-next-4"
+
+	Click on Next: Button
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Questionnaire]
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Customer Pricing next button "heap-next-5"
+	
+	FinOps Fundamentals and KickOff: Radio Button 
+		//label[contains(text(),'FinOps Fundamentals and KickOff')]/../..//label[contains(text(),'Remote')]
+
+	Spend Management Implementation/Onboarding: Radio Button 
+		//label[contains(text(),'Spend Management Implementation/Onboarding')]/../..//label[contains(text(),'Remote')]
+
+	PyraCloud Spend Management Training: Radio Button 
+		//label[contains(text(),'PyraCloud Spend Management Training')]/../..//label[contains(text(),'Remote')]		
+
+	Cloud Cost Optimization Implementation: Radio Button 
+		//label[contains(text(),'Cloud Cost Optimization Implementation')]/../..//label[contains(text(),'Remote')]
+	
+	Click on Next: Button 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Contacts]
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Contacts Finish BUtton "heap-finish"
+	
+
+	Add Authorized Contacts
+
+	Add SoftwareONE Contacts
+
+	Select Document Type
+
+	Click on Finish: Button
+
+************************************************************************************************************************************************************
+[Feature]
+************************************************************************************************************************************************************
+
+
+
+
+	
