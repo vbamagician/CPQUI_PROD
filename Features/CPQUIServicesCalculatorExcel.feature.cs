@@ -97,14 +97,14 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I Navigate to CPQ UI Page \"https://contracts.softwareone.com/login/secondary-logi" +
                         "n\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table6.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "lT60VQvBz3RcY3LSPPikPg=="});
 #line 8
- testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table6, "And ");
+ testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table7, "And ");
 #line hidden
 #line 11
  testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
