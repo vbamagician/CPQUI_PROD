@@ -31,7 +31,7 @@ namespace CPQUI.StepDefinitions
         [Given(@"I select Pack Managed LSP Checkbox")]
         public async Task GivenISelectPackManagedLSPCheckbox()
         {
-            throw new PendingStepException();
+           await _definitionPage.SelectPackManagedLSPCheckbox();
         }
 
         [Given(@"I click on Next Button From Definition Page for MSA")]
@@ -44,31 +44,31 @@ namespace CPQUI.StepDefinitions
         [Given(@"I click on Add Buton to mention Agreemnt that customer going to sign with Microsoft")]
         public async Task GivenIClickOnAddButonToMentionAgreemntThatCustomerGoingToSignWithMicrosoft()
         {
-            throw new PendingStepException();
+            await _scopePage.ClickOnAddButonToMentionAgreemntThatCustomerGoingToSignWithMicrosoft();
         }
 
         [Given(@"I choose Enrollment Type as EA")]
         public async Task GivenIChooseEnrollmentTypeAsEA()
         {
-            throw new PendingStepException();
+            await _scopePage.ChooseEnrollmentTypeAsEA();
         }
 
         [Given(@"I choose Price Level as A")]
         public async Task GivenIChoosePriceLevelAsA()
         {
-            throw new PendingStepException();
+            await _scopePage.ChoosePriceLevelAsA(); 
         }
 
         [Given(@"I enter Annual Amount as ""([^""]*)""")]
         public async Task GivenIEnterAnnualAmountAs(string p0)
         {
-            throw new PendingStepException();
+            await _scopePage.EnterAnnualAmountAs(p0);
         }
 
         [Given(@"I click on Submit Button")]
         public async Task GivenIClickOnSubmitButton()
         {
-            throw new PendingStepException();
+            await _scopePage.ClickOnSubmitButton();
         }
 
         [Given(@"I click Next on Scope Page for MSA")]
@@ -95,25 +95,25 @@ namespace CPQUI.StepDefinitions
         [Given(@"I choose Remote option for FinOps Fundamentals and KickOff")]
         public async Task GivenIChooseRemoteOptionForFinOpsFundamentalsAndKickOff()
         {
-            throw new PendingStepException();
+            await _questionnairePage.ChooseRemoteOptionForFinOpsFundamentalsAndKickOff();
         }
 
         [Given(@"I choose Remote option for Spend Management Implementation or Onboarding")]
         public async Task GivenIChooseRemoteOptionForSpendManagementImplementationOrOnboarding()
         {
-            throw new PendingStepException();
+            await _questionnairePage.ChooseRemoteOptionForSpendManagementImplementationOrOnboarding();
         }
 
         [Given(@"I choose Remote option for PyraCloud Spend Management Training")]
         public async Task GivenIChooseRemoteOptionForPyraCloudSpendManagementTraining()
         {
-            throw new PendingStepException();
+            await _questionnairePage.ChooseRemoteOptionForPyraCloudSpendManagementTraining();
         }
 
         [Given(@"I choose Remote option for Cloud Cost Optimization Implementation")]
         public async Task GivenIChooseRemoteOptionForCloudCostOptimizationImplementation()
         {
-            throw new PendingStepException();
+            await _questionnairePage.ChooseRemoteOptionForCloudCostOptimizationImplementation();
         }
 
         [Given(@"I click Next on Questionaire Page for MSA")]
