@@ -1,7 +1,5 @@
 using CPQUI.Drivers;
 using CPQUI.Pages;
-using System;
-using TechTalk.SpecFlow;
 
 namespace CPQUI.StepDefinitions
 {
@@ -10,7 +8,6 @@ namespace CPQUI.StepDefinitions
     {
 
         private readonly Driver _driver;
-        private readonly SolutionsPage _solutionsPage;
         private readonly DefinitionPage _definitionPage;
         private readonly ScopePage _scopePage;
         private readonly CustomerPricingPage _customerPricingPage;
@@ -22,7 +19,6 @@ namespace CPQUI.StepDefinitions
         CPQUIMicrosoftAgreementServiceStepDefinitions(Driver driver)
         {
             _driver = driver;
-            _solutionsPage = new SolutionsPage(_driver.Page);
             _definitionPage = new DefinitionPage(_driver.Page);
             _scopePage = new ScopePage(_driver.Page);
             _customerPricingPage = new CustomerPricingPage(_driver.Page);
