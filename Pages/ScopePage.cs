@@ -52,10 +52,10 @@ namespace CPQUI.Pages
         //Properties for Microsoft Agreement Service 
         //*****************************************************************************************************************
         private ILocator AddAgreementInformationButton => _page.Locator("//button[contains(text(),'Add')]");
-        private ILocator EAEnrollmentTypeRadioButton => _page.Locator("//label[contains(text(),'EA')]");
-        private ILocator PriceLevelARadioButton => _page.Locator("//label[contains(text(),'EA')]/../../../../../../div[4]/div[2]/div[1]/ul/li[1]/label");
+        private ILocator EAEnrollmentTypeRadioButton => _page.Locator("//label[contains(text(),'Enrollment Type')]/../../div[2]/div[1]/ul/li[1]");
+        private ILocator PriceLevelARadioButton => _page.Locator("//label[contains(text(),'Enrollment Type')]/../../../div[4]/div[2]/div[1]/ul/li[1]/label");
         private ILocator AnnualAmountTextBox => _page.Locator("//label[contains(text(),'Annual Amount')]/../..//input");
-        private ILocator SubmitButton => _page.Locator("//button[contains(text(),'Submit')]");
+        private ILocator SubmitButton => _page.Locator("//label[contains(text(),'Enrollment Type')]/../../../div[6]//button");
 
 
         //  MM    MM  EEEEEE  TTTTTT  HH    HH  OOOOO  DDDDD    SSSSSS
