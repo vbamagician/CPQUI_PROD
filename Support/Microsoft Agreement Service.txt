@@ -93,7 +93,28 @@ Contacts Finish BUtton "heap-finish"
 [Feature]
 ************************************************************************************************************************************************************
 
+        [Given(@"I choose Remote option for FinOps Fundamentals and KickOff")]
+        public async Task GivenIChooseRemoteOptionForFinOpsFundamentalsAndKickOff()
+        {
+            throw new PendingStepException();
+        }
 
+        [Given(@"I choose Remote option for Spend Management Implementation or Onboarding")]
+        public async Task GivenIChooseRemoteOptionForSpendManagementImplementationOrOnboarding()
+        {
+            throw new PendingStepException();
+        }
 
+        [Given(@"I choose Remote option for PyraCloud Spend Management Training")]
+        public async Task GivenIChooseRemoteOptionForPyraCloudSpendManagementTraining()
+        {
+            throw new PendingStepException();
+        }
+
+        [Given(@"I choose Remote option for Cloud Cost Optimization Implementation")]
+        public async Task GivenIChooseRemoteOptionForCloudCostOptimizationImplementation()
+        {
+            throw new PendingStepException();
+        }
 
 	

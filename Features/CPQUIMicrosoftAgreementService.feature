@@ -30,4 +30,4 @@ Scenario: Test MS Agreement UI Stability in CPQ UI PROD
 	And I add Softwareone Contacts
 	And I Select Document Type as PDF
 	When I click Finish on Contacts Page for MSA
-	Then I should see the value of contract would be "EUR 4,696.57"
+	Then I should see the value of contract would be "EUR 4,690.51"

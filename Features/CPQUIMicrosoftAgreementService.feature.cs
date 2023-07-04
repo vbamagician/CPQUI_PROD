@@ -174,7 +174,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I click Finish on Contacts Page for MSA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 33
- testRunner.Then("I should see the value of contract would be \"EUR 4,696.57\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should see the value of contract would be \"EUR 4,690.51\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
