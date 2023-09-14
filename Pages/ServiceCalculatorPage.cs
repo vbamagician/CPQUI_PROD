@@ -48,7 +48,7 @@ namespace CPQUI.Pages
         {
             await _controls.WaitForPageAppears(pagePlacementText);
             _controls.HoldThread(1000);
-            await _controls.NextButton.ClickAsync();
+            await _controls.NextButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }
     }

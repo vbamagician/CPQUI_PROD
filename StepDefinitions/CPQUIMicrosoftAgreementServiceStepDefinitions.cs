@@ -14,8 +14,7 @@ namespace CPQUI.StepDefinitions
         private readonly MarginAsSoldPage _marginAsSoldPage;
         private readonly QuestionnairePage _questionnairePage;
         private readonly ContactsPage _contactsPage;
-        private readonly OpportunityPage _opportunityPage;
-
+        
         CPQUIMicrosoftAgreementServiceStepDefinitions(Driver driver)
         {
             _driver = driver;
@@ -25,7 +24,6 @@ namespace CPQUI.StepDefinitions
             _marginAsSoldPage = new MarginAsSoldPage(_driver.Page);
             _questionnairePage = new QuestionnairePage(_driver.Page);
             _contactsPage = new ContactsPage(_driver.Page);
-            _opportunityPage = new OpportunityPage(_driver.Page);
         }
 
         [Given(@"I select Pack Managed LSP Checkbox")]

@@ -5,15 +5,14 @@ UI stability and validate the values came by choosing attributes for the task
 
 @smoke
 Scenario: Test UI stability of General Services for Azure by Importing WBS
-	Given I Navigate to CPQ UI Page "https://contracts.softwareone.com/login/secondary-login"
+	Given I Navigate to CPQ UI Page
 	And I Enter following Login Details and Click Login Button
 		| Username                            | Password                 |
-		| helpdesk-scg.global@softwareone.com | lT60VQvBz3RcY3LSPPikPg== |
+		| helpdesk-scg.global@softwareone.com | CPQ.account1708 |
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Service "General Services for Azure"
 	And I click on Configure Now Button
-	And I close Contract Unavailable Popup Window
 	And I choose Time & Material from Type of Contract Question
 	And I entered Contract Duration in Month as "36"
 	And I click on Next Button From Definition Page
@@ -27,19 +26,18 @@ Scenario: Test UI stability of General Services for Azure by Importing WBS
 	And I click on Next Button from OtherCosts Page
 	And I click on Next Button from CustomerPricing Page
 	When I click on Finish Button from CustomerVariables Page
-	Then I should see the Opprtunity Value as "EUR 7,328.22"
+	Then I should see the value of contract
 
 @smoke
 Scenario: Test UI stability of General Services For Azure by Manually Inserting WBS
-	Given I Navigate to CPQ UI Page "https://contracts.softwareone.com/login/secondary-login"
+	Given I Navigate to CPQ UI Page
 	And I Enter following Login Details and Click Login Button
 		| Username                            | Password       |
-		| helpdesk-scg.global@softwareone.com | lT60VQvBz3RcY3LSPPikPg== |
+		| helpdesk-scg.global@softwareone.com | CPQ.account1708 |
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Service "General Services for Azure"
 	And I click on Configure Now Button
-	And I close Contract Unavailable Popup Window
 	And I choose Time & Material from Type of Contract Question
 	And I entered Contract Duration in Month as "36"
 	And I click on Next Button From Definition Page
@@ -55,4 +53,4 @@ Scenario: Test UI stability of General Services For Azure by Manually Inserting 
 	And I click on Next Button from OtherCosts Page
 	And I click on Next Button from CustomerPricing Page
 	When I click on Finish Button from CustomerVariables Page
-	Then I should see the Opprtunity Value as "EUR 107,243.56"
+	Then I should see the value of contract

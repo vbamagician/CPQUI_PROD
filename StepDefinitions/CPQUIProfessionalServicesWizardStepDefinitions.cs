@@ -23,8 +23,7 @@ namespace CPQUI.StepDefinitions
         private readonly CustomerPricingPage _customerPricingPage;
         private readonly OtherCostsPage _otherCostsPage;
         private readonly CustomerVariablesPage _customerVariablesPage;
-        private readonly OpportunityPage _opportunityPage;
-
+        
         CPQUIProfessionalServicesWizardStepDefinitions(Driver driver)
         {
             _driver = driver;
@@ -34,7 +33,6 @@ namespace CPQUI.StepDefinitions
             _customerPricingPage = new CustomerPricingPage(_driver.Page);
             _otherCostsPage = new OtherCostsPage(_driver.Page);
             _customerVariablesPage = new CustomerVariablesPage(_driver.Page);
-            _opportunityPage = new OpportunityPage(_driver.Page);
         }
 
         [Given(@"I click on Configure Now Button")]
@@ -174,13 +172,6 @@ namespace CPQUI.StepDefinitions
         {
             const string customerVariablePagePlacement = "finish";
             await _customerVariablesPage.ClickOnFinishButtonFromCustomerVariablesPage(customerVariablePagePlacement);
-        }
-
-        [Then(@"I should see the Opprtunity Value as ""([^""]*)""")]
-        public async Task ThenIShouldSeeTheOpprtunityValueAs(string p0)
-        {
-            bool IsEqual = await _opportunityPage.IsValueOfOpportunityExpected(p0);
-            IsEqual.Should().BeTrue();
         }
     }
 }

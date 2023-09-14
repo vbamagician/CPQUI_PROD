@@ -22,7 +22,7 @@ namespace CPQUI.Pages
         public async Task ClickOnNextButtonFromOtherCostsPage(string pagePlacementText)
         {
             await _controls.WaitForPageAppears(pagePlacementText);
-            await _controls.NextButton.ClickAsync();
+            await _controls.NextButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }
     }  

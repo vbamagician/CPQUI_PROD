@@ -1,0 +1,2 @@
+cloud manage azure
+

@@ -94,17 +94,16 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
- testRunner.Given("I Navigate to CPQ UI Page \"https://contracts.softwareone.com/login/secondary-logi" +
-                        "n\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
-                            "lT60VQvBz3RcY3LSPPikPg=="});
+                            "CPQ.account1708"});
 #line 8
- testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table2, "And ");
+ testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table3, "And ");
 #line hidden
 #line 11
  testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -131,7 +130,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I Click on Next Button from MAS Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 19
- testRunner.Then("I should see the value of contract would be \"EUR 1,000,000.00\" for MAS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

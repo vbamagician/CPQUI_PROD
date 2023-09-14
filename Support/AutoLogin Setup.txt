@@ -30,7 +30,7 @@ namespace CPQUI
 
             await page.GetByLabel("Username").FillAsync("helpdesk-scg.global@softwareone.com");
 
-            await page.GetByLabel("Password").FillAsync("lT60VQvBz3RcY3LSPPikPg==");
+            await page.GetByLabel("Password").FillAsync("CPQ.account1708");
 
             await page.GetByRole(AriaRole.Button, new() { Name = "Log in" }).ClickAsync();
 

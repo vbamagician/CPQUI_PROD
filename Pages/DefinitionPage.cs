@@ -1,5 +1,6 @@
 ﻿using CPQUI.Controls;
 using Microsoft.Playwright;
+using NUnit.Framework;
 
 namespace CPQUI.Pages
 {
@@ -27,11 +28,43 @@ namespace CPQUI.Pages
         private ILocator ManagedLSPPackCheckBox => _page.Locator("//span[text()='Pack Managed LSP']/../../td[1]/label\r\n");
 
 
+        //*****************************************************************************************************************
+        // Properties of Managed UC
+        //*****************************************************************************************************************
+        private ILocator ManagedUCVoiceForOptionalServicesRadioButton => _page.Locator("//label[contains(text(),'Managed Unified Communication Voice or Teams Essentials?')]/../../div[2]/div[1]/ul/li[1]/label\r\n");
+        private ILocator YesfoIsVoiceInfrastructureSupportRequiredRadioButton => _page.Locator("//label[contains(text(),'Is Voice Infrastructure support required?')]/../..//label[contains(text(),'Yes')]");
+        private ILocator NoForIsCallRouteRequiredRadioButton => _page.Locator("//label[contains(text(),'Is Call Route required?')]/../..//label[contains(text(),'No')]");
+
+
+
+
         //  MM    MM  EEEEEE  TTTTTT  HH    HH  OOOOO  DDDDD    SSSSSS
         //  MMM  MMM  EE        TT    HH    HH OO   OO DD   DD  SS
         //  MM MM MM  EEEE      TT    HHHHHHHH OO   OO DD   DD  SSSSSS
         //  MM    MM  EE        TT    HH    HH OO   OO DD   DD      SS
         //  MM    MM  EEEEEE    TT    HH    HH  OOOOO  DDDDDD   SSSSSS
+
+
+
+        //*****************************************************************************************************************
+        // Methods of Managed UC
+        //*****************************************************************************************************************
+        public async Task SelectOptionManagedUnifiedCommunicationsVoiceForOptionalServices()
+        {
+            await ManagedUCVoiceForOptionalServicesRadioButton.ClickAsync();
+        }
+
+        public async Task SelectOptionYesForIsVoiceInfrastructureSupportRequired()
+        {
+            await YesfoIsVoiceInfrastructureSupportRequiredRadioButton.ClickAsync();
+        }
+
+        public async Task SelectOptionNoForIsCallRouteRequired()
+        {
+            await NoForIsCallRouteRequiredRadioButton.ClickAsync();
+        }
+
+
 
         //*****************************************************************************************************************
         // Methods of Microsoft Agreement Services 
@@ -62,7 +95,7 @@ namespace CPQUI.Pages
         public async Task ClickOnNextButtonFromDefinitionPage(string pagePlacementText)
         {
             await _controls.WaitForPageAppears(pagePlacementText);
-            await _controls.NextButton.ClickAsync();
+            await _controls.NextButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }
     }

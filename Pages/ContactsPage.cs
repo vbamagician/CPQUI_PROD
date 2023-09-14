@@ -21,11 +21,11 @@ namespace CPQUI.Pages
         private ILocator DocumentTypeButton => _page.Locator("//label[contains(text(),'Document Type:')]/../..//select");
                                                               
         //Customer's Contact Elements
-        private ILocator AddAuthorizedContactButton => _page.Locator("//div[contains(@class,'column1-60')]//div[contains(@class,'kk_ColumnAssignment_1')]/div[1]//button");
+        private ILocator AddAuthorizedContactButton => _page.Locator("(//button[contains(text(),'Add')])[1]");
         private ILocator SaveAuthorizedContactButton => _page.Locator("//button[normalize-space(text())='Save']");
 
         //SoftwareONE Contact Elements
-        private ILocator AddSWOContactButton => _page.Locator("//div[contains(@class,'column1-60')]//div[contains(@class,'kk_ColumnAssignment_1')]/div[4]//button");
+        private ILocator AddSWOContactButton => _page.Locator("(//button[contains(text(),'Add')])[2]");
         private ILocator SWOContactNameTextBox => _page.Locator("//label[contains(text(),'Contact name')]//../..//input");
         private ILocator SWOContactJobTitleTextBox => _page.Locator("//label[contains(text(),'Job title')]//../..//input");
         private ILocator SWOContactTelephoneTextBox => _page.Locator("//label[contains(text(),'Telephone number')]//../..//input");
@@ -53,14 +53,14 @@ namespace CPQUI.Pages
         public async Task SelectDocumentTypeAsPDF()
         {
             //I need to find why we should wait before option select
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
             await DocumentTypeButton.SelectOptionAsync(new SelectOptionValue() { Index = 1 });
         }
 
         public async Task ClickOnFinishButtonFromContactsPage(string pagePlacementText)
         {
             await _controls.WaitForPageAppears(pagePlacementText);
-            await _controls.FinishButton.ClickAsync();
+            await _controls.FinishButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }
     }

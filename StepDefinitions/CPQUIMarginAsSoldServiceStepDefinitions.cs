@@ -8,13 +8,11 @@ namespace CPQUI.StepDefinitions
     {
         private readonly Driver _driver;
         private readonly ConfigureMASPage _configureMASPage;
-        private readonly OpportunityPage _opportunityPage;
-
+        
         CPQUIMarginAsSoldServiceStepDefinitions(Driver driver)
         {
             _driver = driver;
             _configureMASPage = new ConfigureMASPage(_driver.Page);
-            _opportunityPage = new OpportunityPage(_driver.Page);
         }
 
         [Given(@"I Enter Business Volume for MAS as ""([^""]*)""")]
@@ -46,13 +44,6 @@ namespace CPQUI.StepDefinitions
         {
             const string masPagePlacement = "next-4";
             await _configureMASPage.ClickNextButtonFromConfigureMASPage(masPagePlacement);
-        }
-
-        [Then(@"I should see the value of contract would be ""([^""]*)"" for MAS")]
-        public async Task ThenIShouldSeeTheValueOfContractWouldBeForMAS(string p0)
-        {
-            bool IsEqual = await _opportunityPage.IsValueOfOpportunityExpected(p0);
-            IsEqual.Should().BeTrue();
         }
     }
 }

@@ -22,7 +22,7 @@ namespace CPQUI.Pages
         public async Task ClickOnFinishButtonFromCustomerVariablesPage(string pagePlacementText)
         {
             await _controls.WaitForPageAppears(pagePlacementText);
-            await _controls.FinishButton.ClickAsync();
+            await _controls.FinishButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }
     }

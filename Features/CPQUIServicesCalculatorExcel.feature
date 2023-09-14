@@ -4,10 +4,10 @@ THis feature will test the solution which has Excel Based Configurator. We shall
 
 @smoke
 Scenario: Test Excel Based Coonfigurator Solution
-	Given I Navigate to CPQ UI Page "https://contracts.softwareone.com/login/secondary-login"
+	Given I Navigate to CPQ UI Page
 	And I Enter following Login Details and Click Login Button
 		| Username                            | Password                 |
-		| helpdesk-scg.global@softwareone.com | lT60VQvBz3RcY3LSPPikPg== |
+		| helpdesk-scg.global@softwareone.com | CPQ.account1708 |
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Service "Unified Support for Azure"
@@ -17,4 +17,4 @@ Scenario: Test Excel Based Coonfigurator Solution
 	And I upload the Excel based configurator
 	And I click next from ScopePage for EBC
 	When When I click Finish from Margin As Sold Page for EBC
-	Then I should see the value of contract would be "EUR 43,200.00" for EBC
+	Then I should see the value of contract

@@ -21,12 +21,12 @@ namespace CPQUI.Pages
         //*****************************************************************************************************************
         //Properties of Azure Simple 
         //*****************************************************************************************************************
-        private ILocator AddMicrosoftTenantButton => _page.Locator("//div[contains(@class,'column1-60')]/div/div[2]/div/div[2]//button");
-        private ILocator TenantNameTextBox => _page.Locator("//div[contains(@class,'kk-flyout')]/div/div[2]/div[1]/div[5]//input");
+        private ILocator AddMicrosoftTenantButton => _page.Locator("//button[contains(text(),'Add')]");
+        private ILocator TenantNameTextBox => _page.Locator("//label[contains(text(),'Tenant name:')]/../..//input");
         private ILocator ProdORNoProdRadioButtons => _page.GetByText("Production", new() { Exact = true });
-        private ILocator SubscriptionIDTextBox => _page.Locator("//div[contains(@class,'kk-flyout')]/div/div[2]/div[1]/div[7]//input");
-        private ILocator SaveTenantButton => _page.Locator("//div[contains(@class,'kk-flyout')]/div/div[2]/div[1]/div[9]//button");
-        private ILocator PrePaymentTextBox => _page.Locator("//label[contains(text(),'Amount')]/../..//input");
+        private ILocator SubscriptionIDTextBox => _page.Locator("//label[contains(text(),'Subscription ID:')]/../..//input");
+        private ILocator SaveTenantButton => _page.Locator("(//button[contains(text(),'Save')])[2]");
+        private ILocator PrePaymentTextBox => _page.Locator("//label[contains(text(),'Amount:')]/../..//input");
 
         //*****************************************************************************************************************
         //Properties of Security Posture Assess. Example 
@@ -47,6 +47,13 @@ namespace CPQUI.Pages
         private ILocator PyraCloudSpendManagementTrainingRemoteRadioButton => _page.Locator("//label[contains(text(),'PyraCloud Spend Management Training')]/../..//label[contains(text(),'Remote')]");
         private ILocator CloudCostOptimizationImplementationRemoteRadioButton => _page.Locator("//label[contains(text(),'Cloud Cost Optimization Implementation')]/../..//label[contains(text(),'Remote')]");
 
+        //*****************************************************************************************************************
+        //Properties of Managed UC
+        //*****************************************************************************************************************
+        private ILocator MSO365TenantNameTextBox => _page.Locator("//label[contains(text(),'O365 Tenant Name:')]/../..//input");
+
+
+
 
 
         //  MM    MM  EEEEEE  TTTTTT  HH    HH  OOOOO  DDDDD    SSSSSS
@@ -55,6 +62,16 @@ namespace CPQUI.Pages
         //  MM    MM  EE        TT    HH    HH OO   OO DD   DD      SS
         //  MM    MM  EEEEEE    TT    HH    HH  OOOOO  DDDDDD   SSSSSS
 
+
+
+
+        //*****************************************************************************************************************
+        //Methods of Managed UC 
+        //*****************************************************************************************************************
+        public async Task EnteredNameAsRandomValueForMicrosoftOfficeTenant()
+        {
+            await MSO365TenantNameTextBox.FillAsync("ABCD");
+        }
 
 
         //*****************************************************************************************************************
@@ -118,7 +135,7 @@ namespace CPQUI.Pages
         public async Task ClickOnNextButtonFromQuestionnairePage(string pagePlacementText)
         {
             await _controls.WaitForPageAppears(pagePlacementText);
-            await _controls.NextButton.ClickAsync();
+            await _controls.NextButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }
     }

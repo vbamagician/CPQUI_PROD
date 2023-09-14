@@ -22,14 +22,14 @@ namespace CPQUI.Pages
         public async Task ClickOnNextButtonFromMarginAsSoldPage(string pagePlacementText)
         {
             await _controls.WaitForPageAppears(pagePlacementText);
-            await _controls.NextButton.ClickAsync();
+            await _controls.NextButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }
 
         public async Task ClickOnFinishBttonFromMarginAsSoldPage(string pagePlacementText)
         {
             await _controls.WaitForPageAppears(pagePlacementText);
-            await _controls.FinishButton.ClickAsync();
+            await _controls.FinishButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }
     }

@@ -18,8 +18,8 @@ namespace CPQUI.Controls
         private ILocator LoadingScreen => _page.Locator("#ContentPlaceHolderBody_ctl02_ctl02");
 
         // Public Properties 
-        public ILocator NextButton => _page.GetByRole(AriaRole.Button, new() { Name = " Next" });
-        public ILocator FinishButton => _page.GetByRole(AriaRole.Button, new() { Name = " Finish" });
+        public ILocator NextButton(string pagePlacementText) => _page.Locator($"//div[contains(@class,'heap-{pagePlacementText}')]//button[contains(text(),'Next')]");
+        public ILocator FinishButton(string pagePlacementText) => _page.Locator($"//div[contains(@class,'heap-{pagePlacementText}')]//button[contains(text(),'Finish')]");
 
         // Public Methods
         public async Task WaitForPageAppears(string pagePlacementText)

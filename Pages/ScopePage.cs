@@ -45,7 +45,7 @@ namespace CPQUI.Pages
         private ILocator TaskTitleTextBox => _page.Locator("//label[contains(text(),'Title:')]/../..//input");
         private ILocator TaskEffortInHoursTextBox => _page.Locator("//label[contains(text(),'Effort in Days:')]/../..//input");
         private ILocator ResourceDropdown => _page.Locator("//label[contains(text(),'Resource:')]/../..//select");
-        private ILocator CountryDropdown => _page.Locator("//label[contains(text(),'Country:')]/../..//select");
+        private ILocator CountryDropdown => _page.Locator("//label[{contains(text(),'Country:')]/../..//select");
         private ILocator ConfirmButton => _page.GetByRole(AriaRole.Button, new() { Name = "Confirm" });
 
         //*****************************************************************************************************************
@@ -57,12 +57,53 @@ namespace CPQUI.Pages
         private ILocator AnnualAmountTextBox => _page.Locator("//label[contains(text(),'Annual Amount')]/../..//input");
         private ILocator SubmitButton => _page.Locator("//label[contains(text(),'Enrollment Type')]/../../../div[6]//button");
 
+        //*****************************************************************************************************************
+        //Properties for Managed UC
+        //*****************************************************************************************************************
+        private ILocator ThreeYearForAgreementTermRadioButton => _page.Locator("//label[contains(text(), '3 Year')]");
+        private ILocator HundredAsNumberOfUsersTextBox => _page.Locator("//label[contains(text(), 'Number of users:')]/../..//input");
+        private ILocator TwentyThousandAsSalePriceForManagedUCAgreementTextBox => _page.Locator("(//label[contains(text(),'Sell price:')]/../..//input)[1]");
+        private ILocator HundredAsNUmberOfDevicesTextBox => _page.Locator("//label[contains(text(), 'Number of devices:')]/../..//input");
+        private ILocator TenThousandAsSalePriceForVoiceInfraSupportTextBox => _page.Locator("(//label[contains(text(),'Sell price:')]/../..//input)[2]");
+
+
+
+
 
         //  MM    MM  EEEEEE  TTTTTT  HH    HH  OOOOO  DDDDD    SSSSSS
         //  MMM  MMM  EE        TT    HH    HH OO   OO DD   DD  SS
         //  MM MM MM  EEEE      TT    HHHHHHHH OO   OO DD   DD  SSSSSS
         //  MM    MM  EE        TT    HH    HH OO   OO DD   DD      SS
         //  MM    MM  EEEEEE    TT    HH    HH  OOOOO  DDDDDD   SSSSSS
+
+
+
+
+
+        //-----------------------------------------------------------------------------------------------------------------
+        //Methods for Managed UC
+        //-----------------------------------------------------------------------------------------------------------------
+
+        public async Task EnterNumberOfDevices()
+        {
+            await HundredAsNUmberOfDevicesTextBox.FillAsync("100");
+            await HundredAsNUmberOfDevicesTextBox.PressAsync("Enter");
+            await _controls.WaitForLoadingScreenToDisappear();
+        }
+
+        public async Task EnterNumberOfUsers()
+        {
+            await HundredAsNumberOfUsersTextBox.FillAsync("100");
+            await HundredAsNUmberOfDevicesTextBox.PressAsync("Enter");
+            await _controls.WaitForLoadingScreenToDisappear();
+        }
+
+        public async Task ChooseOptionYearForAgreementTerm()
+        {
+            await ThreeYearForAgreementTermRadioButton.ClickAsync();
+        }
+
+
 
         //-----------------------------------------------------------------------------------------------------------------
         //Methods for Microsoft Agreement Service
@@ -92,6 +133,8 @@ namespace CPQUI.Pages
             await SubmitButton.ClickAsync();
         }
 
+
+
         //-----------------------------------------------------------------------------------------------------------------
         //Methods for General Services of Azure / Professional Services Wizard
         //-----------------------------------------------------------------------------------------------------------------
@@ -103,7 +146,7 @@ namespace CPQUI.Pages
 
         public async Task DownloadWBSFile(string fileName)
         {
-            var download = await _page.RunAndWaitForDownloadAsync(async () => await DownloadWBSButton.ClickAsync());
+            IDownload download = await _page.RunAndWaitForDownloadAsync(async () => await DownloadWBSButton.ClickAsync());
             await download.SaveAsAsync(fileName);
         }
 
@@ -114,7 +157,7 @@ namespace CPQUI.Pages
 
         public async Task UploadWBSFile(string fileName)
         {
-            var fileChooser = await _page.RunAndWaitForFileChooserAsync(async () => await ChooseFileButton.ClickAsync());
+            IFileChooser fileChooser = await _page.RunAndWaitForFileChooserAsync(async () => await ChooseFileButton.ClickAsync());
             await fileChooser.SetFilesAsync(@"..\..\..\Support\" + fileName);
         }
 
@@ -147,7 +190,7 @@ namespace CPQUI.Pages
 
         public async Task SelectCoutry(string selectedCountry)
         {
-            _controls.HoldThread(1000);
+            _controls.HoldThread(2000);
             await CountryDropdown.SelectOptionAsync(new[] { selectedCountry });
         }
 
@@ -219,7 +262,7 @@ namespace CPQUI.Pages
         public async Task ClickOnNextButtonFromScopingPage(string pagePlacementText)
         {
             await _controls.WaitForPageAppears(pagePlacementText);
-            await _controls.NextButton.ClickAsync();
+            await _controls.NextButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }
     }

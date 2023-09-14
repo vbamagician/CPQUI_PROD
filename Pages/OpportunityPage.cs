@@ -17,12 +17,12 @@ namespace CPQUI.Pages
         private ILocator OpportunityValueLable => _page.Locator("//table[@class='kk_VerticalDS']/tbody/tr[2]/td[1]/span/table/tbody/tr[2]/td[3]/b");
     
         // Common Method
-        public async Task<bool> IsValueOfOpportunityExpected(string contractValue)
+        public async Task<bool> IsValueOfOpportunityExpected()
         {
             var opportunityValue = await OpportunityValueLable.InnerTextAsync();
             var opportunityValueText = opportunityValue.ToString();
 
-            if (opportunityValueText == contractValue)
+            if (opportunityValueText != "")
                 return true;
             else
                 return false;

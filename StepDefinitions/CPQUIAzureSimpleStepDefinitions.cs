@@ -1,5 +1,4 @@
 using CPQUI.Drivers;
-using CPQUI.Helper;
 using CPQUI.Pages;
 using TechTalk.SpecFlow.Assist;
 
@@ -33,11 +32,26 @@ namespace CPQUI.StepDefinitions
             _opportunityPage = new OpportunityPage(_driver.Page);
         }
 
-        [Given(@"I Navigate to CPQ UI Page ""([^""]*)""")]
-        public void GivenINavigateToCPQUIPage(string p0)
+        [Given(@"I Navigate to CPQ UI Page")]
+        public void GivenINavigateToCPQUIPage()
         {
-            _driver.Page.GotoAsync(p0);
+            //Define Environemtn Variable that decide what one to choose
+            string? varenvspace = Environment.GetEnvironmentVariable("ENVSPACE");
+
+            if (varenvspace == null)
+            {
+                _driver.Page.GotoAsync("https://contracts.softwareone.com/");
+            }
+            else if (varenvspace == "CLOUD")
+            {
+                string? pageLink = Environment.GetEnvironmentVariable("CPQUI_PAGE_LINK");
+                if (pageLink == null)
+                    _driver.Page.GotoAsync("https://contracts.softwareone.com/");
+                else
+                    _driver.Page.GotoAsync(pageLink);
+            }
         }
+
 
         [Given(@"I Enter following Login Details and Click Login Button")]
         public async Task GivenIEnterFollowingLoginDetailsAndClickLoginButton(Table table)
@@ -50,16 +64,19 @@ namespace CPQUI.StepDefinitions
                 Console.WriteLine("Local Credentilas User");
                 //Login Mechanism for Local Repo
                 dynamic data = table.CreateDynamicInstance();
-                var decryptedString = AESOperations.DecryptString("b14ca5898a4e4133bbce2ea2315a1916", (string)data.Password);
-                await _loginPage.Login((string?)data.Username, decryptedString);
+
+                // Eliminated AESOperation for a time being 
+                //var decryptedString = AESOperations.DecryptString("b14ca5898a4e4133bbce2ea2315a1916", (string)data.Password);
+
+                await _loginPage.SSOLogin((string)data.Username, (string)data.Password);
             }
             else if (varenvspace == "CLOUD")
             {
                 //Login Mechanism for AzureDevOps Pipeline
                 Console.WriteLine("ENVSPACE Variable used");
                 //Source Environment Variables
-                string? username = Environment.GetEnvironmentVariable("CPQUI_PROD_USERNAME");
-                string? password = Environment.GetEnvironmentVariable("CPQUI_PROD_PASSWORD");
+                string? username = Environment.GetEnvironmentVariable("CPQUI_LOGIN_USERNAME");
+                string? password = Environment.GetEnvironmentVariable("CPQUI_LOGIN_PASSWORD");
                 await _loginPage.Login(username, password);
             }
         }
@@ -166,10 +183,10 @@ namespace CPQUI.StepDefinitions
             await _contactsPage.ClickOnFinishButtonFromContactsPage(contactsPagePlacement);
         }
 
-        [Then(@"I should see the value of contract would be ""([^""]*)""")]
-        public async Task ThenIShouldSeeTheValueOfContractWouldBe(string p0)
+        [Then(@"I should see the value of contract")]
+        public async Task ThenIShouldSeeTheValueOfContract()
         {
-            bool IsEqual = await _opportunityPage.IsValueOfOpportunityExpected(p0);
+            bool IsEqual = await _opportunityPage.IsValueOfOpportunityExpected();
             IsEqual.Should().BeTrue();
         }
     }

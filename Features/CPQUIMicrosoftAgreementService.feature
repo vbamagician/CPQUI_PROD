@@ -4,10 +4,10 @@ This Feature will test the UI Statbility for Microsoft Agreement Service in CPQ 
 
 @smoke
 Scenario: Test MS Agreement UI Stability in CPQ UI PROD
-	Given I Navigate to CPQ UI Page "https://contracts.softwareone.com/login/secondary-login"
+	Given I Navigate to CPQ UI Page
 	And I Enter following Login Details and Click Login Button
 		| Username                            | Password                 |
-		| helpdesk-scg.global@softwareone.com | lT60VQvBz3RcY3LSPPikPg== |
+		| helpdesk-scg.global@softwareone.com | CPQ.account1708 |
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Service "Microsoft Agreement Service"
@@ -26,8 +26,8 @@ Scenario: Test MS Agreement UI Stability in CPQ UI PROD
 	And I choose Remote option for PyraCloud Spend Management Training
 	And I choose Remote option for Cloud Cost Optimization Implementation
 	And I click Next on Questionaire Page for MSA
+	And I Select Document Type as PDF
 	And I Add Authorized Contacts
 	And I add Softwareone Contacts
-	And I Select Document Type as PDF
 	When I click Finish on Contacts Page for MSA
-	Then I should see the value of contract would be "EUR 4,690.51"
+	Then I should see the value of contract

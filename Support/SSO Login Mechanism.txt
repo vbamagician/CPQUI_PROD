@@ -1,0 +1,25 @@
+PROD Link: https://contracts.softwareone.com/
+
+I click on SSO Login Button
+	ClickOnLoginButton
+		//button[@id='buttonAADSignIn']
+
+I entered my SSO username
+	EnterSSOUserName
+		//input[@name='loginfmt']
+
+I click on Next Button To Enter SSO Password
+	ClickOnNextButtonToEnterSSOPassword
+		//input[@value='Next']
+
+I entered my SSO password
+	EnterSSOPassword
+		//input[@name='passwd']
+
+I click on Sign In Button To Finish SSO Login Operation
+	ClickOnSignInButtonToFinishSSOLoginOperation
+		//input[@value='Sign in']
+
+I click Yes to stay signed in Window
+	ClickOnYesButtonToFinishSSOLoginOperation
+		//input[@value='Yes']

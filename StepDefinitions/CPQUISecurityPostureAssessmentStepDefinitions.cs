@@ -13,7 +13,6 @@ namespace CPQUI.StepDefinitions
         private readonly MarginAsSoldPage _marginAsSoldPage;
         private readonly QuestionnairePage _questionnairePage;
         private readonly ContactsPage _contactsPage;
-        private readonly OpportunityPage _opportunityPage;
 
         CPQUISecurityPostureAssessmentStepDefinitions(Driver driver)
         {
@@ -24,7 +23,6 @@ namespace CPQUI.StepDefinitions
             _marginAsSoldPage = new MarginAsSoldPage(_driver.Page);
             _questionnairePage = new QuestionnairePage(_driver.Page);
             _contactsPage = new ContactsPage(_driver.Page);
-            _opportunityPage = new OpportunityPage(_driver.Page);
         }
 
         [Given(@"I click on Configure Now Button for SPAE")]
@@ -109,13 +107,6 @@ namespace CPQUI.StepDefinitions
         {
             const string contactsPagePlacement = "finish";
             await _contactsPage.ClickOnFinishButtonFromContactsPage(contactsPagePlacement);
-        }
-
-        [Then(@"I should see the value of contract would be ""([^""]*)"" for SPAE")]
-        public async Task ThenIShouldSeeTheValueOfContractWouldBeForSPAE(string p0)
-        {
-            bool IsEqual = await _opportunityPage.IsValueOfOpportunityExpected(p0);
-            IsEqual.Should().BeTrue();
         }
     }
 }

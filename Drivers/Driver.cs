@@ -17,8 +17,14 @@ namespace CPQUI.Drivers
             //Playwright
             IPlaywright playwright = await Playwright.CreateAsync();
 
-            //Browser
+            /*//Browser
             _browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+            {
+                Headless = false
+            });*/
+
+            //Browser
+            _browser = await playwright.Firefox.LaunchAsync(new BrowserTypeLaunchOptions
             {
                 Headless = false
             });

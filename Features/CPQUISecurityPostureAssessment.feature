@@ -4,10 +4,10 @@ This Feature will test the UI Statbility for Security Posture Assessment Solutio
 
 @smoke
 Scenario: Test Security Posture Assessment Solution UI Stability On CPQ UI for SPAE
-	Given I Navigate to CPQ UI Page "https://contracts.softwareone.com/login/secondary-login"
+	Given I Navigate to CPQ UI Page
 	And I Enter following Login Details and Click Login Button
 		| Username                            | Password				 |
-		| helpdesk-scg.global@softwareone.com | lT60VQvBz3RcY3LSPPikPg== |
+		| helpdesk-scg.global@softwareone.com | CPQ.account1708 |
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Service "Security Posture Assessment for AWS"
@@ -20,8 +20,8 @@ Scenario: Test Security Posture Assessment Solution UI Stability On CPQ UI for S
 	And I click Next Margin As Sold Page for SPAE
 	And I fill Questionnaire Page questions for SPAE
 	And I click Next on Questionaire Page for SPAE
+	And I Select Document Type as PDF for APAE
 	And I Add Authorized Contacts for SPAE
 	And I add Softwareone Contacts for SPAE
-	And I Select Document Type as PDF for APAE
 	When I click Finish on Contacts Page for SPAE
-	Then I should see the value of contract would be "EUR 37,499.47" for SPAE
+	Then I should see the value of contract

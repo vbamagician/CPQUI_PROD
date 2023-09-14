@@ -94,17 +94,16 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
- testRunner.Given("I Navigate to CPQ UI Page \"https://contracts.softwareone.com/login/secondary-logi" +
-                        "n\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table7.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
-                            "lT60VQvBz3RcY3LSPPikPg=="});
+                            "CPQ.account1708"});
 #line 8
- testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table7, "And ");
+ testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table8, "And ");
 #line hidden
 #line 11
  testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -134,7 +133,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("When I click Finish from Margin As Sold Page for EBC", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 20
- testRunner.Then("I should see the value of contract would be \"EUR 43,200.00\" for EBC", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

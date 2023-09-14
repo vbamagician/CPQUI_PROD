@@ -1,0 +1,126 @@
+Service Name:
+	Unified Communications Managed Service
+
+No Configure Now Button 
+
+===================================================================================================================
+[Definition Page]
+===================================================================================================================
+
+Next Button Class Name: 
+	heap-next-1
+
+Section Optional Services
+
+	I select option Managed Unified Communications Voice for Optional Services
+		://label[contains(text(),'Managed Unified Communication Voice or Teams Essentials?')]/../../div[2]/div[1]/ul/li[1]/label
+
+
+	I select option Yes for Is Voice Infrastructure support required
+		://label[contains(text(),'Is Voice Infrastructure support required?')]/../..//label[contains(text(),'Yes')]
+
+
+	I select option No for Is Call Route required
+		://label[contains(text(),'Is Call Route required?')]/../..//label[contains(text(),'No')]
+
+	I click on Next button from Definition Page
+
+===================================================================================================================
+[Scope Page]
+===================================================================================================================
+
+Next Button Class Name: 
+	heap-next-2
+
+Agreement Details 
+
+	I choose option 3 Year for Agreement Term
+		://label[contains(text(), '3 Year')]
+
+	I entered 100 as Number of Users
+		://label[contains(text(), 'Number of users:')]/../..//input
+
+	I entered 20000 as Sell Price for ManagedUC Agreement		
+		:(//label[contains(text(),'Sell price:')]/../..//input)[1]
+
+Voice Infrastructure Support
+
+	I entered 100 as Number of Devices
+		://label[contains(text(), 'Number of devices:')]/../..//input
+
+	
+	I entered 10000 as Sell Price for Voice Infrastructure Support
+		:(//label[contains(text(),'Sell price:')]/../..//input)[2]
+
+
+	I click on Next Button from Scoping Page 
+
+===================================================================================================================
+[Customer Pricing Page]
+===================================================================================================================
+
+Next Button class name:
+	heap-next-3
+
+	I click on Next Button from Customer Pricing Page
+
+===================================================================================================================
+[Margin As Sold Page]
+===================================================================================================================
+
+Next Button class name:
+	heap-next-4
+
+	I click on Next Button from Margin As Sold Page
+
+===================================================================================================================
+[Questionnaire Page]
+===================================================================================================================
+
+Next Button class name:
+	heap-next-5
+
+	
+	I entered name as ABCD for O365 Tenant
+		://label[contains(text(),'O365 Tenant Name:')]/../..//input
+
+	I click on Next Button from Questionnaire Page 
+
+===================================================================================================================
+[Contacts Page]
+===================================================================================================================
+
+Next Button class name:
+	heap-finish
+
+	I add Authorized Contacts
+	
+	I add SoftwareONE Contacts
+
+	I choose document type as PDF
+
+	I click on Finish Button from Contacts Page
+
+===================================================================================================================
+[Opportunity Page]
+===================================================================================================================
+
+	I see some value in Opportunity Line ID Table
+
+ 	 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

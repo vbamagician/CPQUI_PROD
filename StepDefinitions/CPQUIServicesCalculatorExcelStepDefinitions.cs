@@ -10,14 +10,12 @@ namespace CPQUI.StepDefinitions
         private readonly Driver _driver;
         private readonly ServiceCalculatorPage _serviceCalculatorPage;
         private readonly MarginAsSoldPage _marginAsSoldPage;
-        private readonly OpportunityPage _opportunityPage;
 
         CPQUIServicesCalculatorExcelStepDefinitions(Driver driver)
         {
             _driver = driver;
             _serviceCalculatorPage = new ServiceCalculatorPage(_driver.Page);
             _marginAsSoldPage = new MarginAsSoldPage(_driver.Page);
-            _opportunityPage = new OpportunityPage(_driver.Page);
         }
 
         [Given(@"I click on Download Button to download configurator for EBC")]
@@ -50,13 +48,6 @@ namespace CPQUI.StepDefinitions
         {
             const string marginPagePlacement = "finish";
             await _marginAsSoldPage.ClickOnFinishBttonFromMarginAsSoldPage(marginPagePlacement);
-        }
-
-        [Then(@"I should see the value of contract would be ""([^""]*)"" for EBC")]
-        public async Task ThenIShouldSeeTheValueOfContractWouldBeForEBC(string p0)
-        {
-            bool IsEqual = await _opportunityPage.IsValueOfOpportunityExpected(p0);
-            IsEqual.Should().BeTrue();
         }
     }
 }

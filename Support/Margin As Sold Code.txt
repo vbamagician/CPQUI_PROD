@@ -25,7 +25,7 @@ class Program
 
         await page.GetByLabel("Password").ClickAsync();
 
-        await page.GetByLabel("Password").FillAsync("lT60VQvBz3RcY3LSPPikPg==");
+        await page.GetByLabel("Password").FillAsync("CPQ.account1708");
 
         await page.GetByRole(AriaRole.Button, new() { Name = "Log in" }).ClickAsync();
 
