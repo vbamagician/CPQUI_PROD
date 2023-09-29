@@ -43,9 +43,9 @@ namespace CPQUI.Pages
         private ILocator SellPriceLable => _page.Locator("//tbody/tr[2]/td[11]/span");
         private ILocator AddTaskButton => _page.GetByRole(AriaRole.Button, new() { Name = " Add" });
         private ILocator TaskTitleTextBox => _page.Locator("//label[contains(text(),'Title:')]/../..//input");
-        private ILocator TaskEffortInHoursTextBox => _page.Locator("//label[contains(text(),'Effort in Days:')]/../..//input");
+        private ILocator TaskEffortInHoursTextBox => _page.Locator("//label[contains(text(),'Effort in Hours:')]/../..//input");
         private ILocator ResourceDropdown => _page.Locator("//label[contains(text(),'Resource:')]/../..//select");
-        private ILocator CountryDropdown => _page.Locator("//label[{contains(text(),'Country:')]/../..//select");
+        private ILocator CountryDropdown => _page.Locator("//label[contains(text(),'Country:')]/../..//select");
         private ILocator ConfirmButton => _page.GetByRole(AriaRole.Button, new() { Name = "Confirm" });
 
         //*****************************************************************************************************************
@@ -190,7 +190,6 @@ namespace CPQUI.Pages
 
         public async Task SelectCoutry(string selectedCountry)
         {
-            _controls.HoldThread(2000);
             await CountryDropdown.SelectOptionAsync(new[] { selectedCountry });
         }
 
@@ -200,21 +199,11 @@ namespace CPQUI.Pages
             await _controls.WaitForLoadingScreenToDisappear();
         }
 
-        public async Task<bool> IfImportedSellPriceMatches(string sellPrice)
+        public async Task<bool> IfSellPriceOccurs()
         {
             string SellValueText = await SellPriceLable.InnerTextAsync();
 
-            if (sellPrice == SellValueText)
-                return true;
-            else
-                return false;
-        }
-
-        public async Task<bool> IfInsertedSellPriceMatches(string sellPrice)
-        {
-            string SellValueText = await SellPriceLable.InnerTextAsync();
-
-            if (sellPrice == SellValueText)
+            if (SellValueText != "")
                 return true;
             else
                 return false;

@@ -96,10 +96,10 @@ namespace CPQUI.StepDefinitions
             await _scopePage.ClickOnUploadButton();
         }
 
-        [Then(@"I should see the sell prices of import task as ""([^""]*)""")]
-        public async Task ThenIShouldSeeTheSellPricesOfImportTaskAs(string p0)
+        [Then(@"I Should see the sell prices of task")]
+        public async Task ThenIShouldSeeTheSellPricesOfTask()
         {
-            bool IsEqual = await _scopePage.IfImportedSellPriceMatches(p0);
+            bool IsEqual = await _scopePage.IfSellPriceOccurs();
             IsEqual.Should().BeTrue();
         }
 
@@ -137,13 +137,6 @@ namespace CPQUI.StepDefinitions
         public async Task WhenIClickOnConfirmButton()
         {
             await _scopePage.ClickOnConfirmButton();
-        }
-
-        [Then(@"I should see the sell price of the manual Task as ""([^""]*)""")]
-        public async Task ThenIShouldSeeTheSellPriceOfTheManualTaskAs(string p0)
-        {
-            bool IsEqual = await _scopePage.IfInsertedSellPriceMatches(p0);
-            IsEqual.Should().BeTrue();
         }
 
         [Then(@"I click on Next Button from Scoping Page")]

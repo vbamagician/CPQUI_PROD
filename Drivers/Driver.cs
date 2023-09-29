@@ -6,7 +6,8 @@ namespace CPQUI.Drivers
     {
         private readonly Task<IPage> _page;
 
-        private IBrowser? _browser;
+        //private IBrowser? _browser;
+        private IBrowserContext? _browserContext;
 
         public Driver() => _page = InitializePlaywright();
 
@@ -24,15 +25,20 @@ namespace CPQUI.Drivers
             });*/
 
             //Browser
-            _browser = await playwright.Firefox.LaunchAsync(new BrowserTypeLaunchOptions
+            var browser = await playwright.Firefox.LaunchAsync(new BrowserTypeLaunchOptions
             {
                 Headless = false
             });
 
+            _browserContext = await browser.NewContextAsync(new()
+            {
+                RecordVideoDir = "videos/"
+            });
+
             //Page
-            return await _browser.NewPageAsync();
+            return await _browserContext.NewPageAsync();
         }
 
-        public void Dispose() => _browser?.CloseAsync();
+        public void Dispose() => _browserContext?.CloseAsync();
     }
 }
