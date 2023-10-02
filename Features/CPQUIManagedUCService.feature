@@ -6,8 +6,8 @@ This Feature will test the UI Statbility for Managed UC in CPQ UI
 Scenario: Test Managed UC UI Stability on CPQ UI
 	Given I Navigate to CPQ UI Page
 	And I Enter following Login Details and Click Login Button
-		| Username                            | Password                 |
-		| helpdesk-scg.global@softwareone.com | CPQ.account1708			 |
+		| Username                            | Password        |
+		| helpdesk-scg.global@softwareone.com | CPQ.account1708 |
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Service "Unified Communications Managed Service"
