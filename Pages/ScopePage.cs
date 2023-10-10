@@ -62,10 +62,8 @@ namespace CPQUI.Pages
         //*****************************************************************************************************************
         private ILocator ThreeYearForAgreementTermRadioButton => _page.Locator("//label[contains(text(), '3 Year')]");
         private ILocator HundredAsNumberOfUsersTextBox => _page.Locator("//label[contains(text(), 'Number of users:')]/../..//input");
-        private ILocator TwentyThousandAsSalePriceForManagedUCAgreementTextBox => _page.Locator("(//label[contains(text(),'Sell price:')]/../..//input)[1]");
         private ILocator HundredAsNumberOfDevicesTextBox => _page.Locator("//label[contains(text(), 'Number of devices:')]/../..//input");
-        private ILocator TenThousandAsSalePriceForVoiceInfraSupportTextBox => _page.Locator("(//label[contains(text(),'Sell price:')]/../..//input)[2]");
-
+        
 
 
 
@@ -250,7 +248,7 @@ namespace CPQUI.Pages
 
         public async Task ClickOnNextButtonFromScopingPage(string pagePlacementText)
         {
-            await _controls.WaitForPageAppears(pagePlacementText);
+            //await _controls.WaitForPageAppears(pagePlacementText);
             await _controls.NextButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }

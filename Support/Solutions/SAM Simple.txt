@@ -1,0 +1,288 @@
+Service Name: 
+	SAMSimple
+
+No "Configure Now" button
+
+===============================================================================================================================
+[Definition Page]
+===============================================================================================================================
+
+Next Button Class Name: 
+	heap-next-1
+
+Allow SAMSimple Inventory Agent on Client Devices
+
+	I choose "YES" to deploy the SAMSimple inventory agent on client Devices
+		ChooseYESToDeploySAMSimpleInventoryAgentOnClientDevices
+			//label[contains(text()[normalize-space()],'Yes')]
+
+
+	I choose option of "We are able to deploy the SAMSimple inventory agents to all devices in scope"
+		ChooseOptionToDeployeSAMSimpleAgentsToSpecificDevicesInScope
+			//label[contains(text()[normalize-space()],'We are able to deploy the SAMSimple inventory agents to all devices in scope')]
+
+	I click on Next button from Definition page
+		ClickOnNextButtonFromDefinitionPage
+
+===============================================================================================================================
+[Scope Page]
+===============================================================================================================================
+
+Next Button Class Name: 
+	heap-next-2
+
+	I select publisher as "ActivePDF"
+		SelectPublisher
+			//table/tbody/tr/td/span[contains(text()[normalize-space()],'ActivePDF')]
+
+	I entered number of estimated end-user devices as 1
+		EnterNumberOfEstimatedEndUserDevice
+			//label[contains(text()[normalize-space()],'# End-user Device:')]/../..//input
+
+	I entered number of estimated physical and virtual servers as 1
+		EnterNumberOfEstimatedPhysicalAndVirtualServers
+			//label[contains(text()[normalize-space()],'# Servers (Physical & Virtual):')]/../..//input
+
+	I entered number of estimated users as 1
+		EnterNumberOfEstimatedUsers
+			//label[contains(text()[normalize-space()],'# Users:')]/../..//input
+
+	I select Operating System in use as "Linux"
+		SelectOperatingSystemInUse
+			//table/tbody/tr/td/span[contains(text()[normalize-space()],'Linux')]
+
+	I entered number of trusted domain as 1
+		EnterNumberOfTrustedDomains
+			//label[contains(text()[normalize-space()],'# Trusted Domains:')]/../..//input
+
+	I entered number of untrusted domain as 1
+		EnterNumberOfUntrustedDomains
+			//label[contains(text()[normalize-space()],'# Untrusted Domains:')]/../..//input
+
+	I entered number of geographic location as 1
+		EnterNumberOfGeogrphicLocation
+			//label[contains(text()[normalize-space()],'# Locations:')]/../..//input
+
+	I entered number of segregated networks as 1
+		EnterNumberOfSegregatedNetworks
+			//label[contains(text()[normalize-space()],'# Segregated Networks:')]/../..//input
+
+	I select Inventory Inventory Data Source is deployed into the clients environment as "HP-UD (DDMI)"
+		SelectInventoryDataSourceWhichIsDeployedIntoClientEnvironment
+			//table/tbody/tr/td/span[contains(text()[normalize-space()],'HP-UD (DDMI)')]
+
+	I select an option as "PDQ Deploy" method of software distrubution
+		SelectAnOptionForMethodOfSoftwareDistribution 
+			//table/tbody/tr/td/span[contains(text()[normalize-space()],'PDQ Deploy')]
+
+	I select virtualization platform as "Microsoft Hyper-V"
+		SelectAnOptionForVirtualizationPlatform
+			//table/tbody/tr/td/span[contains(text()[normalize-space()],'Microsoft Hyper-V')]
+
+	I select application virtualization platform as "Microsoft App-V"
+		SelectAnOptionForApplicationVirtualizationPlatform
+			//table/tbody/tr/td/span[contains(text()[normalize-space()],'Microsoft App-V')]
+
+	I select SaaS Platform as "Microsoft Office 365"
+		SelectAnOptionForSAASPlatform
+			//table/tbody/tr/td/span[contains(text()[normalize-space()],'Microsoft Office 365')]
+
+
+	I click on next button from Scope page
+		ClickOnNextButtonFromScopePage
+
+
+===============================================================================================================================
+[Customer Pricing Page]
+===============================================================================================================================
+
+Next Button Class Name:
+	heap-next-3
+
+
+	I select an option for implementation level as "Easy"
+		SelectAnOptionForImplementationLevel
+			//label[contains(text()[normalize-space()],'Easy')]
+
+
+	I click on Next button from customer pricing page 
+		ClickOnNextButtonFromCustomerPricingPage
+
+
+===============================================================================================================================
+[Margin as Sold Page]
+===============================================================================================================================
+
+Next Button Class Name:
+	heap-next-4
+
+	I click on next button from Margin As Sold page 
+		ClickOnNextButtonFromMarginAsSoldPage
+
+
+
+===============================================================================================================================
+[Questionnaire Page]
+===============================================================================================================================
+
+Next Button Class Name: 
+	heap-next-5
+
+Trusted Domains
+
+	I click on Add Domain Button to Add Trusted Domain
+		ClickOnAddDomainButtonForTrustedDomain
+			//button[contains(text()[normalize-space()],'Add Domain')]
+
+
+	I select "Trusted" as option from Domain Form
+		SelectOptionFromDomainFormForTrustedDomain
+			//label[text()='Is this a trusted or untrusted domain?']/../..//select
+				value of the option: 64979
+
+
+	I entered domain name as "ABCD"
+		EnterDomainNameForTrustedDomain
+			//label[text()='Domain name:']/../..//input
+
+
+	I click on Save and add another button to add one more domain
+		ClickOnSaveAndAddAnotherButtonForTrustedDomain
+			//button[contains(text()[normalize-space()],'Save & Add another')]
+
+Untrusted Domains
+
+	I select "Untrusted" as option from Domain Form
+		SelectOptionFromDomainFormForUntrustedDomain
+			//label[text()='Is this a trusted or untrusted domain?']/../..//select
+				value of the option: 64980
+	
+	I entered domain name as "ABCD"
+		EnterDomainNameForUntrustedDomain
+			//label[text()='Domain name:']/../..//input
+
+
+	I click on Save button to close domain form
+		ClickOnSaveButtonToCloseDomainForm
+			(//*[text()='Add Domain']/../../../../..//button[contains(text()[normalize-space()],'Save')])[1]
+		
+Geographic Locations
+	
+	I click on Add Location Button To Add Gegraphic Location
+		ClickOnAddLocationButton
+			//button[contains(text()[normalize-space()],'Add Location')]
+
+	
+	I entered geographic location as "India"
+		EnterGeographicLocation
+			//label[text()='Geographic location:']/../..//input
+
+	
+	I click on Save button to close Location form
+		ClickOnSaveButtonToCloseLocationForm
+			(//*[text()='Add new location']/../../../../..//button[contains(text()[normalize-space()],'Save')])[1]
+
+	
+Segregated Networks / DMZ
+
+	
+	I click on Add Network button To Add Segregated Networks
+		ClickOnAddSegregatedNetworksButton
+			//button[contains(text()[normalize-space()],'Add Network')]
+
+	
+	I entered Segregated Network as "ABCD"
+		EnterSegregtedNetwork
+			//label[text()='Details:']/../..//input
+
+	
+	I click on Save button to close Segregated Networks Form
+		ClickOnSaveButtonToCloseSegregatedNetworksForm
+			(//*[text()='Add new segregated network']/../../../../..//button[contains(text()[normalize-space()],'Save')])[1]
+
+
+
+Application Virtualization
+
+
+	I click on Add Application virtualization Details button To Add Virtual Application Details
+		ClickOnAddApplicationVirtualizationDetailsButton
+			//button[contains(text()[normalize-space()],'Add Application Virtualization Details')]
+
+	
+	I entered product as "ABCD"
+		EnterProductNameForApplicationVirtualizationDetails
+			//label[text()='Product:']/../..//input
+
+	I entered Version as "A01"
+		EnterVersionForApplicationVirtualizationDetails
+			//label[text()='Version:']/../..//input
+	
+	I entered Edition as "ABCD"
+		EnterEditionForApplicationVirtualizationDetails
+			//label[text()='Edition:']/../..//input
+
+	I click on Save button to close Application Virtualization form
+		ClickOnSaveButtonToCloseApplicationVirtualizationForm
+			(//*[text()='Add new record']/../../../../..//button[contains(text()[normalize-space()],'Save')])[1]
+	
+
+Virtualization Platform
+
+	
+	Add Virtualization Platform Details
+
+	I click on Add Virtualization Platform Details button To Add Virtualization Platform Details
+		ClickOnAddAddVirtualizationPlatformDetailsButton
+			//button[contains(text()[normalize-space()],'Add Virtualization Platform Details')]
+
+	I entered product as "ABCD"
+		EnterProductNameForVirtualizationPlatformDetails
+			//label[text()='Product:']/../..//input
+
+	I entered Version as "A01"
+		EnterVersionForVirtualizationPlatformDetails
+			//label[text()='Version:']/../..//input
+	
+	I entered Version as "ABCD"
+		EnterEditionForVirtualizationPlatformDetails
+			//label[text()='Edition:']/../..//input
+
+	I click on Save button to close Virtualization Platform form
+		ClickOnSaveButtonToCloseVirtualizationPlatformForm
+			(//*[text()='Add new record']/../../../../..//button[contains(text()[normalize-space()],'Save')])[1]
+
+Contractual Definitions
+
+	I select Invoice Frequency option as "Option A: Quarterly consumption subscription invoice"
+	64987
+		SelectInvoiceFrequencyOption
+			//label[text()='Invoicing frequency:']/../..//select
+
+
+
+	I click on next button from Quetionnaire page 
+		ClickOnNextButtonFromQuestionnairePage
+
+
+
+===============================================================================================================================
+[Contacts Page]
+===============================================================================================================================
+
+Next Button class name:
+	heap-finish
+	
+	I choose document type as PDF
+	
+	I add Authorized Contacts
+		
+	I add SoftwareONE Contacts	
+
+	I click on Finish Button from Contacts Page
+
+===================================================================================================================
+[Opportunity Page]
+===================================================================================================================
+
+	I see some value in Opportunity Line ID Table
