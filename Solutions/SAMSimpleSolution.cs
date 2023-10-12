@@ -1,5 +1,6 @@
 ﻿using CPQUI.Controls;
 using Microsoft.Playwright;
+using Newtonsoft.Json.Linq;
 
 namespace CPQUI.Solutions
 {
@@ -24,23 +25,58 @@ namespace CPQUI.Solutions
         //===============================================================================================================================
 
         //Radio Button Group
-        private ILocator DynamicOptionOfRadioButtonGroup(string value) => _page.Locator($"//label[contains(text()[normalize-space()],'{value}')]");
+        private ILocator DynamicOptionOfRadioButtonGroup(string value)
+        {
+            string selector = $"//label[contains(text()[normalize-space()],'{value}')]";
+            return _page.Locator(selector);
+        }
+
 
         //Table Elements
-        private ILocator DynamicTilesOfTableElement(string value) => _page.Locator($"//span[contains(text()[normalize-space()],'{value}')]/../..");
+        private ILocator DynamicTilesOfTableElement(string value)
+        {
+            string selector = $"//span[contains(text()[normalize-space()],'{value}')]/../..";
+            return _page.Locator(selector);
+        }
+
 
         //Textbox
-        private ILocator DynamicFieldOfTextBox(string value) => _page.Locator($"//label[contains(text()[normalize-space()],'{value}')]/../..//input");
-        private ILocator StrictFieldOfTextBox(string value) => _page.Locator($"//label[text()[normalize-space()]='{value}']/../..//input");
+        private ILocator DynamicFieldOfTextBox(string value)
+        {
+            string selector = $"//label[contains(text()[normalize-space()],'{value}')]/../..//input";  
+            return _page.Locator(selector);
+        }
+        private ILocator StrictFieldOfTextBox(string value)
+        {
+            string selector = $"//label[text()[normalize-space()]='{value}']/../..//input";
+            return _page.Locator(selector);
+        }
+
 
         //Buttons
-        private ILocator DynamicPopupFormOpenerButton(string value) => _page.Locator($"//button[contains(text()[normalize-space()],'{value}')]");
-        private ILocator StaticSaveAndAddAnotherPopupFormButton() => _page.Locator("//button[contains(text()[normalize-space()],'Save & Add another')]");
-        private ILocator DynamicPopupFormSaveButton() => _page.Locator("(//button[contains(text()[normalize-space()],'Save')])[1]");
+        private ILocator DynamicPopupFormOpenerButton(string value)
+        {
+            string selector = $"//button[contains(text()[normalize-space()],'{value}')]";
+            return _page.Locator(selector);
+        }
+        private ILocator StaticSaveAndAddAnotherPopupFormButton()
+        {
+            string selector = "//button[contains(text()[normalize-space()],'Save & Add another')]";
+            return _page.Locator(selector);
+        }
+        private ILocator DynamicPopupFormSaveButton()
+        {
+            string selector = "(//button[contains(text()[normalize-space()],'Save')])[1]";
+            return _page.Locator(selector);
+        }
+
 
         //Dropdown or ComboBox or List
-        private ILocator DynamicOptionOfDropDown(string searchText) => _page.Locator($"//label[text()[normalize-space()]='{searchText}']/../..//select");
-
+        private ILocator DynamicOptionOfDropDown(string searchText)
+        {
+            string selector = $"//label[text()[normalize-space()]='{searchText}']/../..//select";
+            return _page.Locator(selector);
+        }
 
 
         //===============================================================================================================================
@@ -87,12 +123,12 @@ namespace CPQUI.Solutions
         }
 
         public async Task EnterNumberOfEstimatedPhysicalAndVirtualServers(string p0)
-        {
+        {   
             await DynamicFieldOfTextBox("# Servers (Physical & Virtual):").FillAsync(p0);
         }
 
         public async Task EnterNumberOfEstimatedUsers(string p0)
-        {
+        {       
             await DynamicFieldOfTextBox("# Users:").FillAsync(p0);
         }
 

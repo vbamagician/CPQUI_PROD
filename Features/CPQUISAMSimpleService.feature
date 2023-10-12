@@ -3,7 +3,7 @@
 This feature will test the UI stability of SAM Simple Solution in CPQ
 
 @smoke
-Scenario: Test MS Agreement UI Stability in CPQ UI PROD
+Scenario: Test SAMSimple Solution UI Stability in CPQ UI PROD
 	Given I Navigate to CPQ UI Page
 	And I Enter following Login Details and Click Login Button
 		| Username                            | Password        |

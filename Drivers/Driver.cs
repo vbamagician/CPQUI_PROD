@@ -21,7 +21,8 @@ namespace CPQUI.Drivers
             /*//Browser
             var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
-                Headless = false
+                Headless = false,
+                SlowMo = 100
             });*/
 
             //Browser

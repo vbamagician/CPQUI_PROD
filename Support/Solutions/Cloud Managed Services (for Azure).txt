@@ -1,0 +1,174 @@
+I Solution Name: 
+	Cloud Managed Services (for Azure)
+
+NO Configure Now Button 
+
+//================================================================================================================================================================================
+// Definition Page
+//================================================================================================================================================================================
+
+Next Button Element: 
+	heap-next-1
+
+	I select option as "Yes" for service selection of Azure Essential for CSP
+		SelectOptionForServiceSelectionOfAzureEssentialForCSP(string optionCaption)
+			//label[contains(text()[normalize-space()],'Azure Essentials for CSP?')]/../..//label[contains(text()[normalize-space()],'Yes')]
+		
+		Wait for pageloading complete
+	
+	I select option as "Yes" for service selection of Azure Essentials for EA
+		SelectOptionForServiceSelectionOfAzureEssentialsForEA(string optionCaption)
+			//label[contains(text()[normalize-space()],'Azure Essentials for EA?')]/../..//label[contains(text()[normalize-space()],'Yes')]
+	
+		Wait for pageloading complete
+
+	I select option as "Yes" for service selection of Azure Advanced
+		SelectOptionForServiceSelectionOfAzureAdvanced(string optionCaption)
+			//label[contains(text()[normalize-space()],'Azure Advanced?')]/../..//label[contains(text()[normalize-space()],'Yes')]
+
+		Wait for pageloading complete
+
+	I click on Next button from Definition page
+		ClickOnNextButtonFromDefinitionPage(string pagePlacementText)
+
+		Wait for pageloading complete
+
+//================================================================================================================================================================================
+// Scope Page
+//================================================================================================================================================================================
+
+Next Button Element
+	heap-next-2
+
+
+//Azure Essentials for CSP
+
+	I entered Estimated Consumption per month for Azure Essential for CSP as "10000"
+		EnterEstimatedConsumptionPerMonthForAzureEssentialForCSP(string amount)
+			(//label[contains(text()[normalize-space()],'Estimated Consumption per month')]/../..//input)[1]
+
+
+
+	I choose option as "Yes" about offering discount for Azure Essential for CSP
+		ChooseOptionAboutOfferingDiscountForAzureEssentialForCSP(string deicsion)
+			(//label[contains(text()[normalize-space()],'Yes')])[1]
+	
+		Wait for pageloading complete
+
+
+	I entered discount percentage for Azure Essential for CSP as "5"
+		EnterDiscountPercentageForAzureEssentialForCSP(string discount)
+			(//label[contains(text()[normalize-space()],'Discount %:')]/../..//input)[1]
+
+
+//Azure Essentials for EA
+
+	I entered Estimated Consumption per month for Azure Essentials for EA as "10000"
+		EnterEstimatedConsumptionPerMonthForAzureEssentialsForEA(string amount)
+			(//label[contains(text()[normalize-space()],'Estimated Consumption per month')]/../..//input)[2]
+
+
+
+	I choose option as "Yes" about offering discount for Azure Essentials for EA
+		ChooseOptionAboutOfferingDiscountForAzureEssentialsForEA(string deicsion)
+			(//label[contains(text()[normalize-space()],'Yes')])[2]
+
+		Wait for pageloading complete
+
+
+	I entered discount percentage for Azure Essentials for EA as "5"
+		EnterDiscountPercentageForAzureEssentialsForEA(string discount)
+			(//label[contains(text()[normalize-space()],'Discount %:')]/../..//input)[2]
+
+
+
+//Azure Advanced
+
+	I entered Estimated Consumption per month for Azure Advanced as "10000"
+		EnterEstimatedConsumptionPerMonthForAzureAdvanced(string amount)
+			(//label[contains(text()[normalize-space()],'Estimated Consumption per month')]/../..//input)[3]
+
+
+
+	I choose option as "Yes" about offering discount for Azure Advanced
+		ChooseOptionAboutOfferingDiscountForAzureAdvanced(string deicsion)
+			(//label[contains(text()[normalize-space()],'Yes')])[3]
+
+		Wait for pageloading complete
+
+	I entered discount percentage for Azure Advanced as "5"
+		EnterDiscountPercentageForAzureAdvanced(string discount)
+			(//label[contains(text()[normalize-space()],'Discount %:')]/../..//input)[3]
+
+
+//Azure Account Transfer
+
+	I select option from dropdown for Azure Account Transfer as New CSP and value is "66852"
+		SelectOptionForAzureAccountTransfer(string optionValue)
+			//label[contains(text()[normalize-space()],'Please select from one of the following transfer options:')]/../..//select
+
+		Wait for pageloading complete
+
+
+	I click on next button from scope page 
+		ClickOnNextButtonFromScopePage(string pagePlacementText)
+
+		Wait for pageloading complete
+
+
+//================================================================================================================================================================================
+// Customer Pricing Page
+//================================================================================================================================================================================
+
+
+Next Button Class Name:
+	heap-next-3
+
+
+	I select an option for implementation level as "Easy"
+		SelectAnOptionForImplementationLevel
+			//label[contains(text()[normalize-space()],'Easy')]
+
+
+	I click on Next button from customer pricing page 
+		ClickOnNextButtonFromCustomerPricingPage(string pagePlacementText)
+			
+
+
+
+//================================================================================================================================================================================
+[Contacts Page]
+//================================================================================================================================================================================
+
+Next Button class name:
+	heap-finish
+	
+	I choose document type as PDF
+	
+	I add Authorized Contacts
+		
+	I add SoftwareONE Contacts	
+
+	I click on Finish Button from Contacts Page
+
+//================================================================================================================================================================================
+[Opportunity Page]
+//================================================================================================================================================================================
+
+	I see some value in Opportunity Line ID Table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
