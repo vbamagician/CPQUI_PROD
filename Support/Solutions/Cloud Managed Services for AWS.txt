@@ -1,0 +1,30 @@
+Solution Name: 
+	Cloud Managed Services for AWS
+
+Does not have Configure Now Button
+	Completely Modularized Solution 
+
+//=========================================================================================================================================
+// Definition Page
+//=========================================================================================================================================
+
+next Button Element 
+	heap-next-1
+
+	I select option as "Premium" from available Services Tiers in scope 
+		SelectServiceForCloudManagedServicesForAWS(string choosenService) 
+			//label[text()='Premium']
+		Wait for page loading completed 
+
+	I click on Next button from definition page for CMSAWS
+		ClickOnNextButtonFromDefinitionPage()
+
+//=========================================================================================================================================
+// Definition Page
+//=========================================================================================================================================
+
+next Button Element 
+	heap-next-2
+
+	
+	

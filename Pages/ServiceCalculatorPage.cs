@@ -17,7 +17,7 @@ namespace CPQUI.Pages
         }
 
         //Properties
-        private ILocator DownloadFileButton => _page.GetByRole(AriaRole.Button, new() { Name = "Download" });
+        private ILocator DownloadFileButton => _page.Locator("//button[text()='Download']");
         private ILocator PopupWindowCloseButton => _page.GetByRole(AriaRole.Button, new() { Name = "Close" });
         private ILocator UploadFileButton => _page.GetByRole(AriaRole.Button, new() { Name = "Upload" });
         private ILocator ChooseFileButton => _page.GetByText("Choose files");
@@ -26,13 +26,18 @@ namespace CPQUI.Pages
         //Methods
         public async Task DownloadCalculator()
         {
+            Console.WriteLine("Waiting for file to download");
             var download = await _page.RunAndWaitForDownloadAsync( async () => await DownloadFileButton.ClickAsync() );
+
+            Console.WriteLine("Saving file to a folder");
             await download.SaveAsAsync("MAS Data - Unified Support for Azure.xlsb");
         }
 
         public async Task ClosePopupWindow()
         {
+            Console.WriteLine("About to click on Close button ");
             await PopupWindowCloseButton.ClickAsync();
+            Console.WriteLine("Clicked on close button");
         }
 
         public async Task UploadCalculator()

@@ -63,7 +63,7 @@ namespace CPQUI.Pages
         public async Task ClickNextButtonFromConfigureMASPage(string pagePlacementText)
         {
             await _controls.WaitForPageAppears(pagePlacementText);
-                
+            await _controls.NextButton(pagePlacementText).ClickAsync();    
             await _controls.WaitForLoadingScreenToDisappear();
         }
     }

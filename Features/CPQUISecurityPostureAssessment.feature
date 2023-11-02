@@ -17,7 +17,7 @@ Scenario: Test Security Posture Assessment Solution UI Stability On CPQ UI for S
 	And I click Next on Scope Page for SPAE
 	And I Choose Days to Build My Plan for SPAE
 	And I click Next Customer Pricing Page for SPAE
-	And I click Next Margin As Sold Page for SPAE
+	#And I click Next Margin As Sold Page for SPAE
 	And I fill Questionnaire Page questions for SPAE
 	And I click Next on Questionaire Page for SPAE
 	And I Select Document Type as PDF for APAE

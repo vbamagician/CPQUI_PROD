@@ -77,6 +77,17 @@ namespace CPQUI.StepDefinitions
                 //Source Environment Variables
                 string? username = Environment.GetEnvironmentVariable("CPQUI_LOGIN_USERNAME");
                 string? password = Environment.GetEnvironmentVariable("CPQUI_LOGIN_PASSWORD");
+                
+                bool IsEqual;
+                if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
+                {
+                    IsEqual = false;
+                } else
+                {
+                    IsEqual = true;
+                }
+                IsEqual.Should().BeTrue();
+
                 await _loginPage.Login(username, password);
             }
         }
@@ -153,7 +164,7 @@ namespace CPQUI.StepDefinitions
         [Given(@"I click Next on Questionaire Page")]
         public async Task ThenIClickNextOnQuestionairePage()
         {
-            const string questionairePagePlacement = "next-5";
+            const string questionairePagePlacement = "next-5"; 
             await _questionnairePage.ClickOnNextButtonFromQuestionnairePage(questionairePagePlacement);
         }
 

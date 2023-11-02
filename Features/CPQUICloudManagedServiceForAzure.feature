@@ -24,7 +24,7 @@ Scenario: Test Cloud Managed Service for Azure in CPQ
 	And I entered Estimated Consumption per month for Azure Advanced as "10000"
 	And I choose option as "Yes" about offering discount for Azure Advanced
 	And I entered discount percentage for Azure Advanced as "5"
-	And I select option from dropdown for Azure Account Transfer as New CSP and value is "66852"
+	And I select option from dropdown for Azure Account Transfer as New CSP and value is "69119"
 	And I click on next button from scope page for CMSA
 	And I click on Next button from customer pricing page for CMSA
 	And I Select Document Type as PDF

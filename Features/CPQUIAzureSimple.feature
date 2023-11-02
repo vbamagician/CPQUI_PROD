@@ -17,7 +17,7 @@ Scenario: Test AzureSimple UI Stability On CPQ UI
 	And I choose customer have existing account to transfer
 	And I click Next on Scope Page
 	And I click Next Customer Pricing Page
-	And I click Next Margin As Sold Page
+	#And I click Next Margin As Sold Page
 	And I Add Microsoft Tenant
 	And I entered prepayment amount as 60000
 	And I click Next on Questionaire Page

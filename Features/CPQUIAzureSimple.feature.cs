@@ -128,9 +128,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line 19
  testRunner.And("I click Next Customer Pricing Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 20
- testRunner.And("I click Next Margin As Sold Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
 #line 21
  testRunner.And("I Add Microsoft Tenant", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

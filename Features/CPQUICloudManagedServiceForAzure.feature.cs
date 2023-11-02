@@ -154,7 +154,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 27
  testRunner.And("I select option from dropdown for Azure Account Transfer as New CSP and value is " +
-                        "\"66852\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                        "\"69119\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 28
  testRunner.And("I click on next button from scope page for CMSA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

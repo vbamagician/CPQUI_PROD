@@ -20,7 +20,7 @@ Scenario: Test MS Agreement UI Stability in CPQ UI PROD
 	And I click on Submit Button
 	And I click Next on Scope Page for MSA
 	And I click Next Customer Pricing Page for MSA
-	And I click Next Margin As Sold Page for MSA
+	#And I click Next Margin As Sold Page for MSA
 	And I choose Remote option for FinOps Fundamentals and KickOff
 	And I choose Remote option for Spend Management Implementation or Onboarding
 	And I choose Remote option for PyraCloud Spend Management Training

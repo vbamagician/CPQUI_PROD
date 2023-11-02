@@ -1,0 +1,55 @@
+Service Name: 
+	DevOps Maturity Assessment for AWS
+
+No Comfigure Now Button for this service
+
+//=================================================================================================================================
+// Scope Page
+//=================================================================================================================================
+
+Next Button Element:
+	heap-next-2
+
+Please select the appropriate modules related to this solution.
+
+	I select the first module as "DevOps Maturity Assessment for AWS- Extension- People & Process"
+		SelectModule(string moduleName)
+		//span[contains(text(),'People & Process')]/../..//label
+	Wait for loading screen to disappere
+
+	I select the second module as "DevOps Maturity Assessment for AWS- Extension- Process & Technology"
+		SelectModule(string moduleName)
+		//span[contains(text(),'Process & Technology')]/../..//label
+	Wait for loading screen to disappere		
+
+	 I click on Next button from scope page
+		ClickOnNextButtonFromScopePageForDMAAWS(string pagePlacementText)
+	Wait for loading screen to disappere
+
+		
+//=================================================================================================================================
+// Customer Pricing Page
+//=================================================================================================================================
+
+Next Button Element:
+	heap-next-3
+	
+	I click on Next button from Customer Pricing page
+		ClickOnNextButtonFromCustomerPricingPageForDMAAWS(string pagePlacementText)
+	
+
+//=================================================================================================================================
+// Margin As Sold Page
+//=================================================================================================================================
+
+Next Button Element:
+	heap-next-4
+	
+	I click on Next button from Margin As Sold Page
+		ClickOnNextButtonFromMarginAsSoldPageForDMAAWS(string pagePlacementText)
+
+//=================================================================================================================================
+// Contacts Page
+//================================================================================================================================
+
+	

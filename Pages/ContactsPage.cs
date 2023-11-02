@@ -52,9 +52,7 @@ namespace CPQUI.Pages
 
         public async Task SelectDocumentTypeAsPDF()
         {
-            //I need to find why we should wait before option select
-            Thread.Sleep(3000);
-            await DocumentTypeButton.SelectOptionAsync(new SelectOptionValue() { Index = 1 });
+            await DocumentTypeButton.SelectOptionAsync(new[] { "PDF" });
         }
 
         public async Task ClickOnFinishButtonFromContactsPage(string pagePlacementText)

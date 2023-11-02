@@ -95,14 +95,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table8.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "CPQ.account1708"});
 #line 8
- testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table8, "And ");
+ testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table9, "And ");
 #line hidden
 #line 11
  testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -175,14 +175,11 @@ this.ScenarioInitialize(scenarioInfo);
 #line 33
  testRunner.And("I click Next Customer Pricing Page for SAMSimple", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 34
- testRunner.And("I click Next Margin As Sold Page for SAMSimple", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
 #line 35
  testRunner.And("I click on Add Domain Button to Add Trusted Domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 36
- testRunner.And("I select \"64979\" as option from Domain Form for Trusted Domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I select \"Trusted\" as option from Domain Form for Trusted Domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 37
  testRunner.And("I entered domain name as \"ABCD\" for Trusted Domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -191,7 +188,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I click on Save and Add Another button to add one more domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 39
- testRunner.And("I select \"64980\" as option from Domain Form for Untrusted Domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I select \"Untrusted\" as option from Domain Form for Untrusted Domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 40
  testRunner.And("I entered domain name as \"ABCD\" for Untrusted Domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -250,7 +247,8 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I click on Save button to close Virtualization Platform form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 58
- testRunner.And("I select Invoice Frequency option as \"64988\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I select Invoice Frequency option as \"Option A: Quarterly consumption subscriptio" +
+                        "n invoice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 59
  testRunner.And("I click Next on Questionaire Page for SAMSimple", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

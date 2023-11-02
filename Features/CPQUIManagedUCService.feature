@@ -20,7 +20,7 @@ Scenario: Test Managed UC UI Stability on CPQ UI
 	And I entered hundred as Number of Devices
 	And I click Next on Scope Page for MUC
 	And I click on Next Button from Customer Pricing Page for MUC
-	And I click on Next Button from Margin As Sold Page for MUC
+	#And I click on Next Button from Margin As Sold Page for MUC
 	And I entered name as random value for Microsoft Office Tenant
 	And I click on Next Button from Questionnaire Page for MUC
 	And I Select Document Type as PDF

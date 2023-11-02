@@ -31,12 +31,12 @@ Scenario: Test SAMSimple Solution UI Stability in CPQ UI PROD
 	And I click Next on Scope Page for SAMSimple
 	And I select an option for implementation level as "Medium"
 	And I click Next Customer Pricing Page for SAMSimple
-	And I click Next Margin As Sold Page for SAMSimple
+	#And I click Next Margin As Sold Page for SAMSimple
 	And I click on Add Domain Button to Add Trusted Domain
-	And I select "64979" as option from Domain Form for Trusted Domain
+	And I select "Trusted" as option from Domain Form for Trusted Domain
 	And I entered domain name as "ABCD" for Trusted Domain
 	And I click on Save and Add Another button to add one more domain
-	And I select "64980" as option from Domain Form for Untrusted Domain
+	And I select "Untrusted" as option from Domain Form for Untrusted Domain
 	And I entered domain name as "ABCD" for Untrusted Domain
 	And I click on Save button to close domain form
 	And I click on Add Location Button To Add Gegraphic Location
@@ -55,7 +55,7 @@ Scenario: Test SAMSimple Solution UI Stability in CPQ UI PROD
 	And I entered Version as "A01" for Virtualization Platform
 	And I entered Edition as "ABCD" for Virtualization Platform
 	And I click on Save button to close Virtualization Platform form
-	And I select Invoice Frequency option as "64988"
+	And I select Invoice Frequency option as "Option A: Quarterly consumption subscription invoice"
 	And I click Next on Questionaire Page for SAMSimple
 	And I Select Document Type as PDF
 	And I Add Authorized Contacts

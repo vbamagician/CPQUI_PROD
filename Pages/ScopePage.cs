@@ -1,5 +1,6 @@
 ﻿using CPQUI.Controls;
 using Microsoft.Playwright;
+using NUnit.Framework.Internal;
 using System.Formats.Asn1;
 
 namespace CPQUI.Pages
@@ -20,12 +21,14 @@ namespace CPQUI.Pages
         //*****************************************************************************************************************
         //Common Properties
         //*****************************************************************************************************************
+        private ILocator DynamicRadioButtonOption(string questionLabel, string optionLabel) => _page.Locator($"//label[text()='{questionLabel}']/../..//label[text()='{optionLabel}']");
+
 
         //*****************************************************************************************************************
         //Properties for Azure Simple 
         //*****************************************************************************************************************
         private ILocator ECVTextBox => _page.Locator("//label[contains(text(),'Estimated Consumption per month')]/../..//input");
-        private ILocator AccountOptions => _page.Locator("//div[contains(@class,'column1-60')]/div/div[2]/div/div[6]//select");
+        private ILocator AccountOptions => _page.Locator("//select");
 
         //*****************************************************************************************************************
         //Properties for Security Posture Assess. Example page 
@@ -63,10 +66,9 @@ namespace CPQUI.Pages
         private ILocator ThreeYearForAgreementTermRadioButton => _page.Locator("//label[contains(text(), '3 Year')]");
         private ILocator HundredAsNumberOfUsersTextBox => _page.Locator("//label[contains(text(), 'Number of users:')]/../..//input");
         private ILocator HundredAsNumberOfDevicesTextBox => _page.Locator("//label[contains(text(), 'Number of devices:')]/../..//input");
+
+
         
-
-
-
 
         //  MM    MM  EEEEEE  TTTTTT  HH    HH  OOOOO  DDDDD    SSSSSS
         //  MMM  MMM  EE        TT    HH    HH OO   OO DD   DD  SS
@@ -77,6 +79,15 @@ namespace CPQUI.Pages
 
 
 
+        //-----------------------------------------------------------------------------------------------------------------
+        //Methods for DevOps Maturity Assessment
+        //-----------------------------------------------------------------------------------------------------------------
+
+        public async Task SelectOptionFromRadioButtonGroupForDMA(string optionLabel, string questionLabel)
+        {
+            await DynamicRadioButtonOption(questionLabel, optionLabel).ClickAsync();
+        }
+
 
         //-----------------------------------------------------------------------------------------------------------------
         //Methods for Managed UC
@@ -85,8 +96,6 @@ namespace CPQUI.Pages
         public async Task EnterNumberOfDevices()
         {
             await HundredAsNumberOfDevicesTextBox.FillAsync("100");
-            await HundredAsNumberOfDevicesTextBox.PressAsync("Enter");
-            await _controls.WaitForLoadingScreenToDisappear();
         }
 
         public async Task EnterNumberOfUsers()
@@ -144,7 +153,13 @@ namespace CPQUI.Pages
 
         public async Task DownloadWBSFile(string fileName)
         {
+            Console.WriteLine("Clicking the Download WBS button.");
+            await DownloadWBSButton.ClickAsync();
+
+            Console.WriteLine("Waiting for the download to start.");
             IDownload download = await _page.RunAndWaitForDownloadAsync(async () => await DownloadWBSButton.ClickAsync());
+
+            Console.WriteLine("Saving the download file.");
             await download.SaveAsAsync(fileName);
         }
 
@@ -248,7 +263,6 @@ namespace CPQUI.Pages
 
         public async Task ClickOnNextButtonFromScopingPage(string pagePlacementText)
         {
-            //await _controls.WaitForPageAppears(pagePlacementText);
             await _controls.NextButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }
