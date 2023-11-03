@@ -83,8 +83,8 @@ namespace CPQUI.Pages
         //Methods for DevOps Maturity Assessment
         //-----------------------------------------------------------------------------------------------------------------
 
-        public async Task SelectOptionFromRadioButtonGroupForDMA(string optionLabel, string questionLabel)
-        {
+        public async Task SelectOptionFromRadioButtonGroupForDMA(string questionLabel, string optionLabel)
+        { 
             await DynamicRadioButtonOption(questionLabel, optionLabel).ClickAsync();
         }
 

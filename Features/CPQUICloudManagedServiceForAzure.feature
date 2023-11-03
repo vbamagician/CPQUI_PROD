@@ -10,7 +10,7 @@ Scenario: Test Cloud Managed Service for Azure in CPQ
 		| helpdesk-scg.global@softwareone.com | CPQ.account1708 |
 	And I click on New Contract Button
 	And I configure client details for new Contract
-	And I click on Service "Cloud Managed Services (for Azure)"
+	And I click on Service "Cloud Managed Services for Azure"
 	And I select option as "Yes" for service selection of Azure Essential for CSP
 	And I select option as "Yes" for service selection of Azure Essentials for EA
 	And I select option as "Yes" for service selection of Azure Advanced

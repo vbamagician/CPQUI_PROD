@@ -36,18 +36,12 @@ namespace CPQUI.StepDefinitions
             await _serviceCalculatorPage.UploadCalculator();
         }
 
-        [Given(@"I click next from ScopePage for EBC")]
-        public async Task GivenIClickNextFromScopePageForEBC()
+        [When(@"When I click Finish from Scope Page for EBC")]
+        public async Task WhenWhenIClickFinishFromScopePageForEBC()
         {
-            const string scopePagePlacement = "next-2";
-            await _serviceCalculatorPage.ClickOnNextButtonFromServiceCalculatorPage(scopePagePlacement);
+            const string scopePagePlacement = "finish";
+            await _serviceCalculatorPage.ClickOnFinishButtonFromServiceCalculatorPage(scopePagePlacement);
         }
 
-        [When(@"When I click Finish from Margin As Sold Page for EBC")]
-        public async Task WhenWhenIClickFinishFromMarginAsSoldPageForEBC()
-        {
-            const string marginPagePlacement = "finish";
-            await _marginAsSoldPage.ClickOnFinishBttonFromMarginAsSoldPage(marginPagePlacement);
-        }
     }
 }

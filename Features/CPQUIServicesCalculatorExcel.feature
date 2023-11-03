@@ -15,6 +15,5 @@ Scenario: Test Excel Based Coonfigurator Solution
 	And I click on Download Button to download configurator for EBC
 	And I see the popup window and close it
 	And I upload the Excel based configurator
-	And I click next from ScopePage for EBC
-	#When When I click Finish from Margin As Sold Page for EBC
+	When When I click Finish from Scope Page for EBC
 	Then I should see the value of contract

@@ -49,12 +49,9 @@ namespace CPQUI.Pages
             await _controls.WaitForLoadingScreenToDisappear();
         }
 
-        public async Task ClickOnNextButtonFromServiceCalculatorPage(string pagePlacementText)
+        public async Task ClickOnFinishButtonFromServiceCalculatorPage(string pagePlacementText)
         {
-            await _controls.WaitForPageAppears(pagePlacementText);
-            _controls.HoldThread(1000);
-            await _controls.NextButton(pagePlacementText).ClickAsync();
-            await _controls.WaitForLoadingScreenToDisappear();
+            await _controls.FinishButton(pagePlacementText).ClickAsync();
         }
     }
 }
