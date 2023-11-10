@@ -42,7 +42,6 @@ namespace CPQUI.Pages
         private ILocator DownloadWBSButton => _page.Locator("//span/a");
         private ILocator ImportWBSButton => _page.GetByRole(AriaRole.Button, new() { Name = " Import" });
         private ILocator ChooseFileButton => _page.GetByText("Choose files");
-        //private ILocator UploadDocumentButton => _page.GetByText("Uploadim");
         private ILocator UploadDocumentButton => _page.Locator("//span[text()='Upload']/..");
         private ILocator SellPriceLable => _page.Locator("//tbody/tr[2]/td[11]/span");
         private ILocator AddTaskButton => _page.GetByRole(AriaRole.Button, new() { Name = " Add" });
