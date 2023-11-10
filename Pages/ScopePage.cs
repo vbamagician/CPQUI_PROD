@@ -42,7 +42,8 @@ namespace CPQUI.Pages
         private ILocator DownloadWBSButton => _page.Locator("//span/a");
         private ILocator ImportWBSButton => _page.GetByRole(AriaRole.Button, new() { Name = " Import" });
         private ILocator ChooseFileButton => _page.GetByText("Choose files");
-        private ILocator UploadDocumentButton => _page.GetByText("Upload");
+        //private ILocator UploadDocumentButton => _page.GetByText("Uploadim");
+        private ILocator UploadDocumentButton => _page.Locator("//span[text()='Upload']/..");
         private ILocator SellPriceLable => _page.Locator("//tbody/tr[2]/td[11]/span");
         private ILocator AddTaskButton => _page.GetByRole(AriaRole.Button, new() { Name = " Add" });
         private ILocator TaskTitleTextBox => _page.Locator("//label[contains(text(),'Title:')]/../..//input");
@@ -153,13 +154,7 @@ namespace CPQUI.Pages
 
         public async Task DownloadWBSFile(string fileName)
         {
-            Console.WriteLine("Clicking the Download WBS button.");
-            await DownloadWBSButton.ClickAsync();
-
-            Console.WriteLine("Waiting for the download to start.");
             IDownload download = await _page.RunAndWaitForDownloadAsync(async () => await DownloadWBSButton.ClickAsync());
-
-            Console.WriteLine("Saving the download file.");
             await download.SaveAsAsync(fileName);
         }
 
