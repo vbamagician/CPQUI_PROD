@@ -11,20 +11,105 @@ Does not have Configure Now Button
 next Button Element 
 	heap-next-1
 
-	I select option as "Premium" from available Services Tiers in scope 
+	I select option as "Essentials" from available Services Tiers in scope 
 		SelectServiceForCloudManagedServicesForAWS(string choosenService) 
-			//label[text()='Premium']
+			//label[text()='Essentials']
 		Wait for page loading completed 
 
-	I click on Next button from definition page for CMSAWS
+	And I click on Next button from definition page for CMSAWS
 		ClickOnNextButtonFromDefinitionPage()
 
 //=========================================================================================================================================
-// Definition Page
+// Scope Page
 //=========================================================================================================================================
 
 next Button Element 
 	heap-next-2
 
+	And I entered "12000" in a textbox of a question "Estimated Total Consumption per month"
+		EnterValueInTextBoxBasedOnQuestion(string question, string answer)
+			Prop: LocateTextBoxByCousineLabel : 
+				$"//label[contains(text()[normalize-space()],'{question}')]/../..//input"
+
+	And I entered "1" in a textbox of a question "Number of AWS Accounts"
+		EnterValueInTextBoxBasedOnQuestion(string question, string answer)
+			Prop: LocateTextBoxByCousineLabel: 
+				$"//label[contains(text()[normalize-space()],'{question}')]/../..//input"
 	
+	And I choose "No" from radio button group of a question "Does the customer has an exsiting AWS Account to transfer?"
+		ChooseRadioButtonBasedOnQuestion(string question, string optionString)
+			Prop: LocateRadioButtonByCousineLable: 
+				$"//label[contains(text()[normalize-space()],'{question}')]/../..//label[contains(text()[normalize-space()],'{optionString}')]"
 	
+	And I choose "New 'Commercial Account' to be setup by SWO" from dropdown box of a question "Please select from one of the following options:"
+		ChooseDropDownItemBasedOnQuestion(string question, string optionString)
+			Prop: LocateDropdownByCousineLabel:
+				$"//label[contains(text()[normalize-space()],'{question}')]/../..//select"
+
+	And I choose "Standard Support" from radio button group of a question "Standard or Enterprise Support?"
+		ChooseRadioButtonBasedOnQuestion(string question, string optionString)
+			Prop: LocateRadioButtonByCousineLable: 
+				$"//label[contains(text()[normalize-space()],'{question}')]/../..//label[contains(text()[normalize-space()],'{optionString}')]"
+	
+	And I choose "AWS Led Basic Support" from radio button group of a question "Level of Support:"
+		ChooseRadioButtonBasedOnQuestion(string question, string optionString)
+			Prop: LocateRadioButtonByCousineLable: 
+				$"//label[contains(text()[normalize-space()],'{question}')]/../..//label[contains(text()[normalize-space()],'{optionString}')]"
+
+	And I click on Next button from scope page for CMSAWS
+		ClickOnNextButtonFromScopePage()
+
+//=========================================================================================================================================
+// Customer Pricing Page
+//=========================================================================================================================================
+
+next Button Element 
+	heap-next-3
+
+	And I click on Next button from customer pricing page for CMSAWS
+		ClickOnNextButtonFromCustomerPricingPage()
+
+//=========================================================================================================================================
+// Questionnaire Page
+//=========================================================================================================================================
+
+next Button Element 
+	heap-next-5
+
+	And I entered "ABC123" in a textbox of a question "SCU Number:"
+		EnterValueInTextBoxBasedOnQuestion(string question, string answer)
+			Prop: LocateTextBoxByCousineLabel : 
+				$"//label[contains(text()[normalize-space()],'{question}')]/../..//input"
+	
+	And I choose "No" from radio button group of a question "Do they need split billing?"
+		ChooseRadioButtonBasedOnQuestion(string question, string optionString)
+			Prop: LocateRadioButtonByCousineLable: 
+				$"//label[contains(text()[normalize-space()],'{question}')]/../..//label[contains(text()[normalize-space()],'{optionString}')]"
+
+	And I entered "ABCD" in a textbox of a question "Customer PO for monthly billing:"
+		EnterValueInTextBoxBasedOnQuestion(string question, string answer)
+			Prop: LocateTextBoxByCousineLabel : 
+				$"//label[contains(text()[normalize-space()],'{question}')]/../..//input"
+	
+	And I choose "Service Provider Account Model (SPAM)" from radio button group of a question "What should be the target account model?"
+		ChooseRadioButtonBasedOnQuestion(string question, string optionString)
+			Prop: LocateRadioButtonByCousineLable: 
+				$"//label[contains(text()[normalize-space()],'{question}')]/../..//label[contains(text()[normalize-space()],'{optionString}')]"
+	
+	And I entered "ABCD" in a textbox of a question "Account ID:"
+		EnterValueInTextBoxBasedOnQuestion(string question, string answer)
+			Prop: LocateTextBoxByCousineLabel : 
+				$"//label[contains(text()[normalize-space()],'{question}')]/../..//input"
+
+	And I entered "a@gmail.com" in a textbox of a question "Owner Email:"
+		EnterValueInTextBoxBasedOnQuestion(string question, string answer)
+			Prop: LocateTextBoxByCousineLabel : 
+				$"//label[contains(text()[normalize-space()],'{question}')]/../..//input"
+	
+	And I choose "No" from radio button group of a question "Any workload provisioned in Master Payer Account?"
+		ChooseRadioButtonBasedOnQuestion(string question, string optionString)
+			Prop: LocateRadioButtonByCousineLable: 
+				$"//label[contains(text()[normalize-space()],'{question}')]/../..//label[contains(text()[normalize-space()],'{optionString}')]"
+	
+	And I click on Next button from customer questionnaire page for CMSAWS
+		ClickOnNextButtonFromQuestionnairePage()

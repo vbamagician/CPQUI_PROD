@@ -1,6 +1,5 @@
 ﻿using CPQUI.Controls;
 using Microsoft.Playwright;
-using Newtonsoft.Json.Linq;
 
 namespace CPQUI.Solutions
 {

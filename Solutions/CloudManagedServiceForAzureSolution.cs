@@ -1,10 +1,5 @@
 ﻿using CPQUI.Controls;
 using Microsoft.Playwright;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CPQUI.Solutions
 {
@@ -23,7 +18,6 @@ namespace CPQUI.Solutions
             _controls = new CommonControls(_page);
             _page.SetDefaultTimeout(70000);
         }
-
 
 
         //===============================================================================================================================
