@@ -3,7 +3,7 @@ using Microsoft.Playwright;
 
 namespace CPQUI.Solutions
 {
-    internal class CloudManagedServiceForAWSSolution
+    internal class OracleAdvisoryServicesSolution
     {
         private readonly IPage _page;
         private readonly CommonControls _controls;
@@ -12,7 +12,7 @@ namespace CPQUI.Solutions
         // Contructor
         //===============================================================================================================================
 
-        public CloudManagedServiceForAWSSolution(IPage page)
+        public OracleAdvisoryServicesSolution(IPage page)
         {
             _page = page;
             _controls = new CommonControls(_page);
@@ -20,38 +20,28 @@ namespace CPQUI.Solutions
         }
 
         //===============================================================================================================================
-        // Private Properties
+        // Public Properties
         //===============================================================================================================================
-        private ILocator LocatorForEssentialRadioButton(string choosenService) => _page.Locator($"//label[text()='{choosenService}']"); 
-
-        //===============================================================================================================================
-        // Public Methods
-        //===============================================================================================================================
-
-        public async Task SelectServiceForCloudManagedServicesForAWS(string choosenService)
-        {
-            await LocatorForEssentialRadioButton(choosenService).ClickAsync();
-        }
-
-        public async Task EnterValueInTextBoxBasedOnQuestion(string question, string answer)
-        {
-            await _controls.LocateTextBoxByCousineLabel(question).FillAsync(answer);
-        }
 
         public async Task ChooseRadioButtonBasedOnQuestion(string question, string optionString)
         {
             await _controls.LocateRadioButtonByCousineLable(question, optionString).ClickAsync();
+            await _controls.WaitForLoadingScreenToDisappear();
         }
 
-        public async Task ChooseDropDownItemBasedOnQuestion(string question, string optionString)
+        public async Task EnterValueInTextBoxBasedOnHeader(string header, string answer)
         {
-            await _controls.LocateDropdownByCousineLabel(question).SelectOptionAsync(new[] { optionString });
+            await _controls.LocateTextBoxBasedOnPrecedingHeader(header).FillAsync(answer);
+        }
+
+        public async Task EnterValueInTextAreaBasedOnQuestion(string question, string answer)
+        {
+            await _controls.LocateTextAreaByCousineLabel(question).FillAsync(answer);
         }
 
         //===============================================================================================================================
         // Common Methods
         //===============================================================================================================================
-
 
         public async Task ClickOnNextButtonPage(string pagePlacementText)
         {

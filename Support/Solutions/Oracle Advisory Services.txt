@@ -1,0 +1,110 @@
+Solution Name: 
+	Oracle Advisory Services
+
+Does not have Configure Now Button
+	Completely Modularized Solution
+
+//=========================================================================================================================================
+// Definition Page
+//=========================================================================================================================================
+
+next Button Element 
+	heap-next-1
+
+Optional Products
+	
+		And I choose "Yes" from the radio button group for the question "Database and Middleware?"
+			ChooseRadioButtonBasedOnQuestion(string question, string optionString)
+				Prop: LocateRadioButtonByCousineLable:
+					$"//label[contains(text()[normalize-space()],'{question}')]/../..//label[contains(text()[normalize-space()],'{optionString}')]"	
+
+		
+		And I choose "Yes" from the radio button group for the question "E-Business Suite Production?"
+		And I choose "Yes" from the radio button group for the question "Siebel?"
+		And I choose "Yes" from the radio button group for the question "Hyperion?"
+		And I choose "Yes" from the radio button group for the question "Primavera?"
+		And I choose "Yes" from the radio button group for the question "JD Edwards?"
+		And I choose "Yes" from the radio button group for the question "Peoplesoft?"
+		And I choose "Yes" from the radio button group for the question "Agile?"
+		And I choose "Yes" from the radio button group for the question "Fusion Cloud?"
+		And I choose "Yes" from the radio button group for the question "Business Intelligence?"
+		And I choose "Yes" from the radio button group for the question "Golden Gate?"
+		And I choose "Yes" from the radio button group for the question "Identity Access Management?"
+		And I choose "No" from the radio button group for the question "Other Products?"
+		
+
+
+Optional Services
+
+		And I choose "Yes" from the radio button group for the question "Oracle Audit Support?"
+		And I choose "Yes" from the radio button group for the question "Oracle Negotiation Support?"
+		And I choose "Yes" from the radio button group for the question "Local Project Management?"
+
+
+
+		And I click on Next button from definition page for OAS
+		ClickNextButtonFromDefinitionPageForOAS()
+
+//=========================================================================================================================================
+// Scope Page
+//=========================================================================================================================================
+
+next Button Element 
+	heap-next-2
+
+
+		And I enter "1" into the textbox for the question Number of documents for the "Oracle Entitlements Analysis"
+			EnterValueInTextBoxBasedOnHeader(string header, string answer)
+				Prop: LocateTextBoxBasedOnPrecedingHeader :
+					$"//*[contains(text(),'{header}')]/../../../../following::div[1]//input"
+			
+		And I enter "1" into the textbox for the question Number of servers for the "Database and Middleware"
+		And I enter "1" into the textbox for the question Number of environments for the "E-Business Suite Production"
+		And I enter "1" into the textbox for the question Number of environments for the "Siebel"
+		And I enter "1" into the textbox for the question Number of environments for the "Hyperion"
+		And I enter "1" into the textbox for the question Number of environments for the "Primavera"
+		And I enter "1" into the textbox for the question Number of environments for the "Peoplesoft"
+		And I enter "1" into the textbox for the question Number of environments for the "Agile"
+		And I enter "1" into the textbox for the question Number of environments for the "Fusion Cloud"
+		And I enter "1" into the textbox for the question Number of environments for the "Business Intelligence"
+		And I enter "1" into the textbox for the question Number of targets & sources for the "GoldenGate"
+		And I enter "1" into the textbox for the question Number of users for the "Identity & Access Management"
+		And I enter "50" into the textbox for the question Number of hours for the "Oracle Audit Support"
+		And I enter "50" into the textbox for the question Number of hours for the "Oracle Negotiation Support"
+		And I enter "50" into the textbox for the question Number of hours for the "Oracle Remediation and Optimization"
+		And I enter "50" into the textbox for the question Number of hours for the "Local Project Management"
+
+
+		ClickNextButtonFromScopePageForOAS()
+
+//=========================================================================================================================================
+// Customer Pricing Page
+//=========================================================================================================================================
+
+next Button Element 
+	heap-next-3
+
+	And I click on Next button from customer pricing page for OAS
+		ClickOnNextButtonFromCustomerPricingPageForOAS()
+
+
+
+//=========================================================================================================================================
+// Questionnaire Page
+//=========================================================================================================================================
+
+next Button Element 
+	heap-next-5
+
+
+	And I enter "ABCD" into the textarea for the question "Locations in scope:"
+		EnterValueInTextAreaBasedOnQuestion(string question, string answer)
+			Prop: LocateTextAreaByCousineLabel
+				$"//label[contains(text(),'{question}')]/../..//textarea"
+
+	And I enter "ABCD" into the textarea for the question "Organizations in scope:"
+	And I enter "ABCD" into the textarea for the question "Inventory tools in scope:"
+
+
+	ClickNextButtonFromQuestionnairePageForOAS()
+

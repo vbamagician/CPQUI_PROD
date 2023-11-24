@@ -22,6 +22,12 @@ namespace CPQUI.Pages
             var myButton = _page.Locator($"//span[contains(text(),'{solution}')]/../../td/button[text()='Get Contract']");
             await myButton.ClickAsync();
         }  
+
+        public async Task SelectSpecificSolution(string solution)
+        {
+            var myButton = _page.Locator($"//span[text()='{solution}']/../../td/button[text()='Get Contract']");
+            await myButton.ClickAsync();
+        }
         
         public async Task ClickOnConfigureButton()
         {
