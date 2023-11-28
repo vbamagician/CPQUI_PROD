@@ -65,6 +65,36 @@ namespace CPQUI.Controls
             } while (await element.IsHiddenAsync());
         }
 
+        public async Task<bool> IsElementAvailable(ILocator element, int waitFor)
+        {
+            // Initialize a counter for the timeout
+            int timer = 0;
+
+            // Repeatedly check the element's visibility until it's available or the timeout is reached
+            do
+            {
+                if (timer > waitFor)
+                {
+                    // Timeout exceeded, element is not available
+                    break;
+                }
+
+                // Delay execution for one second
+                Thread.Sleep(1000);
+                timer += 1000;
+
+                // Check if the element is visible
+                if (await element.IsVisibleAsync())
+                {
+                    // Element is available, return true
+                    return true;
+                }
+            } while (await element.IsHiddenAsync());
+
+            // Timeout reached or element is hidden, return false
+            return false;
+        }
+
         public void HoldThread(int sleepingTime)
         {
             Thread.Sleep(sleepingTime);

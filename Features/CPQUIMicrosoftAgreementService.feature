@@ -11,6 +11,7 @@ Scenario: Test MS Agreement UI Stability in CPQ UI PROD
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Service "Microsoft Agreement Service"
+	And I click on Configure Now Button
 	And I select Pack Managed LSP Checkbox
 	And I click on Next Button From Definition Page for MSA
 	And I click on Add Buton to mention Agreemnt that customer going to sign with Microsoft

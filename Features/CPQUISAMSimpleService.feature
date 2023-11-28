@@ -11,6 +11,7 @@ Scenario: Test SAMSimple Solution UI Stability in CPQ UI PROD
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Service "SAMSimple"
+	And I click on Configure Now Button
 	And I choose "Yes" to deploy the SAMSimple inventory agent on client Devices
 	And I choose option of "We are able to deploy the SAMSimple inventory agents to all devices in scope"
 	And I click on Next Button From Definition Page for SAMSimple

@@ -11,6 +11,7 @@ Scenario: I test UI Statbility of MAS Based service
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Service "Office 365 Mail Transition"
+	And I click on Configure Now Button
 	And I Enter Business Volume for MAS as "1000000"
 	And I Enter License Cost for MAS as "20000"
 	And I Enter Third Party Delivery Cost for MAS as "10000"

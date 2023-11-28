@@ -12,6 +12,7 @@ Scenario: Test AzureSimple UI Stability On CPQ UI
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Service "AzureSimple"
+	And I click on Configure Now Button
 	And I entered estimated consumption per month value as 7000000
 	And I choose no discount
 	And I choose customer have existing account to transfer

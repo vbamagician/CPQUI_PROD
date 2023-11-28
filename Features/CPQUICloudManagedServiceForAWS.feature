@@ -11,6 +11,7 @@ Scenario: Test Cloud Managed Service for AWS in CPQ
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Service "Cloud Managed Services for AWS"
+	And I click on Configure Now Button
 	And I select option as "Essentials" from available Services Tiers in scope
 	And I click on Next button from definition page for CMSAWS
 	And I entered "12000" in a textbox of a question "Estimated Total Consumption per month"

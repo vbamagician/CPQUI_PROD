@@ -11,6 +11,7 @@ Scenario: Test Managed UC UI Stability on CPQ UI
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Service "Unified Communications Managed Service"
+	And I click on Configure Now Button
 	And I select option Managed Unified Communications Voice for Optional Services
 	And I select option Yes for Is Voice Infrastructure support required
 	And I select option No for Is Call Route required

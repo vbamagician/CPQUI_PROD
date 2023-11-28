@@ -11,6 +11,7 @@ Scenario: Test Oracle Advisory Services Solution in CPQ
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Specific Service "Oracle Advisory Services"
+	And I click on Configure Now Button
 	And I choose "Yes" from the radio button group for the question "Database and Middleware?"
 	And I choose "Yes" from the radio button group for the question "E-Business Suite Production?"
 	And I choose "Yes" from the radio button group for the question "Siebel?"

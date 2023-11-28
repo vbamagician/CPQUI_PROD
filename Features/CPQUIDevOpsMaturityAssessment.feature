@@ -11,6 +11,7 @@ Scenario: Test DevOps Maturity Assessment Solution in CPQ
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Service "DevOps Maturity Assessment for AWS"
+	And I click on Configure Now Button
 	And I choose option "Yes" for a question "Is this a complex environment?"
 	And I choose option "Yes" for a question "Is the complexity for People and Process?"
 	And I choose option "Yes" for a question "Is the complexity for Process and Technology?"

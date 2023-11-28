@@ -114,6 +114,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line 13
  testRunner.And("I click on Service \"Security Posture Assessment for AWS\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+#line 14
+ testRunner.And("I click on Configure Now Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
 #line 15
  testRunner.And("I Entered Value for technical assessment for SPAE as \"100\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

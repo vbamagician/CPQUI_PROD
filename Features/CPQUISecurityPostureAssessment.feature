@@ -11,7 +11,7 @@ Scenario: Test Security Posture Assessment Solution UI Stability On CPQ UI for S
 	And I click on New Contract Button
 	And I configure client details for new Contract
 	And I click on Service "Security Posture Assessment for AWS"
-	#And I click on Configure Now Button for SPAE 'In PROD we do not have Configure Now Button 
+	And I click on Configure Now Button
 	And I Entered Value for technical assessment for SPAE as "100"
 	And I Choose Yes for serverless based workloads for SPAE
 	And I click Next on Scope Page for SPAE
