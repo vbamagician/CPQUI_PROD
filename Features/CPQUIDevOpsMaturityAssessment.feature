@@ -1,10 +1,12 @@
 ﻿Feature: CPQUIDevOpsMaturityAssessment
 
-this feature will test the UI stability of DevOps Maturity Assessment Solution in CPQ
+This feature aims to test the UI Health of the DevOps Maturity Assessment Solution in CPQ. 
+The primary goal is to ensure a robust and seamless user interface experience while configuring
+a new contract for the DevOps Maturity Assessment tailored for AWS.
 
-@tag1
-Scenario: Test DevOps Maturity Assessment Solution in CPQ
-	Given I Navigate to CPQ UI Page
+  @smoke
+  Scenario: Verify UI Health while Configuring DevOps Maturity Assessment Solution in CPQ
+   	Given I Navigate to CPQ UI Page
 	And I Enter following Login Details and Click Login Button
 		| Username                            | Password        |
 		| helpdesk-scg.global@softwareone.com | CPQ.account1708 |

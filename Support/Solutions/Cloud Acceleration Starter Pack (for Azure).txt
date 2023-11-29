@@ -1,0 +1,74 @@
+Solution Name: 
+	Cloud Acceleration Starter Pack (for Azure)
+
+Does not have Configure Now Button
+	Completely Modularized Solution
+
+//=========================================================================================================================================
+// Definition Page
+//=========================================================================================================================================
+
+next Button Element 
+	heap-next-1
+
+		And I choose "Azure Migrate" from the radio button group for the question "Preferred Discovery Tool:"
+			ChooseRadioButtonBasedOnQuestion(string question, string optionString)
+				Prop: LocateRadioButtonByCousineLable:
+					$"//label[contains(text()[normalize-space()],'{question}')]/../..//label[contains(text()[normalize-space()],'{optionString}')]"
+
+		And I choose "xDC Delhi" from the radio button group for the question "Remote Delivery Team:"
+		And I choose "xDC Delhi" from the radio button group for the question "Local Delivery Location:"
+
+		And I click on Next button from definition page for CASP
+		ClickNextButtonFromDefinitionPageForCASP()
+
+//=========================================================================================================================================
+// Scope Page
+//=========================================================================================================================================
+
+next Button Element 
+	heap-next-2
+
+		And I enter "10" into the textbox for the question Number of documents for the "Number of Servers:"
+			EnterValueInTextBoxBasedOnHeader(string header, string answer)
+				Prop: LocateTextBoxBasedOnPrecedingHeader :
+					$"//*[contains(text(),'{header}')]/../../../../following::div[1]//input"
+
+		And I enter "5" into the textbox for the question Number of documents for the "Estimated duration (weeks):"
+		And I enter "1" into the textbox for the question Number of documents for the "Additional Local Project Manager Effort (Days):"
+		And I enter "1" into the textbox for the question Number of documents for the "Additional Remote Project Manager Effort (Days):"
+		And I enter "1" into the textbox for the question Number of documents for the "Additional Local Delivery Effort (Days):"
+		And I enter "1" into the textbox for the question Number of documents for the "Additional Remote Delivery Effort (Days):"
+		And I enter "5000" into the textbox for the question Number of documents for the "Business Volume:"
+		
+		And I click on Next button from scope page for CASP
+		ClickNextButtonFromScopePageForCASP()
+		
+
+//=========================================================================================================================================
+// Customer Pricing Page
+//=========================================================================================================================================
+
+next Button Element 
+	heap-next-3
+
+		And I click on Next button from customer pricing page for CASP
+		ClickOnNextButtonFromCustomerPricingPageForCASP()
+		
+
+//=========================================================================================================================================
+// Questionnaire Page
+//=========================================================================================================================================
+
+next Button Element 
+	heap-next-5
+
+		And I enter "ABCD" into the textbox for the question Number of documents for the "Azure Tenant Info:"
+			EnterValueInTextBoxBasedOnHeader(string header, string answer)
+				Prop: LocateTextBoxBasedOnPrecedingHeader :
+					$"//*[contains(text(),'{header}')]/../../../../following::div[1]//input"
+
+		And I enter "5" into the textbox for the question Number of documents for the "Azure Subscription Info:"
+
+		And I click on Next button from questionnaire page for CASP
+		ClickNextButtonFromQuestionnairePageForCASP()

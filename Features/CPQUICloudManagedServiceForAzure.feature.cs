@@ -35,7 +35,9 @@ namespace CPQUI.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CPQUICloudManagedServiceForAzure", "This feature will test UI stability of Cloud Managed Service for Azure in CPQ", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CPQUICloudManagedServiceForAzure", @"This feature focuses on testing the UI Health of the Cloud Managed Service for Azure within 
+the CPQ environment. The primary objective is to ensure a reliable and smooth user interface 
+experience while configuring a new contract for Cloud Managed Services tailored specifically for Azure.", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,16 +76,16 @@ namespace CPQUI.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Test Cloud Managed Service for Azure in CPQ")]
-        [NUnit.Framework.CategoryAttribute("tag1")]
-        public void TestCloudManagedServiceForAzureInCPQ()
+        [NUnit.Framework.DescriptionAttribute("Verify UI Health while Configuring Cloud Managed Service for Azure in CPQ")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
+        public void VerifyUIHealthWhileConfiguringCloudManagedServiceForAzureInCPQ()
         {
             string[] tagsOfScenario = new string[] {
-                    "tag1"};
+                    "smoke"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Cloud Managed Service for Azure in CPQ", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 6
-this.ScenarioInitialize(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify UI Health while Configuring Cloud Managed Service for Azure in CPQ", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 8
+  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -92,92 +94,92 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 7
- testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 9
+    testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "CPQ.account1708"});
-#line 8
- testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table3, "And ");
-#line hidden
-#line 11
- testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 12
- testRunner.And("I configure client details for new Contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
+  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table4, "And ");
 #line hidden
 #line 13
- testRunner.And("I click on Service \"Cloud Managed Services for Azure\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 14
- testRunner.And("I click on Configure Now Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I configure client details for new Contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
- testRunner.And("I select option as \"Yes\" for service selection of Azure Essential for CSP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on Service \"Cloud Managed Services for Azure\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 16
- testRunner.And("I select option as \"Yes\" for service selection of Azure Essentials for EA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on Configure Now Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
- testRunner.And("I select option as \"Yes\" for service selection of Azure Advanced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I select option as \"Yes\" for service selection of Azure Essential for CSP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
- testRunner.And("I click on Next button from Definition page for CMSA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I select option as \"Yes\" for service selection of Azure Essentials for EA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
- testRunner.And("I entered Estimated Consumption per month for Azure Essential for CSP as \"10000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I select option as \"Yes\" for service selection of Azure Advanced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
- testRunner.And("I choose option as \"Yes\" about offering discount for Azure Essential for CSP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on Next button from Definition page for CMSA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 21
- testRunner.And("I entered discount percentage for Azure Essential for CSP as \"5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I entered Estimated Consumption per month for Azure Essential for CSP as \"10000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 22
- testRunner.And("I entered Estimated Consumption per month for Azure Essentials for EA as \"10000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose option as \"Yes\" about offering discount for Azure Essential for CSP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 23
- testRunner.And("I choose option as \"Yes\" about offering discount for Azure Essentials for EA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I entered discount percentage for Azure Essential for CSP as \"5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 24
- testRunner.And("I entered discount percentage for Azure Essentials for EA as \"5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I entered Estimated Consumption per month for Azure Essentials for EA as \"10000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 25
- testRunner.And("I entered Estimated Consumption per month for Azure Advanced as \"10000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose option as \"Yes\" about offering discount for Azure Essentials for EA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 26
- testRunner.And("I choose option as \"Yes\" about offering discount for Azure Advanced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I entered discount percentage for Azure Essentials for EA as \"5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 27
- testRunner.And("I entered discount percentage for Azure Advanced as \"5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I entered Estimated Consumption per month for Azure Advanced as \"10000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 28
- testRunner.And("I select option from dropdown for Azure Account Transfer as New CSP and value is " +
-                        "\"69119\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose option as \"Yes\" about offering discount for Azure Advanced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 29
- testRunner.And("I click on next button from scope page for CMSA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I entered discount percentage for Azure Advanced as \"5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 30
- testRunner.And("I click on Next button from customer pricing page for CMSA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I select option from dropdown for Azure Account Transfer as New CSP and value is " +
+                        "\"69119\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 31
- testRunner.And("I Select Document Type as PDF", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on next button from scope page for CMSA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 32
- testRunner.And("I Add Authorized Contacts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on Next button from customer pricing page for CMSA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 33
- testRunner.And("I add Softwareone Contacts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I Select Document Type as PDF", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 34
- testRunner.When("I click Finish on Contacts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.And("I Add Authorized Contacts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 35
+  testRunner.And("I add Softwareone Contacts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 36
+ testRunner.When("I click Finish on Contacts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 37
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

@@ -17,7 +17,8 @@ namespace CPQUI.Pages
         }
 
         // Properties
-        private ILocator ConfigureButton => _page.GetByRole(AriaRole.Button, new() { Name = "Configure Now" });
+        private ILocator ConfigureButton => _page.Locator("//button[text()='Configure Now']");
+        private ILocator SolutionPageElement => _page.Locator("//*[contains(@class,'heap-next')]");
 
         // Methods
         public async Task SelectSolution(string solution)
@@ -35,7 +36,7 @@ namespace CPQUI.Pages
         public async Task ClickOnConfigureButton()
         {
             // Check if the Configure button is available within 30 seconds
-            bool isElementPresent = await _controls.IsElementAvailable(ConfigureButton, 30);
+            bool isElementPresent = await _controls.IsElementAvailable(ConfigureButton, 30000);
 
             if (isElementPresent)
             {

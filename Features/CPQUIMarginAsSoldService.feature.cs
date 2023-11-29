@@ -35,8 +35,10 @@ namespace CPQUI.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CPQUIMarginAsSoldService", "This Feature will test the UI Statbility for Services which only have Margin As S" +
-                    "old Configuration ", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CPQUIMarginAsSoldService", "This feature is dedicated to testing the UI Health of the Margin As Sold Service " +
+                    "within the CPQ UI. \r\nThe primary objective is to ensure a consistent and seamles" +
+                    "s user experience while configuring a new \r\ncontract for the Margin As Sold Serv" +
+                    "ice.", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,16 +77,16 @@ namespace CPQUI.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("I test UI Statbility of MAS Based service")]
+        [NUnit.Framework.DescriptionAttribute("Verify UI Health while Configuring Margin As Sold Service in CPQ UI")]
         [NUnit.Framework.CategoryAttribute("smoke")]
-        public void ITestUIStatbilityOfMASBasedService()
+        public void VerifyUIHealthWhileConfiguringMarginAsSoldServiceInCPQUI()
         {
             string[] tagsOfScenario = new string[] {
                     "smoke"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I test UI Statbility of MAS Based service", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 6
-this.ScenarioInitialize(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify UI Health while Configuring Margin As Sold Service in CPQ UI", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 8
+  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -93,46 +95,46 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 7
+#line 9
  testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table6.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "CPQ.account1708"});
-#line 8
- testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table6, "And ");
-#line hidden
-#line 11
- testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 12
- testRunner.And("I configure client details for new Contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
+ testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table7, "And ");
 #line hidden
 #line 13
- testRunner.And("I click on Service \"Office 365 Mail Transition\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 14
- testRunner.And("I click on Configure Now Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I configure client details for new Contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
- testRunner.And("I Enter Business Volume for MAS as \"1000000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click on Service \"Office 365 Mail Transition\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 16
- testRunner.And("I Enter License Cost for MAS as \"20000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click on Configure Now Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
- testRunner.And("I Enter Third Party Delivery Cost for MAS as \"10000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I Enter Business Volume for MAS as \"1000000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
- testRunner.And("I Enter Internal Deliveyr Cost for MAS as \"500000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I Enter License Cost for MAS as \"20000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
- testRunner.When("I Click on Next Button from MAS Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I Enter Third Party Delivery Cost for MAS as \"10000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
+ testRunner.And("I Enter Internal Deliveyr Cost for MAS as \"500000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 21
+ testRunner.When("I Click on Next Button from MAS Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 22
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

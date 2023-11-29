@@ -29,6 +29,37 @@ namespace CPQUI.Controls
         public ILocator LocateTextAreaByCousineLabel(string question) => _page.Locator($"//label[contains(text(),'{question}')]/../..//textarea");
 
         // Public Methods
+        public async Task EnterValueInTextBoxBasedOnQuestion(string question, string answer)
+        {
+            await LocateTextBoxByCousineLabel(question).FillAsync(answer);
+        }
+
+        public async Task ChooseRadioButtonBasedOnQuestion(string question, string optionString)
+        {
+            await LocateRadioButtonByCousineLable(question, optionString).ClickAsync();
+        }
+
+        public async Task ChooseDropDownItemBasedOnQuestion(string question, string optionString)
+        {
+            await LocateDropdownByCousineLabel(question).SelectOptionAsync(new[] { optionString });
+        }
+
+        public async Task EnterValueInTextBoxBasedOnHeader(string header, string answer)
+        {
+            await LocateTextBoxBasedOnPrecedingHeader(header).FillAsync(answer);
+        }
+
+        public async Task EnterValueInTextAreaBasedOnQuestion(string question, string answer)
+        {
+            await LocateTextAreaByCousineLabel(question).FillAsync(answer);
+        }
+
+        public async Task ClickOnNextButtonPage(string pagePlacementText)
+        {
+            await NextButton(pagePlacementText).ClickAsync();
+            await WaitForLoadingScreenToDisappear();
+        }
+
         public async Task WaitForPageAppears(string pagePlacementText)
         {
             int timer = 0;

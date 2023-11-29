@@ -35,7 +35,9 @@ namespace CPQUI.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CPQUICloudManagedServiceForAWS", "This feature will test UI stability of Cloud Managed Service for AWS in CPQ", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CPQUICloudManagedServiceForAWS", @"This feature focuses on testing the UI Health of the Cloud Managed Service for AWS within the CPQ environment. 
+The objective is to ensure a reliable and seamless user interface experience while configuring a 
+new contract for Cloud Managed Services tailored for AWS.", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,16 +76,16 @@ namespace CPQUI.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Test Cloud Managed Service for AWS in CPQ")]
+        [NUnit.Framework.DescriptionAttribute("Verify UI Health while Configuring Cloud Managed Service for AWS in CPQ")]
         [NUnit.Framework.CategoryAttribute("smoke")]
-        public void TestCloudManagedServiceForAWSInCPQ()
+        public void VerifyUIHealthWhileConfiguringCloudManagedServiceForAWSInCPQ()
         {
             string[] tagsOfScenario = new string[] {
                     "smoke"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Cloud Managed Service for AWS in CPQ", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 6
-this.ScenarioInitialize(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify UI Health while Configuring Cloud Managed Service for AWS in CPQ", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 8
+  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -92,105 +94,105 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 7
- testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 9
+    testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "CPQ.account1708"});
-#line 8
- testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table2, "And ");
-#line hidden
-#line 11
- testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 12
- testRunner.And("I configure client details for new Contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
+  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table3, "And ");
 #line hidden
 #line 13
- testRunner.And("I click on Service \"Cloud Managed Services for AWS\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 14
- testRunner.And("I click on Configure Now Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I configure client details for new Contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
- testRunner.And("I select option as \"Essentials\" from available Services Tiers in scope", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on Service \"Cloud Managed Services for AWS\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 16
- testRunner.And("I click on Next button from definition page for CMSAWS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on Configure Now Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
- testRunner.And("I entered \"12000\" in a textbox of a question \"Estimated Total Consumption per mon" +
-                        "th\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I select option as \"Essentials\" from available Services Tiers in scope", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
- testRunner.And("I entered \"1\" in a textbox of a question \"Number of AWS Accounts\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on Next button from definition page for CMSAWS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
- testRunner.And("I choose \"No\" from radio button group of a question \"Does the customer has an exs" +
-                        "iting AWS Account to transfer?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I entered \"12000\" in a textbox of a question \"Estimated Total Consumption per mon" +
+                        "th\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
- testRunner.And("I choose \"New \'Commercial Account\' to be setup by SWO\" from dropdown box of a que" +
-                        "stion \"Please select from one of the following options:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I entered \"1\" in a textbox of a question \"Number of AWS Accounts\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 21
- testRunner.And("I choose \"Standard Support\" from radio button group of a question \"Standard or En" +
-                        "terprise Support?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"No\" from radio button group of a question \"Does the customer has an exs" +
+                        "iting AWS Account to transfer?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 22
- testRunner.And("I choose \"AWS Led Basic Support\" from radio button group of a question \"Level of " +
-                        "Support:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"New \'Commercial Account\' to be setup by SWO\" from dropdown box of a que" +
+                        "stion \"Please select from one of the following options:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 23
- testRunner.And("I click on Next button from scope page for CMSAWS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"Standard Support\" from radio button group of a question \"Standard or En" +
+                        "terprise Support?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 24
- testRunner.And("I click on Next button from customer pricing page for CMSAWS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"AWS Led Basic Support\" from radio button group of a question \"Level of " +
+                        "Support:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 25
- testRunner.And("I entered \"ABC123\" in a textbox of a question \"SCU Number:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on Next button from scope page for CMSAWS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 26
- testRunner.And("I choose \"No\" from radio button group of a question \"Do they need split billing?\"" +
-                        "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on Next button from customer pricing page for CMSAWS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 27
- testRunner.And("I entered \"ABCD\" in a textbox of a question \"Customer PO for monthly billing:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I entered \"ABC123\" in a textbox of a question \"SCU Number:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 28
- testRunner.And("I choose \"Service Provider Account Model (SPAM)\" from radio button group of a que" +
-                        "stion \"What should be the target account model?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"No\" from radio button group of a question \"Do they need split billing?\"" +
+                        "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 29
- testRunner.And("I entered \"ABCD\" in a textbox of a question \"Account ID:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I entered \"ABCD\" in a textbox of a question \"Customer PO for monthly billing:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 30
- testRunner.And("I entered \"a@gmail.com\" in a textbox of a question \"Owner Email:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"Service Provider Account Model (SPAM)\" from radio button group of a que" +
+                        "stion \"What should be the target account model?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 31
- testRunner.And("I choose \"No\" from radio button group of a question \"Any workload provisioned in " +
-                        "Master Payer Account?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I entered \"ABCD\" in a textbox of a question \"Account ID:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 32
- testRunner.And("I click on Next button from customer questionnaire page for CMSAWS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I entered \"a@gmail.com\" in a textbox of a question \"Owner Email:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 33
- testRunner.And("I Select Document Type as PDF", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"No\" from radio button group of a question \"Any workload provisioned in " +
+                        "Master Payer Account?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 34
- testRunner.And("I Add Authorized Contacts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on Next button from customer questionnaire page for CMSAWS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 35
- testRunner.And("I add Softwareone Contacts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I Select Document Type as PDF", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 36
- testRunner.When("I click Finish on Contacts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.And("I Add Authorized Contacts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 37
+  testRunner.And("I add Softwareone Contacts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 38
+ testRunner.When("I click Finish on Contacts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 39
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

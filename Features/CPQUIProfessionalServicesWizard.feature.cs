@@ -35,9 +35,9 @@ namespace CPQUI.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CPQUIProfessionalServicesWizard", "This feature will test General Services of Azure as a part of Professional Servic" +
-                    "es and will check the for the \r\nUI stability and validate the values came by cho" +
-                    "osing attributes for the task", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CPQUIProfessionalServicesWizard", @"This feature ensures the UI Health of the General Services for Azure section in the CPQ Professional Services Wizard. 
+It verifies the smooth and reliable functioning of the user interface when selecting options and entering details, 
+both through importing and manually inserting WBS.", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,101 +76,15 @@ namespace CPQUI.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Test UI stability of General Services for Azure by Importing WBS")]
+        [NUnit.Framework.DescriptionAttribute("Verify UI Health by Importing WBS for General Services for Azure")]
         [NUnit.Framework.CategoryAttribute("smoke")]
-        public void TestUIStabilityOfGeneralServicesForAzureByImportingWBS()
+        public void VerifyUIHealthByImportingWBSForGeneralServicesForAzure()
         {
             string[] tagsOfScenario = new string[] {
                     "smoke"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test UI stability of General Services for Azure by Importing WBS", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 7
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify UI Health by Importing WBS for General Services for Azure", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 8
- testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Username",
-                            "Password"});
-                table9.AddRow(new string[] {
-                            "helpdesk-scg.global@softwareone.com",
-                            "CPQ.account1708"});
-#line 9
- testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table9, "And ");
-#line hidden
-#line 12
- testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 13
- testRunner.And("I configure client details for new Contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 14
- testRunner.And("I click on Service \"General Services for Azure\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 15
- testRunner.And("I click on Configure Now Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 16
- testRunner.And("I choose Time & Material from Type of Contract Question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 17
- testRunner.And("I entered Contract Duration in Month as \"36\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 18
- testRunner.And("I click on Next Button From Definition Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 20
- testRunner.And("I downloaded the WBS template and saved as \"WBSExport.xls\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 21
- testRunner.And("I click on Import Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 22
- testRunner.And("I click on Choose Files Button and Choose \"WBSExport.xls\" File", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 23
- testRunner.When("I click on Upload Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 25
- testRunner.Then("I Should see the sell prices of task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 26
- testRunner.And("I click on Next Button from Scoping Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 27
- testRunner.And("I click on Next Button from OtherCosts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 28
- testRunner.And("I click on Next Button from CustomerPricing Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 29
- testRunner.When("I click on Finish Button from CustomerVariables Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 30
- testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Test UI stability of General Services For Azure by Manually Inserting WBS")]
-        [NUnit.Framework.CategoryAttribute("smoke")]
-        public void TestUIStabilityOfGeneralServicesForAzureByManuallyInsertingWBS()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "smoke"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test UI stability of General Services For Azure by Manually Inserting WBS", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 33
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -180,8 +94,8 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 34
- testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 9
+    testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
@@ -189,64 +103,150 @@ this.ScenarioInitialize(scenarioInfo);
                 table10.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "CPQ.account1708"});
-#line 35
+#line 10
  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table10, "And ");
 #line hidden
-#line 38
+#line 13
  testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 39
+#line 14
  testRunner.And("I configure client details for new Contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 40
+#line 15
  testRunner.And("I click on Service \"General Services for Azure\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 41
+#line 16
  testRunner.And("I click on Configure Now Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 42
+#line 17
  testRunner.And("I choose Time & Material from Type of Contract Question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 43
+#line 18
  testRunner.And("I entered Contract Duration in Month as \"36\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 44
+#line 19
  testRunner.And("I click on Next Button From Definition Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 46
- testRunner.And("I click on Add Button to add new Task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 21
+ testRunner.And("I downloaded the WBS template and saved as \"WBSExport.xls\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 47
- testRunner.And("I Entered Title of the Task as \"Task 1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 22
+ testRunner.And("I click on Import Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 48
- testRunner.And("I Entered Efforts of the Task as \"100\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 23
+ testRunner.And("I click on Choose Files Button and Choose \"WBSExport.xls\" File", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 49
- testRunner.And("I selected resource as Consultant as option number \"33\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 24
+ testRunner.When("I click on Upload Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 50
- testRunner.And("I selected country as \"India (SWO_IN)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 51
- testRunner.When("I click on Confirm Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 53
+#line 26
  testRunner.Then("I Should see the sell prices of task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 54
+#line 27
  testRunner.And("I click on Next Button from Scoping Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 55
+#line 28
  testRunner.And("I click on Next Button from OtherCosts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 56
+#line 29
  testRunner.And("I click on Next Button from CustomerPricing Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 57
+#line 30
  testRunner.When("I click on Finish Button from CustomerVariables Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+#line 31
+ testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Verify UI Health by Manually Inserting WBS for General Services for Azure")]
+        [NUnit.Framework.CategoryAttribute("smoke")]
+        public void VerifyUIHealthByManuallyInsertingWBSForGeneralServicesForAzure()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "smoke"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify UI Health by Manually Inserting WBS for General Services for Azure", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 34
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 35
+    testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Username",
+                            "Password"});
+                table11.AddRow(new string[] {
+                            "helpdesk-scg.global@softwareone.com",
+                            "CPQ.account1708"});
+#line 36
+ testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table11, "And ");
+#line hidden
+#line 39
+ testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 40
+ testRunner.And("I configure client details for new Contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 41
+ testRunner.And("I click on Service \"General Services for Azure\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 42
+ testRunner.And("I click on Configure Now Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 43
+ testRunner.And("I choose Time & Material from Type of Contract Question", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 44
+ testRunner.And("I entered Contract Duration in Month as \"36\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 45
+ testRunner.And("I click on Next Button From Definition Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 47
+ testRunner.And("I click on Add Button to add new Task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 48
+ testRunner.And("I Entered Title of the Task as \"Task 1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 49
+ testRunner.And("I Entered Efforts of the Task as \"100\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 50
+ testRunner.And("I selected resource as Consultant as option number \"33\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 51
+ testRunner.And("I selected country as \"India (SWO_IN)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 52
+ testRunner.When("I click on Confirm Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 54
+ testRunner.Then("I Should see the sell prices of task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 55
+ testRunner.And("I click on Next Button from Scoping Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 56
+ testRunner.And("I click on Next Button from OtherCosts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 57
+ testRunner.And("I click on Next Button from CustomerPricing Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
 #line 58
+ testRunner.When("I click on Finish Button from CustomerVariables Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 59
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

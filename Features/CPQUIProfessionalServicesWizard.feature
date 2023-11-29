@@ -1,11 +1,12 @@
 ﻿Feature: CPQUIProfessionalServicesWizard
 
-This feature will test General Services of Azure as a part of Professional Services and will check the for the 
-UI stability and validate the values came by choosing attributes for the task
+This feature ensures the UI Health of the General Services for Azure section in the CPQ Professional Services Wizard. 
+It verifies the smooth and reliable functioning of the user interface when selecting options and entering details, 
+both through importing and manually inserting WBS.
 
 @smoke
-Scenario: Test UI stability of General Services for Azure by Importing WBS
-	Given I Navigate to CPQ UI Page
+Scenario: Verify UI Health by Importing WBS for General Services for Azure
+    Given I Navigate to CPQ UI Page
 	And I Enter following Login Details and Click Login Button
 		| Username                            | Password                 |
 		| helpdesk-scg.global@softwareone.com | CPQ.account1708 |
@@ -30,8 +31,8 @@ Scenario: Test UI stability of General Services for Azure by Importing WBS
 	Then I should see the value of contract
 
 @smoke
-Scenario: Test UI stability of General Services For Azure by Manually Inserting WBS
-	Given I Navigate to CPQ UI Page
+Scenario: Verify UI Health by Manually Inserting WBS for General Services for Azure
+    Given I Navigate to CPQ UI Page
 	And I Enter following Login Details and Click Login Button
 		| Username                            | Password       |
 		| helpdesk-scg.global@softwareone.com | CPQ.account1708 |

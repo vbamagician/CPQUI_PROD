@@ -1,9 +1,11 @@
 ﻿Feature: CPQUIMarginAsSoldService
 
-This Feature will test the UI Statbility for Services which only have Margin As Sold Configuration 
+This feature is dedicated to testing the UI Health of the Margin As Sold Service within the CPQ UI. 
+The primary objective is to ensure a consistent and seamless user experience while configuring a new 
+contract for the Margin As Sold Service.
 
-@smoke
-Scenario: I test UI Statbility of MAS Based service
+  @smoke
+  Scenario: Verify UI Health while Configuring Margin As Sold Service in CPQ UI
 	Given I Navigate to CPQ UI Page
 	And I Enter following Login Details and Click Login Button
 		| Username                            | Password                 |
