@@ -1,19 +1,19 @@
-﻿Feature: CPQUICloudAccelerationStarterPackForAzure
+﻿Feature: CPQUICloudStarterPackForAzure
 
-This feature aims to ensure the robust UI Health of the Cloud Acceleration Starter Pack (for Azure) 
+This feature aims to ensure the robust UI Health of the Cloud Starter Pack (for Azure) 
 Solution within the CPQ environment. It focuses on validating the seamless and 
 dependable functionality of the user interface while configuring and processing 
-a new contract for the Cloud Acceleration Starter Pack tailored for Azure.
+a new contract for the Cloud Starter Pack tailored for Azure.
 
   @smoke
-  Scenario: Verify UI Health while Configuring Cloud Acceleration Starter Pack for Azure Solution in CPQ
+  Scenario: Verify UI Health while Configuring Cloud Starter Pack for Azure Solution in CPQ
 	Given I Navigate to CPQ UI Page
 		And I Enter following Login Details and Click Login Button
 			| Username                            | Password        |
 			| helpdesk-scg.global@softwareone.com | CPQ.account1708 |
 		And I click on New Contract Button
 		And I configure client details for new Contract
-		And I click on Specific Service "Cloud Acceleration Starter Pack (for Azure)"
+		And I click on Specific Service "Cloud Starter Pack (for Azure)"
 		And I click on Configure Now Button
 		And I choose "Azure Migrate" from the radio button group for the question "Preferred Discovery Tool:"
 		And I choose "xDC Delhi" from the radio button group for the question "Remote Delivery Team:"

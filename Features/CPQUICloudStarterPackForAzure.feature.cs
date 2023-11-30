@@ -20,25 +20,25 @@ namespace CPQUI.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("CPQUICloudAccelerationStarterPackForAzure")]
-    public partial class CPQUICloudAccelerationStarterPackForAzureFeature
+    [NUnit.Framework.DescriptionAttribute("CPQUICloudStarterPackForAzure")]
+    public partial class CPQUICloudStarterPackForAzureFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "CPQUICloudAccelerationStarterPackForAzure.feature"
+#line 1 "CPQUICloudStarterPackForAzure.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CPQUICloudAccelerationStarterPackForAzure", @"This feature aims to ensure the robust UI Health of the Cloud Acceleration Starter Pack (for Azure) 
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CPQUICloudStarterPackForAzure", @"This feature aims to ensure the robust UI Health of the Cloud Starter Pack (for Azure) 
 Solution within the CPQ environment. It focuses on validating the seamless and 
 dependable functionality of the user interface while configuring and processing 
-a new contract for the Cloud Acceleration Starter Pack tailored for Azure.", ProgrammingLanguage.CSharp, featureTags);
+a new contract for the Cloud Starter Pack tailored for Azure.", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,16 +77,14 @@ a new contract for the Cloud Acceleration Starter Pack tailored for Azure.", Pro
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify UI Health while Configuring Cloud Acceleration Starter Pack for Azure Solu" +
-            "tion in CPQ")]
+        [NUnit.Framework.DescriptionAttribute("Verify UI Health while Configuring Cloud Starter Pack for Azure Solution in CPQ")]
         [NUnit.Framework.CategoryAttribute("smoke")]
-        public void VerifyUIHealthWhileConfiguringCloudAccelerationStarterPackForAzureSolutionInCPQ()
+        public void VerifyUIHealthWhileConfiguringCloudStarterPackForAzureSolutionInCPQ()
         {
             string[] tagsOfScenario = new string[] {
                     "smoke"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify UI Health while Configuring Cloud Acceleration Starter Pack for Azure Solu" +
-                    "tion in CPQ", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify UI Health while Configuring Cloud Starter Pack for Azure Solution in CPQ", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 9
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -100,14 +98,14 @@ a new contract for the Cloud Acceleration Starter Pack tailored for Azure.", Pro
 #line 10
  testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table2.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "CPQ.account1708"});
 #line 11
-  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table2, "And ");
+  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table5, "And ");
 #line hidden
 #line 14
   testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -116,7 +114,7 @@ a new contract for the Cloud Acceleration Starter Pack tailored for Azure.", Pro
   testRunner.And("I configure client details for new Contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 16
-  testRunner.And("I click on Specific Service \"Cloud Acceleration Starter Pack (for Azure)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on Specific Service \"Cloud Starter Pack (for Azure)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
   testRunner.And("I click on Configure Now Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

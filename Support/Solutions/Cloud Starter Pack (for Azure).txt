@@ -19,8 +19,8 @@ next Button Element
 		And I choose "xDC Delhi" from the radio button group for the question "Remote Delivery Team:"
 		And I choose "xDC Delhi" from the radio button group for the question "Local Delivery Location:"
 
-		And I click on Next button from definition page for CASP
-		ClickNextButtonFromDefinitionPageForCASP()
+		And I click on Next button from definition page
+		ClickNextButtonFromDefinitionPage()
 
 //=========================================================================================================================================
 // Scope Page
@@ -41,8 +41,8 @@ next Button Element
 		And I enter "1" into the textbox for the question "Additional Remote Delivery Effort (Days):"
 		And I enter "5000" into the textbox for the question "Business Volume:"
 		
-		And I click on Next button from scope page for CASP
-		ClickNextButtonFromScopePageForCASP()
+		And I click on Next button from scope page
+		ClickNextButtonFromScopePage()
 		
 
 //=========================================================================================================================================
@@ -52,8 +52,8 @@ next Button Element
 next Button Element 
 	heap-next-3
 
-		And I click on Next button from customer pricing page for CASP
-		ClickOnNextButtonFromCustomerPricingPageForCASP()
+		And I click on Next button from customer pricing page
+		ClickOnNextButtonFromCustomerPricingPage()
 		
 
 //=========================================================================================================================================
@@ -70,5 +70,5 @@ next Button Element
 
 		And I enter "5" into the textbox for the question "Azure Subscription Info:"
 
-		And I click on Next button from questionnaire page for CASP
-		ClickNextButtonFromQuestionnairePageForCASP()
+		And I click on Next button from questionnaire page
+		ClickNextButtonFromQuestionnairePage()
