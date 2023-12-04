@@ -14,8 +14,8 @@ namespace CPQUI.Pages
         }
 
         // Common Properties
-        private ILocator OpportunityValueLable => _page.Locator("//table[@class='kk_VerticalDS']/tbody/tr[2]/td[1]/span/table/tbody/tr[2]/td[3]/b");
-    
+        private ILocator OpportunityValueLable => _page.Locator("((//table)[2]//td)[4]//*");
+
         // Common Method
         public async Task<bool> IsValueOfOpportunityExpected()
         {

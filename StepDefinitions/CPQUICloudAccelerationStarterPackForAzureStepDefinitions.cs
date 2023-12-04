@@ -42,11 +42,5 @@ namespace CPQUI.StepDefinitions
             const string questionnairePagePlacementText = "next-5";
             await _commonControls.ClickOnNextButtonPage(questionnairePagePlacementText);
         }
-
-        [Given(@"I enter ""([^""]*)"" into the textbox for the question ""([^""]*)""")]
-        public async Task GivenIEnterIntoTheTextboxForTheQuestion(string p0, string p1)
-        {
-            await _commonControls.EnterValueInTextBoxBasedOnQuestion(p1, p0);
-        }
     }
 }

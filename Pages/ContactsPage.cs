@@ -1,6 +1,5 @@
 ﻿using CPQUI.Controls;
 using Microsoft.Playwright;
-using System.Numerics;
 
 namespace CPQUI.Pages
 {

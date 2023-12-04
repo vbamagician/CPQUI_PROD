@@ -25,12 +25,6 @@ namespace CPQUI.StepDefinitions
             await _solutionsPage.SelectSpecificSolution(p0);
         }
 
-        [Given(@"I choose ""([^""]*)"" from the radio button group for the question ""([^""]*)""")]
-        public async Task GivenIChooseFromTheRadioButtonGroupForTheQuestion(string yes, string p1)
-        {
-            await _oracleAdvisoryServicesSolution.ChooseRadioButtonBasedOnQuestion(p1, yes);
-        }
-
         [Given(@"I click on Next button from definition page for OAS")]
         public async Task GivenIClickOnNextButtonFromDefinitionPageForOAS()
         {

@@ -18,8 +18,7 @@ namespace CPQUI.Pages
 
         // Properties
         private ILocator ConfigureButton => _page.Locator("//button[text()='Configure Now']");
-        private ILocator SolutionPageElement => _page.Locator("//*[contains(@class,'heap-next')]");
-
+        
         // Methods
         public async Task SelectSolution(string solution)
         {

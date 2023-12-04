@@ -44,7 +44,7 @@ namespace CPQUI.Pages
         //*****************************************************************************************************************
         private ILocator FinOpsFundamentalsAndKickOffRemoteRadioButton => _page.Locator("//label[contains(text(),'FinOps Fundamentals and KickOff')]/../..//label[contains(text(),'Remote')]");
         private ILocator SpendManagementImplementationOrOnboardingRemoteRadioButton => _page.Locator("//label[contains(text(),'Spend Management Implementation/Onboarding')]/../..//label[contains(text(),'Remote')]\r\n");
-        private ILocator PyraCloudSpendManagementTrainingRemoteRadioButton => _page.Locator("//label[contains(text(),'PyraCloud Spend Management Training')]/../..//label[contains(text(),'Remote')]");
+        private ILocator PyraCloudSpendManagementTrainingRemoteRadioButton => _page.Locator("//label[contains(text(),'Client Portal Spend Management Training')]/../..//label[contains(text(),'Remote')]");
         private ILocator CloudCostOptimizationImplementationRemoteRadioButton => _page.Locator("//label[contains(text(),'Cloud Cost Optimization Implementation')]/../..//label[contains(text(),'Remote')]");
 
         //*****************************************************************************************************************
