@@ -60,3 +60,5 @@ next Button Element
 
 		And I enter "ABCD" into the textarea for the question "Locations in scope:"
 		And I enter "ABCD" into the textarea for the question "Organizations in scope:"
+		#Questionnaire Pricing
+		And I click the button with the text "Next" identified by the parent class "heap-next-5"

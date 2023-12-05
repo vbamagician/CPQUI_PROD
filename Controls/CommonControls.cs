@@ -1,6 +1,4 @@
 ﻿using Microsoft.Playwright;
-using NUnit.Framework.Internal.Execution;
-using System.Reflection.PortableExecutable;
 
 namespace CPQUI.Controls
 {
@@ -24,31 +22,50 @@ namespace CPQUI.Controls
         public ILocator FinishButton(string pagePlacementText) => _page.Locator($"//div[contains(@class,'heap-{pagePlacementText}')]//button[contains(text(),'Finish')]");
 
 
-    // Public properties based on Cousine Label or Header
+        // Public properties based on Cousine Label or Header
 
+        //-------------------------------------------------------------------------------
         //Button
+        //-------------------------------------------------------------------------------
         public ILocator LocateButtonByCaption(string buttonCaption) => _page.Locator($"//button[contains(text()[normalize-space()],'{buttonCaption}')]");
         public ILocator LocateButtonByCaptionAndCousineSpanText(string spanText, string buttonCaption) => _page.Locator($"//span[contains(text()[normalize-space()],'{spanText}')]/../..//button[contains(text()[normalize-space()],'{buttonCaption}')]");
         public ILocator LocateButtonByCaptionAndParentIdentifier(string buttonCaption, string parentClassName) => _page.Locator($"//div[contains(@class[normalize-space()],'{parentClassName}')]//button[contains(text()[normalize-space()],'{buttonCaption}')]");
 
+        //-------------------------------------------------------------------------------
         //TextBoxes
+        //-------------------------------------------------------------------------------
         public ILocator LocateTextBoxByCousineLabel(string question) => _page.Locator($"//label[contains(text()[normalize-space()],'{question}')]/../..//input");
         public ILocator LocateTextBoxByCousineLabelAndRepeatationIndex(string question, string repeatationIndex) => _page.Locator($"(//label[contains(text()[normalize-space()],'{question}')]/../..//input)[{repeatationIndex}]");
         public ILocator LocateTextBoxBasedOnPrecedingHeader(string header) => _page.Locator($"//*[contains(text(),'{header}')]/../../../../following::div[1]//input");
         public ILocator LocateTextAreaByCousineLabel(string question) => _page.Locator($"//label[contains(text(),'{question}')]/../..//textarea");
 
+        //-------------------------------------------------------------------------------
         //Radio Buttons
+        //-------------------------------------------------------------------------------
         public ILocator LocateRadioButtonByText(string radioButtonText) => _page.Locator($"//label[text()='{radioButtonText}']");
         public ILocator LocateRadioButtonByCousineLable(string question, string optionString) => _page.Locator($"//label[contains(text()[normalize-space()],'{question}')]/../..//label[contains(text()[normalize-space()],'{optionString}')]");
-        
+
+        //-------------------------------------------------------------------------------
         //Dropdown
+        //-------------------------------------------------------------------------------
         public ILocator LocateDropdownByCousineLabel(string question) => _page.Locator($"//label[contains(text()[normalize-space()],'{question}')]/../..//select");
 
+        //-------------------------------------------------------------------------------
         //CheckBox
+        //-------------------------------------------------------------------------------
         public ILocator LocateCheckBoxByCousineTableCell(string tableIndex, string tableCellText) => _page.Locator($"(//table)[{tableIndex}]//*[contains(text()[normalize-space()],'{tableCellText}')]/../..//label");
         public ILocator LocateCheckBoxBasedOnPrecedingHeader(string header, string checkBoxText) => _page.Locator($"//*[contains(text()[normalize-space()],'{header}')]/../../../../following::div[1]//label[contains(text()[normalize-space()],'{checkBoxText}')]");
-            
+
         // Public Methods
+
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // Buttons
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        public async Task ClickOnButtonByCaption(string buttonCaption)
+        {
+            await LocateButtonByCaption(buttonCaption).ClickAsync();
+        }
+
         public async Task ClickOnButtonByCaptionAndParentIdentifier(string buttonCaption, string parentClassName)
         {
             await LocateButtonByCaptionAndParentIdentifier(buttonCaption, parentClassName).ClickAsync();
@@ -72,6 +89,11 @@ namespace CPQUI.Controls
             await LocateButtonByCaptionAndCousineSpanText(spanText, buttonCaption).ClickAsync();
         }
 
+
+
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // CheckBox
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public async Task SetCheckboxStateByAdjacentTableCell(string tableIndex, string tableCellText, string checkBoxBehaviour)
         {
             await LocateCheckBoxByCousineTableCell(tableIndex, tableCellText).ClickAsync();
@@ -86,31 +108,13 @@ namespace CPQUI.Controls
             await LocateCheckBoxBasedOnPrecedingHeader(header, checkBoxText).ClickAsync();
         }
 
-        public async Task ClickOnButtonByCaption(string buttonCaption)
-        {
-            await LocateButtonByCaption(buttonCaption).ClickAsync();
-        }
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // TextBox
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         public async Task EnterValueInTextBoxBasedOnQuestion(string question, string answer)
         {
             await LocateTextBoxByCousineLabel(question).FillAsync(answer);
-        }
-
-        public async Task ChooseRadioButtonByText(string radioButtonText)
-        {
-            await LocateRadioButtonByText(radioButtonText).ClickAsync();
-            await WaitForLoadingScreenToDisappear();
-        }
-
-        public async Task ChooseRadioButtonBasedOnQuestion(string question, string optionString)
-        {
-            await LocateRadioButtonByCousineLable(question, optionString).ClickAsync();
-            await WaitForLoadingScreenToDisappear();
-        }
-
-        public async Task ChooseDropDownItemBasedOnQuestion(string question, string optionString)
-        {
-            await LocateDropdownByCousineLabel(question).SelectOptionAsync(new[] { optionString });
         }
 
         public async Task EnterValueInTextBoxBasedOnHeader(string header, string answer)
@@ -158,6 +162,34 @@ namespace CPQUI.Controls
         {
             await LocateTextAreaByCousineLabel(question).FillAsync(answer);
         }
+
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // Radio Button
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        public async Task ChooseRadioButtonByText(string radioButtonText)
+        {
+            await LocateRadioButtonByText(radioButtonText).ClickAsync();
+            await WaitForLoadingScreenToDisappear();
+        }
+
+        public async Task ChooseRadioButtonBasedOnQuestion(string question, string optionString)
+        {
+            await LocateRadioButtonByCousineLable(question, optionString).ClickAsync();
+            await WaitForLoadingScreenToDisappear();
+        }
+
+
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // DropDown
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        public async Task ChooseDropDownItemBasedOnQuestion(string question, string optionString)
+        {
+            await LocateDropdownByCousineLabel(question).SelectOptionAsync(new[] { optionString });
+        }
+
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // Common Methods 
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         public async Task ClickOnNextButtonPage(string pagePlacementText)
         {
