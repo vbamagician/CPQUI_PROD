@@ -21,7 +21,6 @@ namespace CPQUI.Controls
         public ILocator NextButton(string pagePlacementText) => _page.Locator($"//div[contains(@class,'heap-{pagePlacementText}')]//button[contains(text(),'Next')]");
         public ILocator FinishButton(string pagePlacementText) => _page.Locator($"//div[contains(@class,'heap-{pagePlacementText}')]//button[contains(text(),'Finish')]");
 
-
         // Public properties based on Cousine Label or Header
 
         //-------------------------------------------------------------------------------
@@ -61,120 +60,282 @@ namespace CPQUI.Controls
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // Buttons
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        /// <summary>
+        /// This procedure clicks on a button element based on its caption.
+        /// </summary>
+        /// <param name="buttonCaption">The text displayed on the button.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
         public async Task ClickOnButtonByCaption(string buttonCaption)
         {
-            await LocateButtonByCaption(buttonCaption).ClickAsync();
+            // Locate the button by searching for the element containing the specified caption.
+            ILocator button = LocateButtonByCaption(buttonCaption);
+
+            // Click on the button.
+            await button.ClickAsync();
         }
 
+
+        /// <summary>
+        /// This procedure clicks on a button element based on its caption and its parent element's class name.
+        /// </summary>
+        /// <param name="buttonCaption">The text displayed on the button.</param>
+        /// <param name="parentClassName">The class name of the button's parent element.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
         public async Task ClickOnButtonByCaptionAndParentIdentifier(string buttonCaption, string parentClassName)
         {
-            await LocateButtonByCaptionAndParentIdentifier(buttonCaption, parentClassName).ClickAsync();
+            // Locate the button by searching for the element containing the specified caption
+            // within a parent element with the specified class name.
+            ILocator button = LocateButtonByCaptionAndParentIdentifier(buttonCaption, parentClassName);
+
+            // Click on the button.
+            await button.ClickAsync();
+
+            // Wait for the loading screen to disappear after clicking the button.
             await WaitForLoadingScreenToDisappear();
         }
 
+
+        /// <summary>
+        /// This procedure attempts to click on a button element based on its caption within a specified time range. If the element is not found within the time range, the procedure skips it.
+        /// </summary>
+        /// <param name="buttonCaption">The text displayed on the button.</param>
+        /// <param name="waitFor">The maximum amount of time to wait for the element to become available, in seconds.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
         public async Task ClickOnButtonByCaptionIfItIsFoundWithinTimeRangeElseSkipElement(string buttonCaption, int waitFor)
         {
-            // Check if the Configure button is available within 30 seconds
+            // Check if the button is available within the specified time range.
             bool isElementPresent = await IsElementAvailable(LocateButtonByCaption(buttonCaption), waitFor * 1000);
 
+            // If the button is available, click on it.
             if (isElementPresent)
             {
-                // If the button is available, click on it
                 await LocateButtonByCaption(buttonCaption).ClickAsync();
+            }
+            else
+            {
+                // Log that the button was not found within the time range.
+                Console.WriteLine($"Button '{buttonCaption}' was not found within {waitFor} seconds, skipping element.");
             }
         }
 
-        public async Task ClickOnButtonbyCaptionReferencedFromSpanElement(string spanText, string buttonCaption)
-        { 
-            await LocateButtonByCaptionAndCousineSpanText(spanText, buttonCaption).ClickAsync();
-        }
 
+        /// <summary>
+        /// This procedure clicks on a button element based on its caption, which is referenced from a span element containing the specified text.
+        /// </summary>
+        /// <param name="spanText">The text displayed in the span element that references the button.</param>
+        /// <param name="buttonCaption">The text displayed on the button.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
+        public async Task ClickOnButtonbyCaptionReferencedFromSpanElement(string spanText, string buttonCaption)
+        {
+            // Locate the button by searching for the element containing the specified caption
+            // and ensuring it is a descendant of a span element containing the provided text.
+            ILocator button = LocateButtonByCaptionAndCousineSpanText(spanText, buttonCaption);
+
+            // Click on the button.
+            await button.ClickAsync();
+        }
 
 
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // CheckBox
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        /// <summary>
+        /// This procedure sets the state of a checkbox based on its position relative to a table cell containing the specified text.
+        /// </summary>
+        /// <param name="tableIndex">The index of the table element.</param>
+        /// <param name="tableCellText">The text displayed within the table cell adjacent to the checkbox.</param>
+        /// <param name="checkBoxBehaviour">Specifies whether to wait for a loading screen to disappear after checking the box ("synchronous") or not ("asynchronous").</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
         public async Task SetCheckboxStateByAdjacentTableCell(string tableIndex, string tableCellText, string checkBoxBehaviour)
         {
-            await LocateCheckBoxByCousineTableCell(tableIndex, tableCellText).ClickAsync();
+            // Locate the checkbox based on its position next to a table cell containing the specified text.
+            ILocator checkBox = LocateCheckBoxByCousineTableCell(tableIndex, tableCellText);
+
+            // Click on the checkbox to change its state.
+            await checkBox.ClickAsync();
+
+            // Optionally wait for the loading screen to disappear after clicking the checkbox.
             if (checkBoxBehaviour == "synchronous")
             {
                 await WaitForLoadingScreenToDisappear();
             }
         }
 
+
+        /// <summary>
+        /// This procedure sets the state of a checkbox based on the text of a preceding header element.
+        /// </summary>
+        /// <param name="header">The text displayed in the header element preceding the checkbox.</param>
+        /// <param name="checkBoxText">The text displayed on the checkbox label.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
         public async Task SetCheckBoxBasedOnHeaderText(string header, string checkBoxText)
         {
-            await LocateCheckBoxBasedOnPrecedingHeader(header, checkBoxText).ClickAsync();
+            // Locate the checkbox based on its position following a header element containing the specified text.
+            ILocator checkBox = LocateCheckBoxBasedOnPrecedingHeader(header, checkBoxText);
+
+            // Click on the checkbox to change its state.
+            await checkBox.ClickAsync();
         }
+
 
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // TextBox
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+        /// <summary>
+        /// This procedure enters a value into a text box based on the text of the label associated with the text box.
+        /// </summary>
+        /// <param name="question">The text of the label associated with the text box.</param>
+        /// <param name="answer">The text to enter into the text box.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
         public async Task EnterValueInTextBoxBasedOnQuestion(string question, string answer)
         {
-            await LocateTextBoxByCousineLabel(question).FillAsync(answer);
-        }
-
-        public async Task EnterValueInTextBoxBasedOnHeader(string header, string answer)
-        {
-            await LocateTextBoxBasedOnPrecedingHeader(header).FillAsync(answer);
-        }
-
-        public async Task EnterValueInTextBoxBasedOnHeaderAndPressKey(string header, string answer, string keyToPress)
-        {
-            ILocator textBox = LocateTextBoxBasedOnPrecedingHeader(header);
-
-            await textBox.FillAsync(answer);
-
-            if (keyToPress != "Nothing")
-            {
-                await textBox.PressAsync(keyToPress);
-            }
-        }
-
-        public async Task EnterValueInTextBoxBasedOnQuestionAndRepeatationIndex(string answer, string question, string repeatationIndex, string keyToPress)
-        {
-            ILocator textBox = LocateTextBoxByCousineLabelAndRepeatationIndex(question, repeatationIndex);
-
-            await textBox.FillAsync(answer);
-
-            if (keyToPress != "Nothing")
-            {
-                await textBox.PressAsync(keyToPress);
-            }
-        }
-
-        public async Task EnterValueInTextBoxBasedOnQuestionAndPressKey(string answer, string question, string keyToPress)
-        {
+            // Locate the text box by searching for the label containing the specified question text.
             ILocator textBox = LocateTextBoxByCousineLabel(question);
 
+            // Enter the specified answer into the text box.
+            await textBox.FillAsync(answer);
+        }
+
+        /// <summary>
+        /// This procedure enters a value into a text box based on the text of the preceding header element.
+        /// </summary>
+        /// <param name="header">The text displayed in the header element preceding the text box.</param>
+        /// <param name="answer">The text to enter into the text box.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
+        public async Task EnterValueInTextBoxBasedOnHeader(string header, string answer)
+        {
+            // Locate the text box based on its position following a header element containing the specified text.
+            ILocator textBox = LocateTextBoxBasedOnPrecedingHeader(header);
+
+            // Enter the specified answer into the text box.
+            await textBox.FillAsync(answer);
+        }
+
+
+        /// <summary>
+        /// This procedure enters a value into a text box based on the text of the preceding header element and presses a key afterwards.
+        /// </summary>
+        /// <param name="header">The text displayed in the header element preceding the text box.</param>
+        /// <param name="answer">The text to enter into the text box.</param>
+        /// <param name="keyToPress">The key to press after entering the text. Use "Nothing" to skip this step.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
+        public async Task EnterValueInTextBoxBasedOnHeaderAndPressKey(string header, string answer, string keyToPress)
+        {
+            // Locate the text box based on its position following a header element containing the specified text.
+            ILocator textBox = LocateTextBoxBasedOnPrecedingHeader(header);
+
+            // Enter the specified answer into the text box.
             await textBox.FillAsync(answer);
 
+            // If a key is specified, press it after entering the text.
             if (keyToPress != "Nothing")
             {
                 await textBox.PressAsync(keyToPress);
             }
         }
 
+
+        /// <summary>
+        /// This procedure enters a value into a text box based on a question label, a repetition index, and presses a key afterwards.
+        /// </summary>
+        /// <param name="answer">The text to enter into the text box.</param>
+        /// <param name="question">The text of the label associated with the text box.</param>
+        /// <param name="repeatationIndex">An index used to identify a specific text box when multiple elements share the same question label.</param>
+        /// <param name="keyToPress">The key to press after entering the text. Use "Nothing" to skip this step.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
+        public async Task EnterValueInTextBoxBasedOnQuestionAndRepeatationIndex(string answer, string question, string repeatationIndex, string keyToPress)
+        {
+            // Locate the text box by searching for the label containing the specified question text and repetition index.
+            ILocator textBox = LocateTextBoxByCousineLabelAndRepeatationIndex(question, repeatationIndex);
+
+            // Enter the specified answer into the text box.
+            await textBox.FillAsync(answer);
+
+            // If a key is specified, press it after entering the text.
+            if (keyToPress != "Nothing")
+            {
+                await textBox.PressAsync(keyToPress);
+            }
+        }
+
+        /// <summary>
+        /// This procedure enters a value into a text box based on a question label and presses a key afterwards.
+        /// </summary>
+        /// <param name="answer">The text to enter into the text box.</param>
+        /// <param name="question">The text of the label associated with the text box.</param>
+        /// <param name="keyToPress">The key to press after entering the text. Use "Nothing" to skip this step.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
+        public async Task EnterValueInTextBoxBasedOnQuestionAndPressKey(string answer, string question, string keyToPress)
+        {
+            // Locate the text box by searching for the label containing the specified question text.
+            ILocator textBox = LocateTextBoxByCousineLabel(question);
+
+            // Enter the specified answer into the text box.
+            await textBox.FillAsync(answer);
+
+            // If a key is specified, press it after entering the text.
+            if (keyToPress != "Nothing")
+            {
+                await textBox.PressAsync(keyToPress);
+            }
+        }
+
+        /// <summary>
+        /// This procedure enters a value into a 'textarea' element based on the text of the label associated with the text area.
+        /// </summary>
+        /// <param name="question">The text of the label associated with the text area.</param>
+        /// <param name="answer">The text to enter into the text area.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
         public async Task EnterValueInTextAreaBasedOnQuestion(string question, string answer)
         {
-            await LocateTextAreaByCousineLabel(question).FillAsync(answer);
+            // Locate the text area by searching for the label containing the specified question text.
+            ILocator textArea = LocateTextAreaByCousineLabel(question);
+
+            // Enter the specified answer into the text area.
+            await textArea.FillAsync(answer);
         }
+
 
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // Radio Button
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        /// <summary>
+        /// This procedure selects a radio button based on the text displayed on the radio button label.
+        /// </summary>
+        /// <param name="radioButtonText">The text displayed on the radio button label.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
         public async Task ChooseRadioButtonByText(string radioButtonText)
         {
-            await LocateRadioButtonByText(radioButtonText).ClickAsync();
+            // Locate the radio button by searching for the element containing the specified text.
+            ILocator radioButton = LocateRadioButtonByText(radioButtonText);
+
+            // Click on the radio button to select it.
+            await radioButton.ClickAsync();
+
+            // Wait for the loading screen to disappear after clicking the radio button.
             await WaitForLoadingScreenToDisappear();
         }
 
+
+        /// <summary>
+        /// This procedure selects a radio button based on the text of the label associated with the question and the specified option string.
+        /// </summary>
+        /// <param name="question">The text of the label associated with the question.</param>
+        /// <param name="optionString">The text displayed on the radio button label representing the desired option.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
         public async Task ChooseRadioButtonBasedOnQuestion(string question, string optionString)
         {
-            await LocateRadioButtonByCousineLable(question, optionString).ClickAsync();
+            // Locate the radio button by searching for the label containing the specified question text and matching the option string.
+            ILocator radioButton = LocateRadioButtonByCousineLable(question, optionString);
+
+            // Click on the radio button to select it.
+            await radioButton.ClickAsync();
+
+            // Wait for the loading screen to disappear after clicking the radio button.
             await WaitForLoadingScreenToDisappear();
         }
 
@@ -182,10 +343,22 @@ namespace CPQUI.Controls
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // DropDown
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        /// <summary>
+        /// This procedure selects an item from a dropdown menu based on the text of the label associated with the dropdown and the specified option string.
+        /// </summary>
+        /// <param name="question">The text of the label associated with the dropdown.</param>
+        /// <param name="optionString">The text of the option to be selected from the dropdown menu.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
         public async Task ChooseDropDownItemBasedOnQuestion(string question, string optionString)
         {
-            await LocateDropdownByCousineLabel(question).SelectOptionAsync(new[] { optionString });
+            // Locate the dropdown menu by searching for the label containing the specified question text.
+            ILocator dropdown = LocateDropdownByCousineLabel(question);
+
+            // Select the option from the dropdown menu.
+            await dropdown.SelectOptionAsync(new[] { optionString });
         }
+
 
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // Common Methods 

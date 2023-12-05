@@ -9,7 +9,7 @@ namespace CPQUI.StepDefinitions
         private readonly Driver _driver;
         private readonly CommonControls _commonControls;
 
-        CommonStepDefinitions(Driver driver)
+        private CommonStepDefinitions(Driver driver)
         {
             _driver = driver;
             _commonControls = new CommonControls(_driver.Page);
@@ -67,6 +67,7 @@ namespace CPQUI.StepDefinitions
         public async Task GivenIEnterIntoTheTextboxForTheQuestionAndPress(string answer, string question, string keyToPress)
         {
             await _commonControls.EnterValueInTextBoxBasedOnQuestionAndPressKey(answer, question, keyToPress);
+            
         }
 
         [Given(@"I enter ""([^""]*)"" into the textbox with the header labeled ""([^""]*)""")]

@@ -20,25 +20,25 @@ namespace CPQUI.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("CPQUIFinOpsProfessionalServicesCloudServicesAWS")]
-    public partial class CPQUIFinOpsProfessionalServicesCloudServicesAWSFeature
+    [NUnit.Framework.DescriptionAttribute("CPQUIDigitalWorkplaceEssentialsForCSP")]
+    public partial class CPQUIDigitalWorkplaceEssentialsForCSPFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "CPQUIFinOpsProfessionalServicesCloudServicesAWS.feature"
+#line 1 "CPQUIDigitalWorkplaceEssentialsForCSP.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CPQUIFinOpsProfessionalServicesCloudServicesAWS", @"This feature aims to ensure the robust UI Health of the FinOps Professional Services - Cloud Services AWS 
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CPQUIDigitalWorkplaceEssentialsForCSP", @"This feature aims to ensure the robust UI Health of the Digital Workplace Essentials for CSP 
 Solution within the CPQ environment. It focuses on validating the seamless and 
 dependable functionality of the user interface while configuring and processing 
-a new contract for the Digital Workplace Essentials for EA.", ProgrammingLanguage.CSharp, featureTags);
+a new contract for the Digital Workplace Essentials for CSP.", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,16 +77,16 @@ a new contract for the Digital Workplace Essentials for EA.", ProgrammingLanguag
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify UI Health while Configuring FinOps Professional Services - Cloud Services " +
-            "AWS Solution in CPQ")]
+        [NUnit.Framework.DescriptionAttribute("Verify UI Health while Configuring Digital Workplace Essentials for CSP Solution " +
+            "in CPQ")]
         [NUnit.Framework.CategoryAttribute("smoke")]
-        public void VerifyUIHealthWhileConfiguringFinOpsProfessionalServices_CloudServicesAWSSolutionInCPQ()
+        public void VerifyUIHealthWhileConfiguringDigitalWorkplaceEssentialsForCSPSolutionInCPQ()
         {
             string[] tagsOfScenario = new string[] {
                     "smoke"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify UI Health while Configuring FinOps Professional Services - Cloud Services " +
-                    "AWS Solution in CPQ", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify UI Health while Configuring Digital Workplace Essentials for CSP Solution " +
+                    "in CPQ", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 9
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -100,14 +100,14 @@ a new contract for the Digital Workplace Essentials for EA.", ProgrammingLanguag
 #line 10
  testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table9.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "CPQ.account1708"});
 #line 11
-  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table9, "And ");
+  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table7, "And ");
 #line hidden
 #line 14
   testRunner.And("I click the button containing the text \"New Contract\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -135,101 +135,75 @@ a new contract for the Digital Workplace Essentials for EA.", ProgrammingLanguag
   testRunner.And("I click the button containing the text \"I Confirm\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 21
-  testRunner.And("I click the \"Get Contract\" button associated with the reference text \"FinOps Prof" +
-                        "essional Services - Cloud Services AWS\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the \"Get Contract\" button associated with the reference text \"Digital Wor" +
+                        "kplace Essentials for CSP\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 22
   testRunner.And("I click the button containing the text \"Configure Now\" Only If button found withi" +
                         "n 30 seconds else skip", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 23
-  testRunner.And("I choose the radio button option \"Apptio Cloudability\" specifically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Service Success Mana" +
+                        "ger – SSM (Includes 365 Analytics)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 24
-  testRunner.And("I check \"Azure\" checkbox for the header \"Please select Cloud Providers in-scope\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 25
-  testRunner.And("I check \"AWS\" checkbox for the header \"Please select Cloud Providers in-scope\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Adoption Change Mana" +
+                        "gement\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 26
-  testRunner.And("I choose \"Yes\" from the radio button group for the question \"FinOps Fundamentals " +
-                        "Workshop (Kick Off)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 27
-  testRunner.And("I choose \"Yes\" from the radio button group for the question \"FinOps Diagnostic As" +
-                        "sessment\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 28
-  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Cloud Cost Optimizat" +
-                        "ion Fundamentals Workshop (Proof of Value)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 29
-  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Cloud Spend Manageme" +
-                        "nt Implementation for Cloudability\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 30
-  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Cloud Sustainability" +
-                        " Fundamentals Workshop\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 31
-  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Project Management\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 33
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 34
-  testRunner.And("I choose \"xDC Delhi\" from the dropdown for the question \"Please provide your pref" +
-                        "erred Delivery Center:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 27
+  testRunner.And("I enter \"10000\" into the textbox for the question \"Service Success Manager Add-On" +
+                        " Sell Price (Includes 365 Analytics)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 35
-  testRunner.And("I choose \"Associate Consultant\" from the radio button group for the question \"Con" +
-                        "sultant Level:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
+  testRunner.And("I enter \"5000\" into the textbox for the question \"Adoption Change Management Add-" +
+                        "On Sell Price\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 29
+  testRunner.And("I click the button containing the text \"Add\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 30
+  testRunner.And("I enter \"ABCD\" into the textbox for the question \"License type:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 31
+  testRunner.And("I enter \"10000\" into the textbox for the question \"License cost:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 32
+  testRunner.And("I choose \"Annually\" from the radio button group for the question \"Subscription Ty" +
+                        "pe:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 33
+  testRunner.And("I choose \"Annually\" from the radio button group for the question \"Billing Type:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 34
+  testRunner.And("I click the button containing the text \"Confirm\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 36
-  testRunner.And("I enter \"1\" into the textbox for the question \"Number of subscriptions?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 37
-  testRunner.And("I enter \"10000\" into the textbox for the question \"Estimated Annual Cloud Spend\" " +
-                        "having repeat index of \"1\" and press \"Nothing\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 38
-  testRunner.And("I enter \"1\" into the textbox for the question \"Number of accounts?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 39
-  testRunner.And("I enter \"10000\" into the textbox for the question \"Estimated Annual Cloud Spend\" " +
-                        "having repeat index of \"2\" and press \"Nothing\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 40
-  testRunner.And("I enter \"20000\" into the textbox for the question \"Business Volume:\" and press \"E" +
-                        "nter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 42
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 44
+#line 38
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 45
-  testRunner.And("I enter \"ABCD\" into the textarea for the question \"Locations in scope:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 39
+  testRunner.And("I enter \"ABCD\" into the textbox for the question \"Tenant Name:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 46
-  testRunner.And("I enter \"ABCD\" into the textarea for the question \"Organizations in scope:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 48
+#line 41
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 49
+#line 42
   testRunner.And("I choose \"PDF\" from the dropdown for the question \"Document Type:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 51
+#line 44
  testRunner.When("I click the button with the text \"Finish\" identified by the parent class \"heap-fi" +
                         "nish\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 52
+#line 45
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

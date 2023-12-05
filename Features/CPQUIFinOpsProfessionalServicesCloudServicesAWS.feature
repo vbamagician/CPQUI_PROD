@@ -3,7 +3,7 @@
 This feature aims to ensure the robust UI Health of the FinOps Professional Services - Cloud Services AWS 
 Solution within the CPQ environment. It focuses on validating the seamless and 
 dependable functionality of the user interface while configuring and processing 
-a new contract for the Cloud Starter Pack tailored for Azure.
+a new contract for the Digital Workplace Essentials for EA.
 
   @smoke
   Scenario: Verify UI Health while Configuring FinOps Professional Services - Cloud Services AWS Solution in CPQ
