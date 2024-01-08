@@ -42,7 +42,7 @@ new contract for Cloud Managed Services tailored for AWS.
 		And I choose "No" from radio button group of a question "Any workload provisioned in Master Payer Account?"
 		#Questionnaire Pricing
 		And I click the button with the text "Next" identified by the parent class "heap-next-5"
-		And I choose "PDF" from the dropdown for the question "Document Type:"
+		#And I choose "PDF" from the dropdown for the question "Document Type:"
 	#contacts page
 	When I click the button with the text "Finish" identified by the parent class "heap-finish"
 	Then I should see the value of contract

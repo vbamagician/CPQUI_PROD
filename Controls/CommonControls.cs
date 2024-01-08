@@ -93,23 +93,6 @@ namespace CPQUI.Controls
 
             // Wait for the loading screen to disappear after clicking the button.
             await WaitForLoadingScreenToDisappear();
-
-            /* There has been a recurring observation over the past few weeks where the data grid on the CPQ page 
-             * necessitates a manual refresh to display updated information. Notably, certain pages, such as the 
-             * Cost pages, solely rely on data grids that require refreshing or updating by clicking on the next 
-             * button. Consequently, the initial click on the next button triggers the data grid update, and to 
-             * navigate away from the page, a subsequent click is required.
-             */
-
-            /* To handle above isssue, I want to wait for a few second and check agian if the same element is 
-             * visible or not. If visible then click again. Probably, 5 second is perfectly okay to wait. 
-             */
-            this.HoldThread(3000);
-
-            if (await button.IsVisibleAsync() && buttonCaption != "Finish")
-            {
-                await button.ClickAsync();
-            }
         }
 
 

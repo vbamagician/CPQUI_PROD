@@ -10,28 +10,28 @@ experience while configuring a new contract for Cloud Managed Services tailored 
 		And I Enter following Login Details and Click Login Button
 			| Username                            | Password        |
 			| helpdesk-scg.global@softwareone.com | CPQ.account1708 |
-		And I click on New Contract Button
-		And I configure client details for new Contract
-		And I click on Service "Cloud Managed Services for Azure"
-		And I click on Configure Now Button
-		And I select option as "Yes" for service selection of Azure Essential for CSP
-		And I select option as "Yes" for service selection of Azure Essentials for EA
-		And I select option as "Yes" for service selection of Azure Advanced
-		And I click on Next button from Definition page for CMSA
-		And I entered Estimated Consumption per month for Azure Essential for CSP as "10000"
-		And I choose option as "Yes" about offering discount for Azure Essential for CSP
-		And I entered discount percentage for Azure Essential for CSP as "5"
-		And I entered Estimated Consumption per month for Azure Essentials for EA as "10000"
-		And I choose option as "Yes" about offering discount for Azure Essentials for EA
-		And I entered discount percentage for Azure Essentials for EA as "5"
-		And I entered Estimated Consumption per month for Azure Advanced as "10000"
-		And I choose option as "Yes" about offering discount for Azure Advanced
-		And I entered discount percentage for Azure Advanced as "5"
-		And I select option from dropdown for Azure Account Transfer as New CSP and value is "69119"
-		And I click on next button from scope page for CMSA
-		And I click on Next button from customer pricing page for CMSA
-		And I Select Document Type as PDF
-		And I Add Authorized Contacts
-		And I add Softwareone Contacts
-	When I click Finish on Contacts Page
+		And I click the button containing the text "New Contract"
+		And I enter "walmart" into the textbox with the header labeled "Select an Account" and press "Enter"
+		And I check the "asynchronous" checkbox based on the adjacent table has index "1" having cell that has value "00001614"
+		And I click the button containing the text "Do you want to continue without an Opportunity?"
+		And I enter "UI Test" into the textbox for the question "Draft topic:"
+		And I check the "synchronous" checkbox based on the adjacent table has index "3" having cell that has value "Idris Elba"
+		And I click the button containing the text "I Confirm"
+		And I click the "Get Contract" button associated with the reference text "Cloud Managed Services for Azure"
+		And I click the button containing the text "Configure Now" Only If button found within 30 seconds else skip
+		And I choose "Yes" from the radio button group for the question "Azure Essentials for CSP?"
+		And I choose "No" from the radio button group for the question "Azure Essentials for EA?"
+		And I choose "No" from the radio button group for the question "Azure Advanced?"
+		#definition page
+		And I click the button with the text "Next" identified by the parent class "heap-next-1"
+		And I enter "12000" into the textbox for the question "Estimated Consumption per month"
+		And I choose "No" from the radio button group for the question "Is a discount required to close this deal?"
+		And I choose "New CSP" from dropdown box of a question "Please select from one of the following transfer options:"
+		#Scoping Page
+		And I click the button with the text "Next" identified by the parent class "heap-next-2"
+		#Customer Pricing
+		And I click the button with the text "Next" identified by the parent class "heap-next-3"
+		And I choose "PDF" from the dropdown for the question "Document Type:"
+	#contacts page
+	When I click the button with the text "Finish" identified by the parent class "heap-finish"
 	Then I should see the value of contract

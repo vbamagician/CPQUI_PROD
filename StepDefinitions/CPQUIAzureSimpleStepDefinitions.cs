@@ -40,7 +40,10 @@ namespace CPQUI.StepDefinitions
 
             if (varenvspace == null)
             {
+                //PROD
                 _driver.Page.GotoAsync("https://contracts.softwareone.com/");
+                //UAT
+                //_driver.Page.GotoAsync("https://softwareone-cpq-uat.onknowledgekube.net/");
             }
             else if (varenvspace == "CLOUD")
             {
