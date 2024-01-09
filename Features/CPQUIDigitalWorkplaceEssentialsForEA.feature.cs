@@ -166,40 +166,30 @@ a new contract for the Digital Workplace Essentials for EA.", ProgrammingLanguag
                         ")\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 30
+  testRunner.And("I enter \"10\" into the textbox for the question \"Number of Users for Service Succe" +
+                        "ss Manager:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 31
   testRunner.And("I enter \"10000\" into the textbox for the question \"Service Success Manager Add-On" +
                         " Sell Price\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 31
+#line 32
+  testRunner.And("I enter \"5\" into the textbox for the question \"Number of Users for Adoption Chang" +
+                        "e Management\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 33
   testRunner.And("I enter \"5000\" into the textbox for the question \"Adoption Change Management Add-" +
                         "On Sell Price\" and press \"Enter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 33
+#line 35
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 34
-  testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
-                        "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 36
-  testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
-                        "-3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 37
-  testRunner.And("I enter \"ABCD\" into the textbox for the question \"Tenant Name:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 39
-  testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
-                        "-5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 40
-  testRunner.And("I choose \"PDF\" from the dropdown for the question \"Document Type:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 42
  testRunner.When("I click the button with the text \"Finish\" identified by the parent class \"heap-fi" +
                         "nish\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 43
+#line 38
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

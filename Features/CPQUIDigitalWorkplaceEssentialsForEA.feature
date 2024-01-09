@@ -27,17 +27,13 @@ a new contract for the Digital Workplace Essentials for EA.
 		And I click the button with the text "Next" identified by the parent class "heap-next-1"
 		And I enter "100" into the textbox for the question "Number of Users for which SoftwareOne needs to Provide Support:"
 		And I enter "20" into the textbox for the question "Sales Price ( per user per month )"
+		And I enter "10" into the textbox for the question "Number of Users for Service Success Manager:"
 		And I enter "10000" into the textbox for the question "Service Success Manager Add-On Sell Price"
+		And I enter "5" into the textbox for the question "Number of Users for Adoption Change Management"
 		And I enter "5000" into the textbox for the question "Adoption Change Management Add-On Sell Price" and press "Enter"
 		#Scoping Page
 		And I click the button with the text "Next" identified by the parent class "heap-next-2"
 		And I click the button with the text "Next" identified by the parent class "heap-next-2"
 		#Customer Pricing
-		And I click the button with the text "Next" identified by the parent class "heap-next-3"
-		And I enter "ABCD" into the textbox for the question "Tenant Name:"
-		#Questionnaire Pricing
-		And I click the button with the text "Next" identified by the parent class "heap-next-5"
-		And I choose "PDF" from the dropdown for the question "Document Type:"
-		#contacts page
 	When I click the button with the text "Finish" identified by the parent class "heap-finish"
 	Then I should see the value of contract
