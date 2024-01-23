@@ -1,0 +1,5 @@
+Solution Name: 
+	DSC Advanced
+
+Does have Configure Now Button - YES
+	Completely Modularized Solution
