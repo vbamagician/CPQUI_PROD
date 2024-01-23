@@ -31,7 +31,7 @@ a new contract for the Digital Workplace Essentials for EA.
 		And I choose "Yes" from the radio button group for the question "Project Management"
 		#definition page
 		And I click the button with the text "Next" identified by the parent class "heap-next-1"
-		And I choose "xDC Delhi" from the dropdown for the question "Please provide your preferred Delivery Center:"
+		And I choose "xDC Gurugram" from the dropdown for the question "Please provide your preferred Delivery Center:"
 		And I choose "Associate Consultant" from the radio button group for the question "Consultant Level:"
 		And I enter "1" into the textbox for the question "Number of subscriptions?"
 		And I enter "10000" into the textbox for the question "Estimated Annual Cloud Spend" having repeat index of "1" and press "Nothing"

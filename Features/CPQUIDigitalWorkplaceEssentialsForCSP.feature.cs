@@ -147,8 +147,8 @@ a new contract for the Digital Workplace Essentials for CSP.", ProgrammingLangua
                         "ger – SSM (Includes 365 Analytics)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 24
-  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Adoption Change Mana" +
-                        "gement\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Digital Workplace Ad" +
+                        "option\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 26
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
@@ -163,11 +163,11 @@ a new contract for the Digital Workplace Essentials for CSP.", ProgrammingLangua
                         " Sell Price (Includes 365 Analytics)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 29
-  testRunner.And("I enter \"5\" into the textbox for the question \"Number of Users for Adoption Chang" +
-                        "e Management\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"5\" into the textbox for the question \"Number of Users for Digital Workpl" +
+                        "ace Adoption\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 30
-  testRunner.And("I enter \"5000\" into the textbox for the question \"Adoption Change Management Add-" +
+  testRunner.And("I enter \"5000\" into the textbox for the question \"Digital Workplace Adoption Add-" +
                         "On Sell Price\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 31

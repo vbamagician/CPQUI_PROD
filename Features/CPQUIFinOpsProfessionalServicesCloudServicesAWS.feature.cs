@@ -179,8 +179,8 @@ a new contract for the Digital Workplace Essentials for EA.", ProgrammingLanguag
                         "-1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 34
-  testRunner.And("I choose \"xDC Delhi\" from the dropdown for the question \"Please provide your pref" +
-                        "erred Delivery Center:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"xDC Gurugram\" from the dropdown for the question \"Please provide your p" +
+                        "referred Delivery Center:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 35
   testRunner.And("I choose \"Associate Consultant\" from the radio button group for the question \"Con" +

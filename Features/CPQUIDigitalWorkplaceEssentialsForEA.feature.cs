@@ -150,8 +150,8 @@ a new contract for the Digital Workplace Essentials for EA.", ProgrammingLanguag
                         "ger – SSM (Includes 365 Analytics)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 25
-  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Adoption Change Mana" +
-                        "gement\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Digital Workplace Ad" +
+                        "option\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 27
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
@@ -174,22 +174,26 @@ a new contract for the Digital Workplace Essentials for EA.", ProgrammingLanguag
                         " Sell Price\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 32
-  testRunner.And("I enter \"5\" into the textbox for the question \"Number of Users for Adoption Chang" +
-                        "e Management\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"5\" into the textbox for the question \"Number of Users for Digital Workpl" +
+                        "ace Adoption\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 33
-  testRunner.And("I enter \"5000\" into the textbox for the question \"Adoption Change Management Add-" +
+  testRunner.And("I enter \"5000\" into the textbox for the question \"Digital Workplace Adoption Add-" +
                         "On Sell Price\" and press \"Enter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 35
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 37
+#line 36
+  testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
+                        "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 38
  testRunner.When("I click the button with the text \"Finish\" identified by the parent class \"heap-fi" +
                         "nish\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 38
+#line 39
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

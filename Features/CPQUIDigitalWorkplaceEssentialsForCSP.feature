@@ -21,13 +21,13 @@ a new contract for the Digital Workplace Essentials for CSP.
 		And I click the "Get Contract" button associated with the reference text "Digital Workplace Essentials for CSP"
 		And I click the button containing the text "Configure Now" Only If button found within 30 seconds else skip
 		And I choose "Yes" from the radio button group for the question "Service Success Manager – SSM (Includes 365 Analytics)"
-		And I choose "Yes" from the radio button group for the question "Adoption Change Management"
+		And I choose "Yes" from the radio button group for the question "Digital Workplace Adoption"
 		#definition page
 		And I click the button with the text "Next" identified by the parent class "heap-next-1"
 		And I enter "10" into the textbox for the question "Number of Users for Service Success Manager:"
 		And I enter "10000" into the textbox for the question "Service Success Manager Add-On Sell Price (Includes 365 Analytics)"
-		And I enter "5" into the textbox for the question "Number of Users for Adoption Change Management"
-		And I enter "5000" into the textbox for the question "Adoption Change Management Add-On Sell Price"
+		And I enter "5" into the textbox for the question "Number of Users for Digital Workplace Adoption"
+		And I enter "5000" into the textbox for the question "Digital Workplace Adoption Add-On Sell Price"
 		And I click the button containing the text "Add"
 		And I enter "ABCD" into the textbox for the question "License type:"
 		And I enter "10000" into the textbox for the question "License cost:"
