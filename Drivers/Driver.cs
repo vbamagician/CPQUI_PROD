@@ -33,7 +33,7 @@ namespace CPQUI.Drivers
 
             _browserContext = await browser.NewContextAsync(new()
             {
-                RecordVideoDir = "videos/"
+                //RecordVideoDir = "videos/"
             });
 
             //Page

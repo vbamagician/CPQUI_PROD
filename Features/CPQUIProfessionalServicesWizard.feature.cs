@@ -97,14 +97,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 9
     testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table16.AddRow(new string[] {
+                table15.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "CPQ.account1708"});
 #line 10
- testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table16, "And ");
+ testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table15, "And ");
 #line hidden
 #line 13
  testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -183,14 +183,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 35
     testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table17.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "CPQ.account1708"});
 #line 36
- testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table17, "And ");
+ testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table16, "And ");
 #line hidden
 #line 39
  testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

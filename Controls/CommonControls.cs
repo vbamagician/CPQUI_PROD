@@ -37,7 +37,7 @@ namespace CPQUI.Controls
         public ILocator LocateTextBoxByCousineLabelAndRepeatationIndex(string question, string repeatationIndex) => _page.Locator($"(//label[contains(text()[normalize-space()],'{question}')]/../..//input)[{repeatationIndex}]");
         public ILocator LocateTextBoxBasedOnPrecedingHeader(string header) => _page.Locator($"//*[contains(text(),'{header}')]/../../../../following::div[1]//input");
         public ILocator LocateTextAreaByCousineLabel(string question) => _page.Locator($"//label[contains(text(),'{question}')]/../..//textarea");
-
+        
         //-------------------------------------------------------------------------------
         //Radio Buttons
         //-------------------------------------------------------------------------------
@@ -55,7 +55,44 @@ namespace CPQUI.Controls
         public ILocator LocateCheckBoxByCousineTableCell(string tableIndex, string tableCellText) => _page.Locator($"(//table)[{tableIndex}]//*[contains(text()[normalize-space()],'{tableCellText}')]/../..//label");
         public ILocator LocateCheckBoxBasedOnPrecedingHeader(string header, string checkBoxText) => _page.Locator($"//*[contains(text()[normalize-space()],'{header}')]/../../../../following::div[1]//label[contains(text()[normalize-space()],'{checkBoxText}')]");
 
+        //-------------------------------------------------------------------------------
+        //Dynamic Element
+        //-------------------------------------------------------------------------------
+        public ILocator LocateElementByAttribute(string element, string attribute, string attributeValue) => _page.Locator($"//{element}[@{attribute}='{attributeValue}']");
+
+
         // Public Methods
+
+        //-------------------------------------------------------------------------------
+        //Dynamic Element Method
+        //-------------------------------------------------------------------------------
+        /// <summary>
+        /// Enters the specified input into an HTML element identified by the provided attribute and attribute value.
+        /// </summary>
+        /// <param name="input">The string value to be entered into the element.</param>
+        /// <param name="element">The type of HTML element (e.g., textbox, button) to locate.</param>
+        /// <param name="attribute">The attribute used to identify the target element.</param>
+        /// <param name="attributeValue">The value associated with the specified attribute.</param>
+        /// <returns>A task representing the asynchronous operation of entering the value into the element.</returns>
+        public async Task EnterValueInElementBasedOnAttribute(string input, string element, string attribute, string attributeValue)
+        {
+            await LocateElementByAttribute(element, attribute, attributeValue).FillAsync(input);
+        }
+
+
+        /// <summary>
+        /// Clicks on an HTML element identified by the provided attribute and attribute value.
+        /// </summary>
+        /// <param name="element">The type of HTML element (e.g., button, link) to locate.</param>
+        /// <param name="attribute">The attribute used to identify the target element.</param>
+        /// <param name="attributeValue">The value associated with the specified attribute.</param>
+        /// <returns>A task representing the asynchronous operation of clicking on the element.</returns>
+        public async Task ClickElementBasedOnAttribute(string element, string attribute, string attributeValue)
+        {
+            await LocateElementByAttribute(element, attribute, attributeValue).ClickAsync();
+        }
+
+
 
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // Buttons
@@ -162,6 +199,7 @@ namespace CPQUI.Controls
                 await WaitForLoadingScreenToDisappear();
             }
         }
+
 
 
         /// <summary>
@@ -297,6 +335,7 @@ namespace CPQUI.Controls
             // Enter the specified answer into the text area.
             await textArea.FillAsync(answer);
         }
+
 
 
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

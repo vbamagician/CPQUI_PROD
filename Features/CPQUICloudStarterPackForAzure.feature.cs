@@ -95,118 +95,130 @@ a new contract for the Cloud Starter Pack tailored for Azure.", ProgrammingLangu
             else
             {
                 this.ScenarioStart();
-#line 10
- testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 12
+ testRunner.Given("I navigate to the page using the environment variable \"CPQUI_PAGE_LINK\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Username",
-                            "Password"});
-                table5.AddRow(new string[] {
-                            "helpdesk-scg.global@softwareone.com",
-                            "CPQ.account1708"});
-#line 11
-  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table5, "And ");
+#line 18
+  testRunner.And("I click the button containing the text \"Login\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 16
-  testRunner.And("I click the button containing the text \"New Contract\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 19
+  testRunner.And("I enter \"CPQUI_LOGIN_USERNAME\" from environment into the element \"input\" of havin" +
+                        "g attribute \"name\" having the value \"loginfmt\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
+  testRunner.And("I click the element \"input\" of having attribute \"value\" having the value \"Next\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 21
+  testRunner.And("I enter \"CPQUI_LOGIN_PASSWORD\" from environment into the element \"input\" of havin" +
+                        "g attribute \"name\" having the value \"passwd\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 22
+  testRunner.And("I click the element \"input\" of having attribute \"value\" having the value \"Sign in" +
+                        "\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 23
+  testRunner.And("I click the element \"input\" of having attribute \"value\" having the value \"Yes\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 27
+  testRunner.And("I click the button containing the text \"New Contract\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 31
   testRunner.And("I enter \"walmart\" into the textbox with the header labeled \"Select an Account\" an" +
                         "d press \"Enter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 21
+#line 32
   testRunner.And("I check the \"asynchronous\" checkbox based on the adjacent table has index \"1\" hav" +
                         "ing cell that has value \"00001614\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 22
+#line 33
   testRunner.And("I click the button containing the text \"Do you want to continue without an Opport" +
                         "unity?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 23
+#line 34
   testRunner.And("I enter \"UI Test\" into the textbox for the question \"Draft topic:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 24
+#line 35
   testRunner.And("I check the \"synchronous\" checkbox based on the adjacent table has index \"3\" havi" +
                         "ng cell that has value \"Idris Elba\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 25
+#line 36
   testRunner.And("I click the button containing the text \"I Confirm\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 29
+#line 40
   testRunner.And("I click the \"Get Contract\" button associated with the reference text \"Cloud Start" +
                         "er Pack (for Azure)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 33
+#line 44
   testRunner.And("I click the button containing the text \"Configure Now\" Only If button found withi" +
                         "n 30 seconds else skip", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 35
+#line 46
   testRunner.And("I choose \"Azure Migrate\" from the radio button group for the question \"Preferred " +
                         "Discovery Tool:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 36
+#line 47
   testRunner.And("I choose \"xDC Delhi\" from the radio button group for the question \"Remote Deliver" +
                         "y Team:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 37
+#line 48
   testRunner.And("I choose \"xDC Delhi\" from the radio button group for the question \"Local Delivery" +
                         " Location:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 40
+#line 51
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 42
+#line 53
   testRunner.And("I enter \"10\" into the textbox for the question \"Number of Servers:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 43
+#line 54
   testRunner.And("I enter \"5\" into the textbox for the question \"Estimated duration (weeks):\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 44
+#line 55
   testRunner.And("I enter \"1\" into the textbox for the question \"Additional Local Project Manager E" +
                         "ffort (Days):\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 45
+#line 56
   testRunner.And("I enter \"1\" into the textbox for the question \"Additional Remote Project Manager " +
                         "Effort (Days):\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 46
+#line 57
   testRunner.And("I enter \"1\" into the textbox for the question \"Additional Local Delivery Effort (" +
                         "Days):\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 47
+#line 58
   testRunner.And("I enter \"1\" into the textbox for the question \"Additional Remote Delivery Effort " +
                         "(Days):\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 48
+#line 59
   testRunner.And("I enter \"5000\" into the textbox for the question \"Business Volume:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 51
+#line 62
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 55
+#line 66
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 57
+#line 68
   testRunner.And("I enter \"ABCD\" into the textbox for the question \"Azure Tenant Info:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 58
+#line 69
   testRunner.And("I enter \"ABCD\" into the textbox for the question \"Azure Subscription Info:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 61
+#line 72
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 64
+#line 75
   testRunner.And("I choose \"PDF\" from the dropdown for the question \"Document Type:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 67
+#line 78
  testRunner.When("I click the button with the text \"Finish\" identified by the parent class \"heap-fi" +
                         "nish\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 69
+#line 80
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

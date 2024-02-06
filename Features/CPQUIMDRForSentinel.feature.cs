@@ -98,14 +98,14 @@ a new contract for the MDR for Sentinel.", ProgrammingLanguage.CSharp, featureTa
 #line 10
  testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table13.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "CPQ.account1708"});
 #line 11
-  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table13, "And ");
+  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table12, "And ");
 #line hidden
 #line 14
   testRunner.And("I click the button containing the text \"New Contract\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

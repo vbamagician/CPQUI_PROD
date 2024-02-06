@@ -97,14 +97,14 @@ contract for the Unified Communications Managed Service.", ProgrammingLanguage.C
 #line 9
     testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table11.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "CPQ.account1708"});
 #line 10
-  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table11, "And ");
+  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table10, "And ");
 #line hidden
 #line 13
   testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

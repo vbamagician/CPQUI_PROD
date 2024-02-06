@@ -7,10 +7,21 @@ a new contract for the Cloud Starter Pack tailored for Azure.
 
   @smoke
   Scenario: Verify UI Health while Configuring Cloud Starter Pack for Azure Solution in CPQ
-	Given I Navigate to CPQ UI Page
-		And I Enter following Login Details and Click Login Button
-			| Username                            | Password        |
-			| helpdesk-scg.global@softwareone.com | CPQ.account1708 |
+	#<10>
+	#Given I Navigate to CPQ UI Page
+	Given I navigate to the page using the environment variable "CPQUI_PAGE_LINK"
+	#</10>
+	#<11>
+		#And I Enter following Login Details and Click Login Button
+			#| Username                            | Password        |
+			#| helpdesk-scg.global@softwareone.com | CPQ.account1708 |
+		And I click the button containing the text "Login"
+		And I enter "CPQUI_LOGIN_USERNAME" from environment into the element "input" of having attribute "name" having the value "loginfmt"
+		And I click the element "input" of having attribute "value" having the value "Next"
+		And I enter "CPQUI_LOGIN_PASSWORD" from environment into the element "input" of having attribute "name" having the value "passwd"
+		And I click the element "input" of having attribute "value" having the value "Sign in"
+		And I click the element "input" of having attribute "value" having the value "Yes"
+	#</11>
 	#<1>
 		#And I click on New Contract Button
 		And I click the button containing the text "New Contract"

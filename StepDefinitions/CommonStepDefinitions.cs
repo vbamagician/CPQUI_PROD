@@ -9,11 +9,65 @@ namespace CPQUI.StepDefinitions
         private readonly Driver _driver;
         private readonly CommonControls _commonControls;
 
+        //Delete this when moving to prod
+        private string CPQUI_PAGE_LINK = "https://contracts.softwareone.com/";
+        private string CPQUI_LOGIN_USERNAME = "helpdesk-scg.global@softwareone.com";
+        private string CPQUI_LOGIN_PASSWORD = "CPQ.account1708";
+
         private CommonStepDefinitions(Driver driver)
         {
             _driver = driver;
             _commonControls = new CommonControls(_driver.Page);
         }
+
+        [Given(@"I navigate to the page using the environment variable ""([^""]*)""")]
+        public void GivenINavigateToThePageUsingTheEnvironmentVariable(string pageLinkEnvVariable)
+        {
+            string? pageLink = Environment.GetEnvironmentVariable("CPQUI_PAGE_LINK");
+
+            //Delete this when moving to prod
+            if (pageLink == null)
+                _driver.Page.GotoAsync(CPQUI_PAGE_LINK);
+            else
+                _driver.Page.GotoAsync(pageLink);
+        }
+
+        [Given(@"I enter ""([^""]*)"" into the element ""([^""]*)"" of having attribute ""([^""]*)"" having the value ""([^""]*)""")]
+        public async Task GivenIEnterIntoTheElementOfHavingAttributeHavingTheValue(string inputString, string element, string attribute, string attributeValue)
+        {
+            await _commonControls.EnterValueInElementBasedOnAttribute(inputString, element, attribute, attributeValue);
+        }
+
+
+        [Given(@"I enter ""([^""]*)"" from environment into the element ""([^""]*)"" of having attribute ""([^""]*)"" having the value ""([^""]*)""")]
+        public async Task GivenIEnterFromEnvironmentIntoTheElementOfHavingAttributeHavingTheValue(string input, string element, string attribute, string attributeValue)
+        {
+            string? inputString = Environment.GetEnvironmentVariable(input);
+
+
+            //Delete this when moving to prod
+            if (inputString == null)
+            {
+                switch (input)
+                {
+                    case "CPQUI_LOGIN_USERNAME":
+                        inputString = CPQUI_LOGIN_USERNAME;
+                        break;
+                    case "CPQUI_LOGIN_PASSWORD":
+                        inputString = CPQUI_LOGIN_PASSWORD;
+                        break;
+                }
+            }
+            await _commonControls.EnterValueInElementBasedOnAttribute(inputString, element, attribute, attributeValue);
+        }
+
+        [Given(@"I click the element ""([^""]*)"" of having attribute ""([^""]*)"" having the value ""([^""]*)""")]
+        public async Task GivenIClickTheElementOfHavingAttributeHavingTheValue(string element, string attribute, string attributeValue)
+        {
+            await _commonControls.ClickElementBasedOnAttribute(element, attribute, attributeValue);
+        }
+
+
 
         //===================================================================================================================================
         // Buttons:
@@ -57,6 +111,13 @@ namespace CPQUI.StepDefinitions
         // TextBox
         //===================================================================================================================================
 
+        [Given(@"I enter ""([^""]*)"" to the very special textbox that has question ""([^""]*)""")]
+        public async Task GivenIEnterToTheVerySpecialTextboxThatHasQuestion(string answer, string question)
+        {
+            await _commonControls.EnterValueInTextBoxBasedOnQuestion(question, answer);
+        }
+
+
         [Given(@"I enter ""([^""]*)"" into the textbox for the question ""([^""]*)""")]
         public async Task GivenIEnterIntoTheTextboxForTheQuestion(string answer, string question)
         {
@@ -87,7 +148,7 @@ namespace CPQUI.StepDefinitions
         {
             await _commonControls.EnterValueInTextBoxBasedOnQuestionAndRepeatationIndex(answer, question, repeatationIndex, keyToPress);
         }
-
+        
 
         //===================================================================================================================================
         // Radio Buttons
