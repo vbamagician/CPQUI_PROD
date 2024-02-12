@@ -167,7 +167,7 @@ namespace CPQUI.Controls
         {
             // Locate the button by searching for the element containing the specified caption
             // and ensuring it is a descendant of a span element containing the provided text.
-            ILocator button = LocateButtonByCaptionAndCousineSpanText(spanText, buttonCaption);
+            ILocator button = LocateButtonByCaptionAndCousineSpanText(spanText, buttonCaption).Nth(1);
 
             // Click on the button.
             await button.ClickAsync();

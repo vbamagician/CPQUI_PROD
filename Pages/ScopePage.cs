@@ -1,7 +1,5 @@
 ﻿using CPQUI.Controls;
 using Microsoft.Playwright;
-using NUnit.Framework.Internal;
-using System.Formats.Asn1;
 
 namespace CPQUI.Pages
 {

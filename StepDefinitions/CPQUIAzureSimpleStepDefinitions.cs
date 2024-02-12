@@ -30,6 +30,8 @@ namespace CPQUI.StepDefinitions
             _questionnairePage = new QuestionnairePage(_driver.Page);
             _contactsPage = new ContactsPage(_driver.Page);
             _opportunityPage = new OpportunityPage(_driver.Page);
+            
+            Console.WriteLine("Instance Created");
         }
 
         [Given(@"I Navigate to CPQ UI Page")]
