@@ -22,7 +22,6 @@ Scenario: Verify UI Health by Importing WBS for General Services for Azure
 	And I click on Import Button
 	And I click on Choose Files Button and Choose "WBSExport.xls" File
 	When I click on Upload Button
-	#Then I should see the sell prices of import task as "7,328.22"
 	Then I Should see the sell prices of task
 	And I click on Next Button from Scoping Page 
 	And I click on Next Button from OtherCosts Page
@@ -43,14 +42,12 @@ Scenario: Verify UI Health by Manually Inserting WBS for General Services for Az
 	And I choose Time & Material from Type of Contract Question
 	And I entered Contract Duration in Month as "36"
 	And I click on Next Button From Definition Page
-	#And I choose "Hours" Option from build your plan Question
 	And I click on Add Button to add new Task
 	And I Entered Title of the Task as "Task 1"
 	And I Entered Efforts of the Task as "100"
 	And I selected resource as Consultant as option number "33"
-	And I selected country as "India (SWO_IN)" 
+	And I selected country as "India (CPX_IN)" 
 	When I click on Confirm Button
-	#Then I should see the sell price of the manual Task as "107,243.56"
 	Then I Should see the sell prices of task
 	And I click on Next Button from Scoping Page 
 	And I click on Next Button from OtherCosts Page

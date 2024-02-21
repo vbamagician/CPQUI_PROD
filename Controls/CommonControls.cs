@@ -37,13 +37,14 @@ namespace CPQUI.Controls
         public ILocator LocateTextBoxByCousineLabelAndRepeatationIndex(string question, string repeatationIndex) => _page.Locator($"(//label[contains(text()[normalize-space()],'{question}')]/../..//input)[{repeatationIndex}]");
         public ILocator LocateTextBoxBasedOnPrecedingHeader(string header) => _page.Locator($"//*[contains(text(),'{header}')]/../../../../following::div[1]//input");
         public ILocator LocateTextAreaByCousineLabel(string question) => _page.Locator($"//label[contains(text(),'{question}')]/../..//textarea");
-        
+
         //-------------------------------------------------------------------------------
         //Radio Buttons
         //-------------------------------------------------------------------------------
         public ILocator LocateRadioButtonByText(string radioButtonText) => _page.Locator($"//label[text()='{radioButtonText}']");
         public ILocator LocateRadioButtonByCousineLable(string question, string optionString) => _page.Locator($"//label[contains(text()[normalize-space()],'{question}')]/../..//label[contains(text()[normalize-space()],'{optionString}')]");
-
+        public ILocator LocateRadioButtonByCousineLableAndRepeatationIndex(string question, string optionString, string repeatationIndex) => _page.Locator($"(//label[contains(text()[normalize-space()],'{question}')]/../..//label[contains(text()[normalize-space()],'{optionString}')])[{repeatationIndex}]");
+        
         //-------------------------------------------------------------------------------
         //Dropdown
         //-------------------------------------------------------------------------------
@@ -158,20 +159,32 @@ namespace CPQUI.Controls
 
 
         /// <summary>
-        /// This procedure clicks on a button element based on its caption, which is referenced from a span element containing the specified text.
+        /// Clicks on a button element identified by its caption, which is referenced from a span element containing the specified text. 
+        /// If the version of this solution is under review, it clicks on the under review version as per the product owner's rule and suggestion.
         /// </summary>
-        /// <param name="spanText">The text displayed in the span element that references the button.</param>
+        /// <param name="spanText">The text displayed in the span element referencing the button.</param>
         /// <param name="buttonCaption">The text displayed on the button.</param>
         /// <returns>A Task object representing the asynchronous operation.</returns>
         public async Task ClickOnButtonbyCaptionReferencedFromSpanElement(string spanText, string buttonCaption)
         {
             // Locate the button by searching for the element containing the specified caption
             // and ensuring it is a descendant of a span element containing the provided text.
-            ILocator button = LocateButtonByCaptionAndCousineSpanText(spanText, buttonCaption).Nth(1);
+            ILocator button = LocateButtonByCaptionAndCousineSpanText(spanText, buttonCaption).First;
 
-            // Click on the button.
-            await button.ClickAsync();
+            //Now we have to check if version of this solution is under review or not? if present then 
+            //we have to consider that under review version. that's the rule and suggestion from product owner
+            if (await IsElementAvailable(_page.Locator($"//span[text()='{spanText}']/../..//span[text()='Under Review']/../..//button[text()='{buttonCaption}']"), 5000))
+            {
+                Console.WriteLine("Under Review Clicked");
+                await _page.Locator($"//span[text()='{spanText}']/../..//span[text()='Under Review']/../..//button[text()='{buttonCaption}']").ClickAsync();
+            }
+            else
+            {
+                // Click on the button.
+                await button.ClickAsync();
+            }
         }
+
 
 
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -377,6 +390,28 @@ namespace CPQUI.Controls
             // Wait for the loading screen to disappear after clicking the radio button.
             await WaitForLoadingScreenToDisappear();
         }
+
+
+
+        /// <summary>
+        /// Chooses a radio button based on the given question, option string, and repetition index.
+        /// </summary>
+        /// <param name="question">The question associated with the radio button.</param>
+        /// <param name="optionString">The option string representing the radio button.</param>
+        /// <param name="repeatationIndex">The repetition index of the radio button.</param>
+        /// <returns>A Task representing the asynchronous operation.</returns>
+        public async Task ChooseRadioButtonBasedOnQuestionAndRepeatationIndex(string question, string optionString, string repeatationIndex)
+        {
+            // Locate the radio button based on the provided parameters.
+            ILocator radioButton = LocateRadioButtonByCousineLableAndRepeatationIndex(question, optionString, repeatationIndex);
+
+            // Click on the located radio button asynchronously.
+            await radioButton.ClickAsync();
+
+            // Wait for the loading screen to disappear asynchronously.
+            await WaitForLoadingScreenToDisappear();
+        }
+
 
 
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

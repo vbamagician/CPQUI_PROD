@@ -25,8 +25,9 @@ experience while configuring a new contract for Cloud Managed Services tailored 
 		#definition page
 		And I click the button with the text "Next" identified by the parent class "heap-next-1"
 		And I enter "12000" into the textbox for the question "Estimated Consumption per month"
-		And I choose "No" from the radio button group for the question "Is a discount required to close this deal?"
+		And I choose "No" from the radio button group for the question "Is a discount required to close this deal?" having repeat index of "1"
 		And I choose "New CSP" from dropdown box of a question "Please select from one of the following transfer options:"
+		And I choose "No" from the radio button group for the question "Is a discount required to close this deal?" having repeat index of "2"
 		#Scoping Page
 		And I click the button with the text "Next" identified by the parent class "heap-next-2"
 		#Customer Pricing

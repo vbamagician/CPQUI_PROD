@@ -16,8 +16,8 @@ a new contract for the Cloud Acceleration Starter Pack tailored for Azure.
 		And I click on Specific Service "Cloud Acceleration Starter Pack (for Azure)"
 		And I click on Configure Now Button
 		And I choose "Azure Migrate" from the radio button group for the question "Preferred Discovery Tool:"
-		And I choose "xDC Delhi" from the radio button group for the question "Remote Delivery Team:"
-		And I choose "xDC Delhi" from the radio button group for the question "Local Delivery Location:"
+		And I choose "xDC Gurugram" from the radio button group for the question "Remote Delivery Team:"
+		And I choose "xDC Gurugram" from the radio button group for the question "Local Delivery Location:"
 		And I click on Next button from definition page
 		And I enter "10" into the textbox for the question "Number of Servers:"
 		And I enter "5" into the textbox for the question "Estimated duration (weeks):"

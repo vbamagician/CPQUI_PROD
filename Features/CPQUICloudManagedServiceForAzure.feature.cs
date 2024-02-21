@@ -160,28 +160,32 @@ experience while configuring a new contract for Cloud Managed Services tailored 
 #line hidden
 #line 28
   testRunner.And("I choose \"No\" from the radio button group for the question \"Is a discount require" +
-                        "d to close this deal?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+                        "d to close this deal?\" having repeat index of \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 29
   testRunner.And("I choose \"New CSP\" from dropdown box of a question \"Please select from one of the" +
                         " following transfer options:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 31
+#line 30
+  testRunner.And("I choose \"No\" from the radio button group for the question \"Is a discount require" +
+                        "d to close this deal?\" having repeat index of \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 32
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 33
+#line 34
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 34
+#line 35
   testRunner.And("I choose \"PDF\" from the dropdown for the question \"Document Type:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 36
+#line 37
  testRunner.When("I click the button with the text \"Finish\" identified by the parent class \"heap-fi" +
                         "nish\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 37
+#line 38
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

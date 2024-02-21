@@ -157,12 +157,12 @@ a new contract for the Cloud Starter Pack tailored for Azure.", ProgrammingLangu
                         "Discovery Tool:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 47
-  testRunner.And("I choose \"xDC Delhi\" from the radio button group for the question \"Remote Deliver" +
-                        "y Team:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"xDC Gurugram\" from the radio button group for the question \"Remote Deli" +
+                        "very Team:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 48
-  testRunner.And("I choose \"xDC Delhi\" from the radio button group for the question \"Local Delivery" +
-                        " Location:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"xDC Gurugram\" from the radio button group for the question \"Local Deliv" +
+                        "ery Location:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 51
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +

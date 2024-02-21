@@ -44,8 +44,8 @@ a new contract for the Cloud Starter Pack tailored for Azure.
 		And I click the button containing the text "Configure Now" Only If button found within 30 seconds else skip
 	#</4>
 		And I choose "Azure Migrate" from the radio button group for the question "Preferred Discovery Tool:"
-		And I choose "xDC Delhi" from the radio button group for the question "Remote Delivery Team:"
-		And I choose "xDC Delhi" from the radio button group for the question "Local Delivery Location:"
+		And I choose "xDC Gurugram" from the radio button group for the question "Remote Delivery Team:"
+		And I choose "xDC Gurugram" from the radio button group for the question "Local Delivery Location:"
 	#<5>
 		#definition page
 		And I click the button with the text "Next" identified by the parent class "heap-next-1"

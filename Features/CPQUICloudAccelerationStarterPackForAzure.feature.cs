@@ -126,12 +126,12 @@ a new contract for the Cloud Acceleration Starter Pack tailored for Azure.", Pro
                         "Discovery Tool:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
-  testRunner.And("I choose \"xDC Delhi\" from the radio button group for the question \"Remote Deliver" +
-                        "y Team:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"xDC Gurugram\" from the radio button group for the question \"Remote Deli" +
+                        "very Team:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
-  testRunner.And("I choose \"xDC Delhi\" from the radio button group for the question \"Local Delivery" +
-                        " Location:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"xDC Gurugram\" from the radio button group for the question \"Local Deliv" +
+                        "ery Location:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 21
   testRunner.And("I click on Next button from definition page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

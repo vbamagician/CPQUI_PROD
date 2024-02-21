@@ -10,9 +10,9 @@ namespace CPQUI.StepDefinitions
         private readonly CommonControls _commonControls;
 
         //Delete this when moving to prod
-        private string CPQUI_PAGE_LINK = "https://contracts.softwareone.com/";
-        private string CPQUI_LOGIN_USERNAME = "helpdesk-scg.global@softwareone.com";
-        private string CPQUI_LOGIN_PASSWORD = "CPQ.account1708";
+        private readonly string CPQUI_PAGE_LINK = "https://contracts.softwareone.com/";
+        private readonly string CPQUI_LOGIN_USERNAME = "helpdesk-scg.global@softwareone.com";
+        private readonly string CPQUI_LOGIN_PASSWORD = "CPQ.account1708";
 
         private CommonStepDefinitions(Driver driver)
         {
@@ -160,11 +160,16 @@ namespace CPQUI.StepDefinitions
             await _commonControls.ChooseRadioButtonByText(radioButtonText);
         }
 
-
         [Given(@"I choose ""([^""]*)"" from the radio button group for the question ""([^""]*)""")]
         public async Task GivenIChooseFromTheRadioButtonGroupForTheQuestion(string optionString, string question)
         {
             await _commonControls.ChooseRadioButtonBasedOnQuestion(question, optionString);
+        }
+
+        [Given(@"I choose ""([^""]*)"" from the radio button group for the question ""([^""]*)"" having repeat index of ""([^""]*)""")]
+        public async Task GivenIChooseFromTheRadioButtonGroupForTheQuestionHavingRepeatIndexOf(string optionString, string question, string repeatIndex)
+        {
+            await _commonControls.ChooseRadioButtonBasedOnQuestionAndRepeatationIndex(question,optionString, repeatIndex);
         }
 
 

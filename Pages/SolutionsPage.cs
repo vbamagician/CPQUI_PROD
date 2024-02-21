@@ -7,8 +7,7 @@ namespace CPQUI.Pages
     {
         private readonly IPage _page;
         private readonly CommonControls _controls;
-        private string _solutionName;
-
+        
         // Constructor
         public SolutionsPage(IPage page)
         {
@@ -25,14 +24,12 @@ namespace CPQUI.Pages
         {
             var myButton = _page.Locator($"//span[contains(text(),'{solution}')]/../../td/button[text()='Get Contract']");
             await myButton.ClickAsync();
-            _solutionName = solution;
         }  
 
         public async Task SelectSpecificSolution(string solution)
         {
             var myButton = _page.Locator($"//span[text()='{solution}']/../../td/button[text()='Get Contract']");
             await myButton.ClickAsync();
-            _solutionName = solution;
         }
 
         public async Task ClickOnConfigureButton()
@@ -44,7 +41,6 @@ namespace CPQUI.Pages
             {
                 // If the button is available, click on it
                 await ConfigureButton.ClickAsync();
-                Console.WriteLine($"###################_______{_solutionName}________#####################");
             }
         }
     }

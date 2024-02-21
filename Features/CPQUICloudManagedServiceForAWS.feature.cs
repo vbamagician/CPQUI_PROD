@@ -142,78 +142,75 @@ new contract for Cloud Managed Services tailored for AWS.", ProgrammingLanguage.
 #line 22
   testRunner.And("I choose \"No\" from the radio button group for the question \"AWS Advanced\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 23
-  testRunner.And("I choose \"No\" from the radio button group for the question \"AWS Premium\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 25
+#line 24
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 26
+#line 25
   testRunner.And("I enter \"12000\" into the textbox for the question \"Estimated Total Consumption pe" +
                         "r month\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 27
+#line 26
   testRunner.And("I choose \"No\" from the radio button group for the question \"Is a discount require" +
                         "d to close this deal?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 28
+#line 27
   testRunner.And("I enter \"1\" into the textbox for the question \"Number of AWS Accounts:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 29
+#line 28
   testRunner.And("I choose \"No\" from the radio button group for the question \"Does the customer has" +
                         " an exsiting AWS Account to transfer?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 30
+#line 29
   testRunner.And("I choose \"New \'Commercial Account\' to be setup by SWO\" from dropdown box of a que" +
                         "stion \"Please select from one of the following options:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 31
+#line 30
   testRunner.And("I choose \"Standard Support\" from radio button group of a question \"Standard or En" +
                         "terprise Support?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 32
+#line 31
   testRunner.And("I choose \"AWS Led Basic Support\" from radio button group of a question \"Level of " +
                         "Support:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 34
+#line 33
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 36
+#line 35
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 37
+#line 36
   testRunner.And("I entered \"ABC123\" in a textbox of a question \"SCU Number:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 38
+#line 37
   testRunner.And("I choose \"No\" from radio button group of a question \"Do they need split billing?\"" +
                         "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 39
+#line 38
   testRunner.And("I choose \"Service Provider Account Model (SPAM)\" from radio button group of a que" +
                         "stion \"What should be the target account model?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 40
+#line 39
   testRunner.And("I entered \"ABCD\" in a textbox of a question \"Account ID:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 41
+#line 40
   testRunner.And("I entered \"a@gmail.com\" in a textbox of a question \"Owner Email:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 42
+#line 41
   testRunner.And("I choose \"No\" from radio button group of a question \"Any workload provisioned in " +
                         "Master Payer Account?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 44
+#line 43
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 47
+#line 46
  testRunner.When("I click the button with the text \"Finish\" identified by the parent class \"heap-fi" +
                         "nish\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 48
+#line 47
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

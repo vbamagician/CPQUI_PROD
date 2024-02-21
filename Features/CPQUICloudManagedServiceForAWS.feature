@@ -20,7 +20,6 @@ new contract for Cloud Managed Services tailored for AWS.
 		And I click the "Get Contract" button associated with the reference text "Cloud Managed Services for AWS"
 		And I click the button containing the text "Configure Now" Only If button found within 30 seconds else skip
 		And I choose "No" from the radio button group for the question "AWS Advanced"
-		And I choose "No" from the radio button group for the question "AWS Premium"
 		#definition page
 		And I click the button with the text "Next" identified by the parent class "heap-next-1"
 		And I enter "12000" into the textbox for the question "Estimated Total Consumption per month"
