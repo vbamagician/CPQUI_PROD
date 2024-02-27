@@ -44,7 +44,7 @@ namespace CPQUI.Controls
         public ILocator LocateRadioButtonByText(string radioButtonText) => _page.Locator($"//label[text()='{radioButtonText}']");
         public ILocator LocateRadioButtonByCousineLable(string question, string optionString) => _page.Locator($"//label[contains(text()[normalize-space()],'{question}')]/../..//label[contains(text()[normalize-space()],'{optionString}')]");
         public ILocator LocateRadioButtonByCousineLableAndRepeatationIndex(string question, string optionString, string repeatationIndex) => _page.Locator($"(//label[contains(text()[normalize-space()],'{question}')]/../..//label[contains(text()[normalize-space()],'{optionString}')])[{repeatationIndex}]");
-        
+
         //-------------------------------------------------------------------------------
         //Dropdown
         //-------------------------------------------------------------------------------
@@ -63,6 +63,22 @@ namespace CPQUI.Controls
 
 
         // Public Methods
+        //Solution Dependent Methods
+
+        public async Task UpdateTheAppropriateOrganisationUnitsForTheGivenRolesToProceed()
+        {
+            if (await IsElementAvailable(_page.Locator("(//table)[2]//tr[2]//td[3]/span"), 5000))
+            {
+                do
+                {
+                    await _page.Locator("(//table)[2]//tr[2]//td[3]/span").ClickAsync();
+                    await LocateButtonByCaption("Update").ClickAsync();
+                    await LocateDropdownByCousineLabel("Organisation Unit").SelectOptionAsync(new[] { "xDC Gurugram" });
+                    await LocateButtonByCaption("Confirm").ClickAsync();
+                } while (await _page.Locator("(//table)[2]//tr[2]//td[3]/span").IsVisibleAsync());
+            }
+        }
+
 
         //-------------------------------------------------------------------------------
         //Dynamic Element Method

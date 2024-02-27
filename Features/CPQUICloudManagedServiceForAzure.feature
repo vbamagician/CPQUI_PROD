@@ -20,14 +20,28 @@ experience while configuring a new contract for Cloud Managed Services tailored 
 		And I click the "Get Contract" button associated with the reference text "Cloud Managed Services for Azure"
 		And I click the button containing the text "Configure Now" Only If button found within 30 seconds else skip
 		And I choose "Yes" from the radio button group for the question "Azure Essentials for CSP?"
-		And I choose "No" from the radio button group for the question "Azure Essentials for EA?"
-		And I choose "No" from the radio button group for the question "Azure Advanced?"
+		And I choose "Yes" from the radio button group for the question "Azure Essentials for EA?"
+		And I choose "Yes" from the radio button group for the question "Azure Advanced?"
+		And I choose "Commvault Metallic" from the radio button group for the question "Which Backup Software is required?"
+		And I choose "Yes" from the radio button group for the question "Do you require Operations on Demand?"
 		#definition page
 		And I click the button with the text "Next" identified by the parent class "heap-next-1"
-		And I enter "12000" into the textbox for the question "Estimated Consumption per month"
+	#Azure Essentials for CSP	
+		And I enter "12000" into the textbox for the question "Estimated Consumption per month" having repeat index of "1" and press "Nothing"
 		And I choose "No" from the radio button group for the question "Is a discount required to close this deal?" having repeat index of "1"
-		And I choose "New CSP" from dropdown box of a question "Please select from one of the following transfer options:"
+	#Azure Essentials for EA	
+		And I enter "11000" into the textbox for the question "Estimated Consumption per month" having repeat index of "2" and press "Nothing"
 		And I choose "No" from the radio button group for the question "Is a discount required to close this deal?" having repeat index of "2"
+	#Azure Advanced
+		And I enter "10000" into the textbox for the question "Estimated Consumption per month" having repeat index of "3" and press "Nothing"
+		And I choose "No" from the radio button group for the question "Is a discount required to close this deal?" having repeat index of "3"
+	#Azure Account Transfer
+		And I choose "New CSP" from dropdown box of a question "Please select from one of the following transfer options:"
+		And I choose "No" from the radio button group for the question "Is a discount required to close this deal?" having repeat index of "4"
+	#Operation on Demand
+		And I enter "10" into the textbox for the question "Please choose the number of monthly 20-hour blocks required?" and press "Enter"
+	#Manage Resources as per organization 
+		#And I update the appropriate organisation units for the given roles to proceed
 		#Scoping Page
 		And I click the button with the text "Next" identified by the parent class "heap-next-2"
 		#Customer Pricing

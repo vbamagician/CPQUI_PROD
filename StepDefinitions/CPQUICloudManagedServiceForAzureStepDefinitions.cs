@@ -10,7 +10,6 @@ namespace CPQUI.StepDefinitions
         private readonly Driver _driver;
         private readonly CloudManagedServiceForAzureSolution _cloudManagedServiceForAzureSolution;
 
-
         CPQUICloudManagedServiceForAzureStepDefinitions(Driver driver)
         {
             _driver = driver;
