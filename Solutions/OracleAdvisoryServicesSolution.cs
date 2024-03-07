@@ -45,6 +45,9 @@ namespace CPQUI.Solutions
 
         public async Task ClickOnNextButtonPage(string pagePlacementText)
         {
+            // Take Screenshot 
+            await _controls.TakeScreenShot();
+
             await _controls.NextButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }

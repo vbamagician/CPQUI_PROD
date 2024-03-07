@@ -1,4 +1,5 @@
 ﻿using Microsoft.Playwright;
+using System.Runtime.CompilerServices;
 
 namespace CPQUI.Controls
 {
@@ -29,6 +30,7 @@ namespace CPQUI.Controls
         public ILocator LocateButtonByCaption(string buttonCaption) => _page.Locator($"//button[contains(text()[normalize-space()],'{buttonCaption}')]");
         public ILocator LocateButtonByCaptionAndCousineSpanText(string spanText, string buttonCaption) => _page.Locator($"//span[contains(text()[normalize-space()],'{spanText}')]/../..//button[contains(text()[normalize-space()],'{buttonCaption}')]");
         public ILocator LocateButtonByCaptionAndParentIdentifier(string buttonCaption, string parentClassName) => _page.Locator($"//div[contains(@class[normalize-space()],'{parentClassName}')]//button[contains(text()[normalize-space()],'{buttonCaption}')]");
+        public ILocator LocateButtonByTableCellTextAndCaption(string tableCellText, string buttonCaption) => _page.Locator($"//*[text()='{tableCellText}']/../..//button[contains(text()[normalize-space()],'{buttonCaption}')]");
 
         //-------------------------------------------------------------------------------
         //TextBoxes
@@ -60,7 +62,8 @@ namespace CPQUI.Controls
         //Dynamic Element
         //-------------------------------------------------------------------------------
         public ILocator LocateElementByAttribute(string element, string attribute, string attributeValue) => _page.Locator($"//{element}[@{attribute}='{attributeValue}']");
-
+        public ILocator LocateElementByTableCellTextAndAttribute(string tableCellText, string attributeName, string attributeValue) => _page.Locator($"//*[text()='{tableCellText}']/../..//*[@{attributeName}='{attributeValue}']");
+        public ILocator LocateElementByText(string text) => _page.GetByText(text);
 
         // Public Methods
         //Solution Dependent Methods
@@ -109,6 +112,45 @@ namespace CPQUI.Controls
             await LocateElementByAttribute(element, attribute, attributeValue).ClickAsync();
         }
 
+        /// <summary>
+        /// Clicks on an HTML element identified by the provided attribute and attribute value.
+        /// </summary>
+        /// <param name="element">The type of HTML element (e.g., button, link) to locate.</param>
+        /// <param name="attribute">The attribute used to identify the target element.</param>
+        /// <param name="attributeValue">The value associated with the specified attribute.</param>
+        /// <returns>A task representing the asynchronous operation of clicking on the element.</returns>
+        public async Task ClickOnElementBasedOnAttribute(string element, string attribute, string attributeValue)
+        {
+            await LocateElementByAttribute(element, attribute, attributeValue).ClickAsync();
+        }
+
+        /// <summary>
+        /// Clicks an element basend on its position relative to a table cell containing a specified text.
+        /// </summary>
+        /// <param name="tableCellText">The text displayed within the table cell adjacent to the element.</param>
+        /// <param name="attributeName">The name of the attirbute.</param>
+        /// <param name="attributeValue">The value of the attirbute.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
+        public async Task ClickOnElementAdjacentToTableCell(string tableCellText, string attributeName, string attributeValue)
+        {
+            // Click on the three dots to make the button visible.
+            ILocator element = LocateElementByTableCellTextAndAttribute(tableCellText, attributeName, attributeValue);
+
+            await element.ClickAsync();
+        }
+
+        /// <summary>
+        /// Clicks on an element on the page identified by its visible text.
+        /// </summary>
+        /// <param name="elementText">The visible text of the element to click on.</param>
+        /// <returns>A Task representing the asynchronous operation.</returns>
+        public async Task ClickOnElementByTextOnIt(string elementText)
+        {
+            // Locate the element by its visible text and perform a click operation
+            await LocateElementByText(elementText).ClickAsync();
+        }
+
+
 
 
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -127,6 +169,9 @@ namespace CPQUI.Controls
 
             // Click on the button.
             await button.ClickAsync();
+
+            // Wait for the loading screen to disappear after clicking the button.
+            // await WaitForLoadingScreenToDisappear();
         }
 
 
@@ -138,6 +183,9 @@ namespace CPQUI.Controls
         /// <returns>A Task object representing the asynchronous operation.</returns>
         public async Task ClickOnButtonByCaptionAndParentIdentifier(string buttonCaption, string parentClassName)
         {
+            // Take Screenshot 
+            await TakeScreenShot();
+
             // Locate the button by searching for the element containing the specified caption
             // within a parent element with the specified class name.
             ILocator button = LocateButtonByCaptionAndParentIdentifier(buttonCaption, parentClassName);
@@ -201,6 +249,59 @@ namespace CPQUI.Controls
             }
         }
 
+        /// <summary>
+        /// Clicks a button identified by its caption, basend on its position relative to a table cell containing a specified text.
+        /// </summary>
+        /// <param name="tableCellText">The text displayed within the table cell adjacent to the button.</param>
+        /// <param name="buttonCaption">The text displayed on the button.</param>
+        /// <returns>A Task object representing the asynchronous operation.</returns>
+        public async Task ClickOnButtonByCaptionAdjacentTableCell(string tableCellText, string buttonCaption)
+        {
+            // Click on the button.
+            ILocator button = LocateButtonByTableCellTextAndCaption(tableCellText, buttonCaption);
+
+            await button.ClickAsync();
+        }
+
+
+        /// <summary>
+        /// Clicks on a button identified by its caption to initiate the download of a file,
+        /// and saves the downloaded file with the specified file name.
+        /// </summary>
+        /// <param name="buttonCaption">The caption of the button to click.</param>
+        /// <param name="fileName">The name to save the downloaded file as.</param>
+        /// <returns>A Task representing the asynchronous operation.</returns>
+        public async Task ClickOnButtonToDownloadAFile(string buttonCaption, string fileName)
+        {
+            // Locate the button element based on its caption
+            ILocator button = LocateButtonByCaption(buttonCaption);
+
+            // Execute the click operation on the button and wait for the download to start
+            var download = await _page.RunAndWaitForDownloadAsync(async () => await button.ClickAsync());
+
+            // Save the downloaded file with the specified file name
+            await download.SaveAsAsync(fileName);
+        }
+
+
+        /// <summary>
+        /// Clicks on a button to initiate the file upload process, selects a file from the file system,
+        /// and uploads it using the provided file path and file name.
+        /// </summary>
+        /// <param name="buttonCaption">The caption of the button used to initiate the upload process.</param>
+        /// <param name="fileName">The name of the file to be uploaded.</param>
+        /// <param name="filePath">The path where the file to be uploaded is located.</param>
+        /// <returns>A Task representing the asynchronous operation.</returns>
+        public async Task ClickOnButtonToUploadAFile(string buttonCaption,
+                                                      string fileName,
+                                                      string filePath)
+        {
+            // Initiates the file chooser dialog by clicking on the button
+            var fileChooser = await _page.RunAndWaitForFileChooserAsync(async () => await _page.GetByText(buttonCaption).ClickAsync());
+
+            // Sets the file to be uploaded using the provided file path and file name
+            await fileChooser.SetFilesAsync(filePath + fileName);
+        }
 
 
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -456,6 +557,9 @@ namespace CPQUI.Controls
 
         public async Task ClickOnNextButtonPage(string pagePlacementText)
         {
+            // Take Screenshot 
+            await TakeScreenShot();
+
             await NextButton(pagePlacementText).ClickAsync();
             await WaitForLoadingScreenToDisappear();
         }
@@ -529,6 +633,18 @@ namespace CPQUI.Controls
         public void HoldThread(int sleepingTime)
         {
             Thread.Sleep(sleepingTime);
+        }
+
+        public async Task TakeScreenShot()
+        {
+            await _page.ScreenshotAsync(new()
+            {
+                Path = await _page.Locator("//h1").InnerTextAsync() + " " + await _page.Locator("//*[contains(@class,'current')]//button").InnerTextAsync() + ".jpeg",
+                FullPage = true,
+                Quality = 100,
+                Type = ScreenshotType.Jpeg
+            });
+            Thread.Sleep(2000);
         }
     }
 }

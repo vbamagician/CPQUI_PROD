@@ -100,14 +100,14 @@ a new contract for the Digital Workplace Essentials for EA.", ProgrammingLanguag
 #line 10
  testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table9.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "CPQ.account1708"});
 #line 11
-  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table9, "And ");
+  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table10, "And ");
 #line hidden
 #line 14
   testRunner.And("I click the button containing the text \"New Contract\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

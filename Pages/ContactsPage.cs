@@ -57,6 +57,10 @@ namespace CPQUI.Pages
         public async Task ClickOnFinishButtonFromContactsPage(string pagePlacementText)
         {
             await _controls.WaitForPageAppears(pagePlacementText);
+
+            // Take Screenshot 
+            await _controls.TakeScreenShot();
+
             await _controls.FinishButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }

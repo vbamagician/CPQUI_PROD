@@ -102,6 +102,9 @@ namespace CPQUI.Solutions
 
         public async Task ClickOnNextButtonFromDefinitionPageForSAMSimple(string pagePlacementText)
         {
+            // Take Screenshot 
+            await _controls.TakeScreenShot();
+
             await _controls.NextButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }
@@ -188,6 +191,9 @@ namespace CPQUI.Solutions
 
         public async Task ClickOnNextButtonFromScopePage(string pagePlacementText)
         {
+            // Take Screenshot 
+            await _controls.TakeScreenShot();
+
             await _controls.NextButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }
@@ -205,6 +211,9 @@ namespace CPQUI.Solutions
 
         public async Task ClickOnNextButtonFromCustomerPricingPage(string pagePlacementText)
         {
+            // Take Screenshot 
+            await _controls.TakeScreenShot();
+
             await _controls.NextButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }
@@ -216,6 +225,9 @@ namespace CPQUI.Solutions
 
         public async Task ClickOnNextButtonFromMarginAsSoldPage(string pagePlacementText)
         {
+            // Take Screenshot 
+            await _controls.TakeScreenShot();
+
             await _controls.NextButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }
@@ -365,6 +377,9 @@ namespace CPQUI.Solutions
 
         public async Task ClickOnNextButtonFromQuestionnairePage(string pagePlacementText)
         {
+            // Take Screenshot 
+            await _controls.TakeScreenShot();
+
             await _controls.NextButton(pagePlacementText).ClickAsync();
             await _controls.WaitForLoadingScreenToDisappear();
         }

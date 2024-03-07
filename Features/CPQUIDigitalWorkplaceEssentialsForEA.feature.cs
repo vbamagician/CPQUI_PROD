@@ -100,14 +100,14 @@ a new contract for the Digital Workplace Essentials for EA.", ProgrammingLanguag
 #line 10
  testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table7.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "CPQ.account1708"});
 #line 11
-  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table7, "And ");
+  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table8, "And ");
 #line hidden
 #line 14
   testRunner.And("I click the button containing the text \"New Contract\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -182,10 +182,6 @@ a new contract for the Digital Workplace Essentials for EA.", ProgrammingLanguag
                         "On Sell Price\" and press \"Enter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 35
-  testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
-                        "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 36
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

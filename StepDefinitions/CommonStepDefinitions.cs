@@ -61,20 +61,16 @@ namespace CPQUI.StepDefinitions
             await _commonControls.EnterValueInElementBasedOnAttribute(inputString, element, attribute, attributeValue);
         }
 
-        [Given(@"I click the element ""([^""]*)"" of having attribute ""([^""]*)"" having the value ""([^""]*)""")]
-        public async Task GivenIClickTheElementOfHavingAttributeHavingTheValue(string element, string attribute, string attributeValue)
-        {
-            await _commonControls.ClickElementBasedOnAttribute(element, attribute, attributeValue);
-        }
-
-
 
         //===================================================================================================================================
         // Buttons:
         //      1. I click the button containing the text
         //      2. Solution Card
         //      3. Wait for button upto defined seconds and if button does not found then skip clicking on it. 
-        //      4. Click on the button based on it's parent class test. Simply NEXT and FINISH button 
+        //      4. Click on the button containing text adjacent to table cell.
+        //      5. Click on the button based on it's parent class test. Simply NEXT and FINISH button 
+        //      6. Click on the button to download the file and save with name
+        //      7. Click on the button to upload the file from the specific path 
         //===================================================================================================================================
 
         //1
@@ -104,6 +100,27 @@ namespace CPQUI.StepDefinitions
         public async Task GivenIClickTheButtonWithTheTextIdentifiedByTheParentClass(string buttonCaption, string parentClassName)
         {
             await _commonControls.ClickOnButtonByCaptionAndParentIdentifier(buttonCaption, parentClassName);
+        }
+
+        //5
+        [Given(@"I click the button containing the text ""([^""]*)"" on the adjacent table has text ""([^""]*)""")]
+        public async Task GivenIClickTheButtonContainingTheTextOnTheAdjacentTableHasText(string buttonCaption, string tableCellText)
+        {
+            await _commonControls.ClickOnButtonByCaptionAdjacentTableCell(tableCellText, buttonCaption);
+        }
+
+        //6
+        [Given(@"I click the button containing the text ""([^""]*)"" Then the file ""([^""]*)"" should be downloaded and saved")]
+        public async Task GivenIClickTheButtonContainingTheTextThenTheFileShouldBeDownloadedAndSaved(string buttonCaption, string fileName)
+        {
+            await _commonControls.ClickOnButtonToDownloadAFile(buttonCaption, fileName);
+        }
+
+        //7
+        [Given(@"I click the button containing the text ""([^""]*)"" to upload the file ""([^""]*)"" from the path ""([^""]*)""")]
+        public async Task GivenIClickTheButtonContainingTheTextToUploadTheFileFromThePath(string buttonCaption, string fileName, string filePath)
+        {
+            await _commonControls.ClickOnButtonToUploadAFile(buttonCaption, fileName, filePath);    
         }
 
 
@@ -200,5 +217,29 @@ namespace CPQUI.StepDefinitions
         {
             await _commonControls.SetCheckBoxBasedOnHeaderText(header, checkBoxText);
         }
+
+        //===================================================================================================================================
+        // Dynamic element
+        //===================================================================================================================================
+
+
+        [Given(@"I click on element with attribute ""([^""]*)"" and value ""([^""]*)"" on the adjacent table has text ""([^""]*)""")]
+        public async Task GivenIClickOnElementWithAttributeAndValueOnTheAdjacentTableHasText(string attributeName, string attributeValue, string tableCellText)
+        {
+            await _commonControls.ClickOnElementAdjacentToTableCell(tableCellText, attributeName, attributeValue);
+        }
+
+        [Given(@"I click the element ""([^""]*)"" of having attribute ""([^""]*)"" having the value ""([^""]*)""")]
+        public async Task GivenIClickTheElementOfHavingAttributeHavingTheValue(string element, string attribute, string attributeValue)
+        {
+            await _commonControls.ClickOnElementBasedOnAttribute(element, attribute, attributeValue);
+        }
+
+        [Given(@"I click the element contains the text ""([^""]*)""")]
+        public async Task GivenIClickTheElementContainsTheText(string elementText)
+        {
+            await _commonControls.ClickOnElementByTextOnIt(elementText);
+        }
+
     }
 }

@@ -33,7 +33,7 @@ a new contract for the Digital Workplace Essentials for EA.
 		And I enter "5000" into the textbox for the question "Digital Workplace Adoption Add-On Sell Price" and press "Enter"
 		#Scoping Page
 		And I click the button with the text "Next" identified by the parent class "heap-next-2"
-		And I click the button with the text "Next" identified by the parent class "heap-next-2"
+		#And I click the button with the text "Next" identified by the parent class "heap-next-2"
 		#Customer Pricing
 	When I click the button with the text "Finish" identified by the parent class "heap-finish"
 	Then I should see the value of contract
