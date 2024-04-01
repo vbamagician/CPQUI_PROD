@@ -171,7 +171,7 @@ namespace CPQUI.Controls
             await button.ClickAsync();
 
             // Wait for the loading screen to disappear after clicking the button.
-            // await WaitForLoadingScreenToDisappear();
+            await WaitForLoadingScreenToDisappear();
         }
 
 

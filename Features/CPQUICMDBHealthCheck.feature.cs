@@ -20,25 +20,24 @@ namespace CPQUI.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("CPQUIDigitalWorkplaceEssentialsForEA")]
-    public partial class CPQUIDigitalWorkplaceEssentialsForEAFeature
+    [NUnit.Framework.DescriptionAttribute("CPQUICMDBHealthCheck")]
+    public partial class CPQUICMDBHealthCheckFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "CPQUIDigitalWorkplaceEssentialsForEA.feature"
+#line 1 "CPQUICMDBHealthCheck.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CPQUIDigitalWorkplaceEssentialsForEA", @"This feature aims to ensure the robust UI Health of the Digital Workplace Essentials for EA 
-Solution within the CPQ environment. It focuses on validating the seamless and 
-dependable functionality of the user interface while configuring and processing 
-a new contract for the Digital Workplace Essentials for EA.", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CPQUICMDBHealthCheck", @"This feature focuses on testing the UI Health of the CMDB Health Check solution within 
+the CPQ environment. The primary objective is to ensure a reliable and smooth user interface 
+experience while configuring a new contract for CMDB Health Check solution.", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,17 +76,15 @@ a new contract for the Digital Workplace Essentials for EA.", ProgrammingLanguag
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify UI Health while Configuring Digital Workplace Essentials for EA Solution i" +
-            "n CPQ")]
+        [NUnit.Framework.DescriptionAttribute("Verify UI Health while Configuring CMDB Health Check solution in CPQ")]
         [NUnit.Framework.CategoryAttribute("smoke")]
-        public void VerifyUIHealthWhileConfiguringDigitalWorkplaceEssentialsForEASolutionInCPQ()
+        public void VerifyUIHealthWhileConfiguringCMDBHealthCheckSolutionInCPQ()
         {
             string[] tagsOfScenario = new string[] {
                     "smoke"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify UI Health while Configuring Digital Workplace Essentials for EA Solution i" +
-                    "n CPQ", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 9
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify UI Health while Configuring CMDB Health Check solution in CPQ", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 8
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -97,99 +94,130 @@ a new contract for the Digital Workplace Essentials for EA.", ProgrammingLanguag
             else
             {
                 this.ScenarioStart();
-#line 10
+#line 9
  testRunner.Given("I Navigate to CPQ UI Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Username",
                             "Password"});
-                table9.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "helpdesk-scg.global@softwareone.com",
                             "CPQ.account1708"});
-#line 11
-  testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table9, "And ");
+#line 10
+ testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table5, "And ");
 #line hidden
-#line 14
+#line 13
   testRunner.And("I click the button containing the text \"New Contract\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 15
+#line 14
   testRunner.And("I enter \"walmart\" into the textbox with the header labeled \"Select an Account\" an" +
                         "d press \"Enter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 16
+#line 15
   testRunner.And("I check the \"asynchronous\" checkbox based on the adjacent table has index \"1\" hav" +
                         "ing cell that has value \"00001614\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 17
+#line 16
   testRunner.And("I click the button containing the text \"Do you want to continue without an Opport" +
                         "unity?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 18
+#line 17
   testRunner.And("I enter \"UI Test\" into the textbox for the question \"Draft topic:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 19
+#line 18
   testRunner.And("I check the \"synchronous\" checkbox based on the adjacent table has index \"3\" havi" +
                         "ng cell that has value \"Idris Elba\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 20
+#line 19
   testRunner.And("I click the button containing the text \"I Confirm\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 21
-  testRunner.And("I click the \"Get Contract\" button associated with the reference text \"Digital Wor" +
-                        "kplace Essentials for EA\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 20
+  testRunner.And("I click the \"Get Contract\" button associated with the reference text \"CMDB Health" +
+                        " Check\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 22
+#line 21
   testRunner.And("I click the button containing the text \"Configure Now\" Only If button found withi" +
                         "n 30 seconds else skip", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 23
-  testRunner.And("I choose \"Monthly\" from the radio button group for the question \"Billing Type\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the button containing the text \"Add Milestone\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 24
-  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Service Success Mana" +
-                        "ger – SSM (Includes 365 Analytics)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"CMDB Health Check Milestone 2\" into the textbox for the question \"Name:\"" +
+                        "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 25
-  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Digital Workplace Ad" +
-                        "option\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"Recurring\" from the radio button group for the question \"Payment freque" +
+                        "ncy:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 26
+  testRunner.And("I enter \"ABCD\" into the textarea for the question \"Success Criteria:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 27
+  testRunner.And("I enter \"ABCD\" into the textarea for the question \"Risks:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 28
+  testRunner.And("I click the button containing the text \"Confirm\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 29
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 28
-  testRunner.And("I enter \"100\" into the textbox for the question \"Number of Users for which Softwa" +
-                        "reOne needs to Provide Support:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 29
-  testRunner.And("I enter \"20\" into the textbox for the question \"Sales Price ( per user per month " +
-                        ")\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 30
-  testRunner.And("I enter \"10\" into the textbox for the question \"Number of Users for Service Succe" +
-                        "ss Manager:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 31
-  testRunner.And("I enter \"10000\" into the textbox for the question \"Service Success Manager Add-On" +
-                        " Sell Price\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
 #line 32
-  testRunner.And("I enter \"5\" into the textbox for the question \"Number of Users for Digital Workpl" +
-                        "ace Adoption\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the button containing the text \"Add New Task\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 33
-  testRunner.And("I enter \"5000\" into the textbox for the question \"Digital Workplace Adoption Add-" +
-                        "On Sell Price\" and press \"Enter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"CMDB Health Check Task ABCD\" into the textbox for the question \"Title:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 34
+  testRunner.And("I enter \"30\" into the textbox for the question \"Effort in Hours:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 35
+  testRunner.And("I choose \"CMDB Health Check Milestone 2\" from the dropdown for the question \"Mile" +
+                        "stone:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 36
+  testRunner.And("I click the button containing the text \"Confirm\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 38
+  testRunner.And("I click the button containing the text \"Add New Expense\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 39
+  testRunner.And("I choose \"Customer Visable\" from the radio button group for the question \"Margin " +
+                        "reducing or Customer Visible\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 40
+  testRunner.And("I choose \"Hotel\" from the dropdown for the question \"Type:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 41
+  testRunner.And("I enter \"ABCD\" into the textbox for the question \"Name:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 42
+  testRunner.And("I enter \"ABCDABCDABCDABCDABCDABCDABCDABCDABCDABCD\" into the textarea for the ques" +
+                        "tion \"Description:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 43
+  testRunner.And("I enter \"1000\" into the textbox for the question \"Cost:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 44
+  testRunner.And("I enter \"20\" into the textbox for the question \"Markup %:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 45
+  testRunner.And("I choose \"CMDB Health Check Milestone 2\" from the dropdown for the question \"Mile" +
+                        "stone:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 46
+  testRunner.And("I click the button containing the text \"Save\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 47
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 38
+#line 49
  testRunner.When("I click the button with the text \"Finish\" identified by the parent class \"heap-fi" +
                         "nish\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 39
+#line 50
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
