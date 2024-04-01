@@ -22,9 +22,12 @@ experience while configuring a new contract for Cloud Managed Services tailored 
 		And I choose "Yes" from the radio button group for the question "Azure Essentials for CSP?"
 		And I choose "Yes" from the radio button group for the question "Azure Essentials for EA?"
 		And I choose "Yes" from the radio button group for the question "Azure Advanced?"
-		And I choose "Yes" from the radio button group for the question "Do you require Operations on Demand?"
+		#And I choose "Yes" from the radio button group for the question "Do you require Operations on Demand?"
 		#definition page
 		And I click the button with the text "Next" identified by the parent class "heap-next-1"
+		And I choose "No" from the radio button group for the question "Is a discount required to close this deal?" having repeat index of "1"
+		And I choose "No" from the radio button group for the question "Is a discount required to close this deal?" having repeat index of "2"
+		And I choose "No" from the radio button group for the question "Is a discount required to close this deal?" having repeat index of "3"
 	#Azure Essentials for CSP	
 		And I enter "12000" into the textbox for the question "Estimated Consumption per month" having repeat index of "1" and press "Nothing"
 	#Azure Essentials for EA	
@@ -32,10 +35,11 @@ experience while configuring a new contract for Cloud Managed Services tailored 
 	#Azure Advanced
 		And I enter "10000" into the textbox for the question "Estimated Consumption per month" having repeat index of "3" and press "Nothing"
 	#Azure Account Transfer
-		And I choose "Commvault Metallic" from the radio button group for the question "Which Backup Software is required?"
-		And I check the "synchronous" checkbox based on the adjacent table has index "5" having cell that has value "New CSP"
+		#And I choose "Commvault Metallic" from the radio button group for the question "Which Backup Software is required?"
+		#And I check the "synchronous" checkbox based on the adjacent table has index "5" having cell that has value "New CSP"
+		And I choose "New CSP" from the dropdown for the question "Please select from one of the following transfer options:"
 	#Operation on Demand
-		And I enter "10" into the textbox for the question "Please choose the number of monthly 20-hour blocks required?" and press "Enter"
+		#And I enter "10" into the textbox for the question "Please choose the number of monthly 20-hour blocks required?" and press "Enter"
 	#Manage Resources as per organization 
 		#And I update the appropriate organisation units for the given roles to proceed
 		#Scoping Page

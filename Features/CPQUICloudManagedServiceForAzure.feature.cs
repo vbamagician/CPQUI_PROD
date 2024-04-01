@@ -150,54 +150,54 @@ experience while configuring a new contract for Cloud Managed Services tailored 
 #line 24
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"Azure Advanced?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 25
-  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Do you require Opera" +
-                        "tions on Demand?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
 #line 27
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+#line 28
+  testRunner.And("I choose \"No\" from the radio button group for the question \"Is a discount require" +
+                        "d to close this deal?\" having repeat index of \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
 #line 29
+  testRunner.And("I choose \"No\" from the radio button group for the question \"Is a discount require" +
+                        "d to close this deal?\" having repeat index of \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 30
+  testRunner.And("I choose \"No\" from the radio button group for the question \"Is a discount require" +
+                        "d to close this deal?\" having repeat index of \"3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 32
   testRunner.And("I enter \"12000\" into the textbox for the question \"Estimated Consumption per mont" +
                         "h\" having repeat index of \"1\" and press \"Nothing\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 31
+#line 34
   testRunner.And("I enter \"11000\" into the textbox for the question \"Estimated Consumption per mont" +
                         "h\" having repeat index of \"2\" and press \"Nothing\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 33
+#line 36
   testRunner.And("I enter \"10000\" into the textbox for the question \"Estimated Consumption per mont" +
                         "h\" having repeat index of \"3\" and press \"Nothing\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 35
-  testRunner.And("I choose \"Commvault Metallic\" from the radio button group for the question \"Which" +
-                        " Backup Software is required?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 40
+  testRunner.And("I choose \"New CSP\" from the dropdown for the question \"Please select from one of " +
+                        "the following transfer options:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 36
-  testRunner.And("I check the \"synchronous\" checkbox based on the adjacent table has index \"5\" havi" +
-                        "ng cell that has value \"New CSP\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 38
-  testRunner.And("I enter \"10\" into the textbox for the question \"Please choose the number of month" +
-                        "ly 20-hour blocks required?\" and press \"Enter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 42
+#line 46
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 44
+#line 48
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 45
+#line 49
   testRunner.And("I choose \"PDF\" from the dropdown for the question \"Document Type:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 47
+#line 51
  testRunner.When("I click the button with the text \"Finish\" identified by the parent class \"heap-fi" +
                         "nish\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 48
+#line 52
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
