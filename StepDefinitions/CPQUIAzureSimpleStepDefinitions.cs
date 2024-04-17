@@ -37,6 +37,9 @@ namespace CPQUI.StepDefinitions
         [Given(@"I Navigate to CPQ UI Page")]
         public void GivenINavigateToCPQUIPage()
         {
+            string? envMyFirstName = Environment.GetEnvironmentVariable("MyFirstName");
+            Console.WriteLine($"{envMyFirstName}");
+
             //Define Environemtn Variable that decide what one to choose
             string? varenvspace = Environment.GetEnvironmentVariable("ENVSPACE");
 

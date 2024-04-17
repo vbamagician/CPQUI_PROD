@@ -10,10 +10,16 @@ contract for the Oracle Adviosry Services.
 		And I Enter following Login Details and Click Login Button
 			| Username                            | Password        |
 			| helpdesk-scg.global@softwareone.com | CPQ.account1708 |
-		And I click on New Contract Button
-		And I configure client details for new Contract
-		And I click on Specific Service "Oracle Advisory Services"
-		And I click on Configure Now Button
+		And I click the button containing the text "New Contract"
+		And I enter "walmart" into the textbox with the header labeled "Select an Account" and press "Enter"
+		And I check the "asynchronous" checkbox based on the adjacent table has index "1" having cell that has value "00001614"
+		And I click the button containing the text "Do you want to continue without an Opportunity?"
+		And I enter "UI Test" into the textbox for the question "Draft topic:"
+		And I check the "synchronous" checkbox based on the adjacent table has index "3" having cell that has value "Idris Elba"
+		And I click the button containing the text "I Confirm"
+		And I click the "Get Contract" button associated with the reference text "Oracle Advisory Services"
+		And I click the button containing the text "Configure Now" Only If button found within 30 seconds else skip
+#definition page
 		And I choose "Yes" from the radio button group for the question "Database and Middleware?"
 		And I choose "Yes" from the radio button group for the question "E-Business Suite Production?"
 		And I choose "Yes" from the radio button group for the question "Siebel?"
@@ -29,8 +35,8 @@ contract for the Oracle Adviosry Services.
 		And I choose "No" from the radio button group for the question "Other Products?"
 		And I choose "Yes" from the radio button group for the question "Oracle Audit Support?"
 		And I choose "Yes" from the radio button group for the question "Oracle Negotiation Support?"
-		And I choose "Yes" from the radio button group for the question "Local Project Management?"
-		And I click on Next button from definition page for OAS
+		And I click the button with the text "Next" identified by the parent class "heap-next-1"
+#scope page
 		And I enter "1" into the textbox for the question Number of documents for the "Oracle Entitlements Analysis"
 		And I enter "1" into the textbox for the question Number of servers for the "Database and Middleware"
 		And I enter "1" into the textbox for the question Number of environments for the "E-Business Suite Production"
@@ -46,15 +52,16 @@ contract for the Oracle Adviosry Services.
 		And I enter "50" into the textbox for the question Number of hours for the "Oracle Audit Support"
 		And I enter "50" into the textbox for the question Number of hours for the "Oracle Negotiation Support"
 		And I enter "50" into the textbox for the question Number of hours for the "Oracle Remediation and Optimization"
-		And I enter "50" into the textbox for the question Number of hours for the "Local Project Management"
-		And I click on Next button from scope page for OAS
-		And I click on Next button from customer pricing page for OAS
+		And I choose "3" from the radio button group for the question "Audit and/or Negotiation support hours need to be consumed within"
+		And I click the button with the text "Next" identified by the parent class "heap-next-2"
+#customer pricing page
+		And I click the button with the text "Next" identified by the parent class "heap-next-3"
+#questionnaire page
 		And I enter "ABCD" into the textarea for the question "Locations in scope:"
 		And I enter "ABCD" into the textarea for the question "Organizations in scope:"
 		And I enter "ABCD" into the textarea for the question "Inventory tools in scope:"
-		And I click on Next button from customer questionnaire page for OAS
-		And I Select Document Type as PDF
-		And I Add Authorized Contacts
-		And I add Softwareone Contacts
-	When I click Finish on Contacts Page
+		And I click the button with the text "Next" identified by the parent class "heap-next-5"
+#contacts page
+		And I choose "PDF" from the dropdown for the question "Document Type:"
+	When I click the button with the text "Finish" identified by the parent class "heap-finish"
 	Then I should see the value of contract

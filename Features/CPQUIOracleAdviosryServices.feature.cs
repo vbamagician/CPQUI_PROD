@@ -108,170 +108,186 @@ namespace CPQUI.Features
   testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table16, "And ");
 #line hidden
 #line 13
-  testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the button containing the text \"New Contract\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 14
-  testRunner.And("I configure client details for new Contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"walmart\" into the textbox with the header labeled \"Select an Account\" an" +
+                        "d press \"Enter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
-  testRunner.And("I click on Specific Service \"Oracle Advisory Services\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I check the \"asynchronous\" checkbox based on the adjacent table has index \"1\" hav" +
+                        "ing cell that has value \"00001614\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 16
-  testRunner.And("I click on Configure Now Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the button containing the text \"Do you want to continue without an Opport" +
+                        "unity?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
+  testRunner.And("I enter \"UI Test\" into the textbox for the question \"Draft topic:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 18
+  testRunner.And("I check the \"synchronous\" checkbox based on the adjacent table has index \"3\" havi" +
+                        "ng cell that has value \"Idris Elba\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 19
+  testRunner.And("I click the button containing the text \"I Confirm\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 20
+  testRunner.And("I click the \"Get Contract\" button associated with the reference text \"Oracle Advi" +
+                        "sory Services\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 21
+  testRunner.And("I click the button containing the text \"Configure Now\" Only If button found withi" +
+                        "n 30 seconds else skip", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 23
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"Database and Middlew" +
                         "are?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 18
+#line 24
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"E-Business Suite Pro" +
                         "duction?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 19
+#line 25
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"Siebel?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 20
+#line 26
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"Hyperion?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 21
+#line 27
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"Primavera?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 22
+#line 28
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"JD Edwards?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 23
+#line 29
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"Peoplesoft?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 24
+#line 30
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"Agile?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 25
+#line 31
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"Fusion Cloud?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 26
+#line 32
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"Business Intelligenc" +
                         "e?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 27
+#line 33
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"Golden Gate?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 28
+#line 34
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"Identity Access Mana" +
                         "gement?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 29
+#line 35
   testRunner.And("I choose \"No\" from the radio button group for the question \"Other Products?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 30
+#line 36
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"Oracle Audit Support" +
                         "?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 31
+#line 37
   testRunner.And("I choose \"Yes\" from the radio button group for the question \"Oracle Negotiation S" +
                         "upport?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 32
-  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Local Project Manage" +
-                        "ment?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 38
+  testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
+                        "-1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 33
-  testRunner.And("I click on Next button from definition page for OAS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 34
+#line 40
   testRunner.And("I enter \"1\" into the textbox for the question Number of documents for the \"Oracle" +
                         " Entitlements Analysis\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 35
+#line 41
   testRunner.And("I enter \"1\" into the textbox for the question Number of servers for the \"Database" +
                         " and Middleware\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 36
+#line 42
   testRunner.And("I enter \"1\" into the textbox for the question Number of environments for the \"E-B" +
                         "usiness Suite Production\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 37
+#line 43
   testRunner.And("I enter \"1\" into the textbox for the question Number of environments for the \"Sie" +
                         "bel\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 38
+#line 44
   testRunner.And("I enter \"1\" into the textbox for the question Number of environments for the \"Hyp" +
                         "erion\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 39
+#line 45
   testRunner.And("I enter \"1\" into the textbox for the question Number of environments for the \"Pri" +
                         "mavera\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 40
+#line 46
   testRunner.And("I enter \"1\" into the textbox for the question Number of environments for the \"Peo" +
                         "plesoft\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 41
+#line 47
   testRunner.And("I enter \"1\" into the textbox for the question Number of environments for the \"Agi" +
                         "le\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 42
+#line 48
   testRunner.And("I enter \"1\" into the textbox for the question Number of environments for the \"Fus" +
                         "ion Cloud\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 43
+#line 49
   testRunner.And("I enter \"1\" into the textbox for the question Number of environments for the \"Bus" +
                         "iness Intelligence\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 44
+#line 50
   testRunner.And("I enter \"1\" into the textbox for the question Number of targets & sources for the" +
                         " \"GoldenGate\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 45
+#line 51
   testRunner.And("I enter \"1\" into the textbox for the question Number of users for the \"Identity &" +
                         " Access Management\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 46
+#line 52
   testRunner.And("I enter \"50\" into the textbox for the question Number of hours for the \"Oracle Au" +
                         "dit Support\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 47
+#line 53
   testRunner.And("I enter \"50\" into the textbox for the question Number of hours for the \"Oracle Ne" +
                         "gotiation Support\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 48
+#line 54
   testRunner.And("I enter \"50\" into the textbox for the question Number of hours for the \"Oracle Re" +
                         "mediation and Optimization\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 49
-  testRunner.And("I enter \"50\" into the textbox for the question Number of hours for the \"Local Pro" +
-                        "ject Management\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 50
-  testRunner.And("I click on Next button from scope page for OAS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 51
-  testRunner.And("I click on Next button from customer pricing page for OAS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 52
-  testRunner.And("I enter \"ABCD\" into the textarea for the question \"Locations in scope:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 53
-  testRunner.And("I enter \"ABCD\" into the textarea for the question \"Organizations in scope:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 54
-  testRunner.And("I enter \"ABCD\" into the textarea for the question \"Inventory tools in scope:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
 #line 55
-  testRunner.And("I click on Next button from customer questionnaire page for OAS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"3\" from the radio button group for the question \"Audit and/or Negotiati" +
+                        "on support hours need to be consumed within\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 56
-  testRunner.And("I Select Document Type as PDF", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 57
-  testRunner.And("I Add Authorized Contacts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
+                        "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 58
-  testRunner.And("I add Softwareone Contacts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 59
- testRunner.When("I click Finish on Contacts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
+                        "-3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 60
+  testRunner.And("I enter \"ABCD\" into the textarea for the question \"Locations in scope:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 61
+  testRunner.And("I enter \"ABCD\" into the textarea for the question \"Organizations in scope:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 62
+  testRunner.And("I enter \"ABCD\" into the textarea for the question \"Inventory tools in scope:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 63
+  testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
+                        "-5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 65
+  testRunner.And("I choose \"PDF\" from the dropdown for the question \"Document Type:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 66
+ testRunner.When("I click the button with the text \"Finish\" identified by the parent class \"heap-fi" +
+                        "nish\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 67
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
