@@ -61,6 +61,22 @@ namespace CPQUI.StepDefinitions
             await _commonControls.EnterValueInElementBasedOnAttribute(inputString, element, attribute, attributeValue);
         }
 
+        //===================================================================================================================================
+        // Special Element
+        //===================================================================================================================================
+
+        [Given(@"I click on the tile having text ""([^""]*)""")]
+        public async Task GivenIClickOnTheTileHavingText(string tileText)
+        {
+            await _commonControls.ClickOnATileFromTable(tileText);
+        }
+
+        [Given(@"I click to close the form ""([^""]*)""")]
+        public async Task GivenIClickToCloseTheForm(string subformname)
+        {
+            await _commonControls.ClickOnCloseButtonOfSubForm(subformname);
+        }
+
 
         //===================================================================================================================================
         // Buttons:

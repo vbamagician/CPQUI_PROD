@@ -1,5 +1,4 @@
 ﻿using Microsoft.Playwright;
-using System.Runtime.CompilerServices;
 
 namespace CPQUI.Controls
 {
@@ -65,6 +64,12 @@ namespace CPQUI.Controls
         public ILocator LocateElementByTableCellTextAndAttribute(string tableCellText, string attributeName, string attributeValue) => _page.Locator($"//*[text()='{tableCellText}']/../..//*[@{attributeName}='{attributeValue}']");
         public ILocator LocateElementByText(string text) => _page.GetByText(text);
 
+        //-------------------------------------------------------------------------------
+        //Special Element
+        //-------------------------------------------------------------------------------
+        public ILocator LocateSpecialCellFromTableElement(string cellText) => _page.Locator($"//*[contains(text()[normalize-space()],'{cellText}')]/../..//label");
+        public ILocator LocateCloseButtonOfSubForm(string subformname) => _page.Locator($"(//h3[text()='{subformname}']/../../../../../../../..//button)[1]");
+
         // Public Methods
         //Solution Dependent Methods
 
@@ -82,6 +87,21 @@ namespace CPQUI.Controls
             }
         }
 
+        //-------------------------------------------------------------------------------
+        //Special Element Method
+        //-------------------------------------------------------------------------------
+
+        public async Task ClickOnATileFromTable(string rowText)
+        {
+            await LocateSpecialCellFromTableElement(rowText).ClickAsync();
+            await WaitForLoadingScreenToDisappear();
+        }
+
+        public async Task ClickOnCloseButtonOfSubForm(string formname)
+        {
+            await LocateCloseButtonOfSubForm(formname).ClickAsync();
+            await WaitForLoadingScreenToDisappear();
+        }
 
         //-------------------------------------------------------------------------------
         //Dynamic Element Method
@@ -148,6 +168,9 @@ namespace CPQUI.Controls
         {
             // Locate the element by its visible text and perform a click operation
             await LocateElementByText(elementText).ClickAsync();
+
+            // Wait for the loading screen to disappear after clicking the button.
+            await WaitForLoadingScreenToDisappear();
         }
 
 

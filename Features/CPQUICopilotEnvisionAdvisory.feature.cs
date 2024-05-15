@@ -141,28 +141,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 22
   testRunner.And("I click on Next Button From Definition Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 25
-  testRunner.And("I click on element with attribute \"class\" and value \"kk-action-menu-trigger\" on t" +
-                        "he adjacent table has text \"Project initiation\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 26
-  testRunner.And("I click the button containing the text \"Edit\" on the adjacent table has text \"Pro" +
-                        "ject initiation\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 27
-  testRunner.And("I choose \"xDC Gurugram\" from the dropdown for the question \"Country:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 28
-  testRunner.And("I click the button containing the text \"Confirm\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
 #line 29
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
                         "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 31
- testRunner.When("I click Finish on Contacts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 32
+  testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
+                        "-3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 35
+  testRunner.When("I click the button with the text \"Finish\" identified by the parent class \"heap-fi" +
+                        "nish\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 36
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

@@ -107,170 +107,217 @@ namespace CPQUI.Features
   testRunner.And("I Enter following Login Details and Click Login Button", ((string)(null)), table19, "And ");
 #line hidden
 #line 13
-  testRunner.And("I click on New Contract Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the button containing the text \"New Contract\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 14
-  testRunner.And("I configure client details for new Contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"walmart\" into the textbox with the header labeled \"Select an Account\" an" +
+                        "d press \"Enter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
-  testRunner.And("I click on Service \"SAMSimple\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I check the \"asynchronous\" checkbox based on the adjacent table has index \"1\" hav" +
+                        "ing cell that has value \"00001614\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 16
-  testRunner.And("I click on Configure Now Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the button containing the text \"Do you want to continue without an Opport" +
+                        "unity?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
-  testRunner.And("I choose \"Yes\" to deploy the SAMSimple inventory agent on client Devices", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"UI Test\" into the textbox for the question \"Draft topic:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
-  testRunner.And("I choose option of \"We are able to deploy the SAMSimple inventory agents to all d" +
-                        "evices in scope\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I check the \"synchronous\" checkbox based on the adjacent table has index \"3\" havi" +
+                        "ng cell that has value \"Idris Elba\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
-  testRunner.And("I click on Next Button From Definition Page for SAMSimple", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the button containing the text \"I Confirm\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
-  testRunner.And("I select publisher as \"ActivePDF\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the \"Get Contract\" button associated with the reference text \"SAMSimple\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 21
-  testRunner.And("I entered number of estimated end-user devices as \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 22
-  testRunner.And("I entered number of estimated physical and virtual servers as \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the button containing the text \"Configure Now\" Only If button found withi" +
+                        "n 30 seconds else skip", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 23
-  testRunner.And("I entered number of estimated users as \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"Yes\" from the radio button group for the question \"Please confirm, we a" +
+                        "re able to do so\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 24
-  testRunner.And("I select Operating System in use as \"Linux\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose the radio button option \"We are able to deploy the SAMSimple inventory a" +
+                        "gents to all devices in scope\" specifically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 25
-  testRunner.And("I entered number of trusted domain as \"1\" for trusted domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 26
-  testRunner.And("I entered number of untrusted domain as \"1\" for untrusted domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
+                        "-1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 27
-  testRunner.And("I entered number of geographic location as \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on the tile having text \"ActivePDF\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 28
-  testRunner.And("I entered number of segregated networks as \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"1\" into the textbox for the question \"# End-user Device:\" and press \"Ent" +
+                        "er\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 29
-  testRunner.And("I select Inventory Inventory Data Source is deployed into the clients environment" +
-                        " as \"HP-UD (DDMI)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"1\" into the textbox for the question \"# Servers (Physical & Virtual):\" a" +
+                        "nd press \"Enter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 30
-  testRunner.And("I select an option as \"PDQ Deploy\" method of software distrubution", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"1\" into the textbox for the question \"# Users:\" and press \"Enter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 31
-  testRunner.And("I select virtualization platform as \"Microsoft Hyper-V\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on the tile having text \"Linux\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 32
-  testRunner.And("I select application virtualization platform as \"Microsoft App-V\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"1\" into the textbox for the question \"# Trusted Domains:\" and press \"Ent" +
+                        "er\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 33
-  testRunner.And("I select SaaS Platform as \"Microsoft Office 365\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"1\" into the textbox for the question \"# Untrusted Domains:\" and press \"E" +
+                        "nter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 34
-  testRunner.And("I click Next on Scope Page for SAMSimple", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"1\" into the textbox for the question \"# Locations:\" and press \"Enter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 35
-  testRunner.And("I select an option for implementation level as \"Medium\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"1\" into the textbox for the question \"# Segregated Networks:\" and press " +
+                        "\"Enter\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 36
-  testRunner.And("I click Next Customer Pricing Page for SAMSimple", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on the tile having text \"HP-UD (DDMI)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 37
-  testRunner.And("I click on Add Domain Button to Add Trusted Domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on the tile having text \"PDQ Deploy\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 38
-  testRunner.And("I select \"Trusted\" as option from Domain Form for Trusted Domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on the tile having text \"Microsoft Hyper-V\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 39
-  testRunner.And("I entered domain name as \"ABCD\" for Trusted Domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on the tile having text \"Microsoft App-V\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 40
-  testRunner.And("I click on Save and Add Another button to add one more domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click on the tile having text \"Microsoft Office 365\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 41
-  testRunner.And("I select \"Untrusted\" as option from Domain Form for Untrusted Domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 42
-  testRunner.And("I entered domain name as \"ABCD\" for Untrusted Domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
+                        "-2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 43
-  testRunner.And("I click on Save button to close domain form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"Medium\" from the radio button group for the question \"Implementation Le" +
+                        "vel: Based on the provided scoping information, the implementation may be Comple" +
+                        "x\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 44
-  testRunner.And("I click on Add Location Button To Add Gegraphic Location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 45
-  testRunner.And("I entered geographic location as \"India\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
+                        "-3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 46
-  testRunner.And("I click on Save button to close Location form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the element contains the text \"Add Domain\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 47
-  testRunner.And("I click on Add Network button To Add Segregated Networks", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"Trusted\" from the dropdown for the question \"Is this a trusted or untru" +
+                        "sted domain?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 48
-  testRunner.And("I entered Segregated Network as \"ABCD\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"ABCD\" into the textbox for the question \"Domain name:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 49
-  testRunner.And("I click on Save button to close Segregated Networks Form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the element contains the text \"Save & Add another\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 50
-  testRunner.And("I click on Add Application virtualization Details button To Add Virtual Applicati" +
-                        "on Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 51
-  testRunner.And("I entered product as \"ABCD\" for Application virtualization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click to close the form \"Add Domain\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 52
-  testRunner.And("I entered Version as \"A01\" for Application virtualization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the element contains the text \"Add Domain\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 53
-  testRunner.And("I entered Edition as \"ABCD\" for Application virtualization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose \"Untrusted\" from the dropdown for the question \"Is this a trusted or unt" +
+                        "rusted domain?\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 54
-  testRunner.And("I click on Save button to close Application Virtualization form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"ABCD\" into the textbox for the question \"Domain name:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 55
-  testRunner.And("I click on Add Virtualization Platform Details button To Add Virtualization Platf" +
-                        "orm Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the element contains the text \"Save & Add another\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 56
-  testRunner.And("I entered product as \"ABCD\" for Virtualization Platform", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 57
-  testRunner.And("I entered Version as \"A01\" for Virtualization Platform", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click to close the form \"Add Domain\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 58
-  testRunner.And("I entered Edition as \"ABCD\" for Virtualization Platform", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the element contains the text \"Add Location\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 59
-  testRunner.And("I click on Save button to close Virtualization Platform form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"India\" into the textbox for the question \"Geographic location:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 60
-  testRunner.And("I select Invoice Frequency option as \"Option A: Quarterly consumption subscriptio" +
-                        "n invoice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the element contains the text \"Save & Add another\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 61
-  testRunner.And("I click Next on Questionaire Page for SAMSimple", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 62
-  testRunner.And("I Select Document Type as PDF", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click to close the form \"Add new location\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 63
-  testRunner.And("I Add Authorized Contacts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I click the element contains the text \"Add Network\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 64
-  testRunner.And("I add Softwareone Contacts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I enter \"ABCD\" into the textbox for the question \"Details:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 65
- testRunner.When("I click Finish on Contacts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.And("I click the element contains the text \"Save & Add another\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 66
+  testRunner.And("I click to close the form \"Add new segregated network\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 68
+  testRunner.And("I click the element contains the text \"Add Application virtualization Details\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 69
+  testRunner.And("I enter \"ABCD\" into the textbox for the question \"Product:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 70
+  testRunner.And("I enter \"1\" into the textbox for the question \"Version:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 71
+  testRunner.And("I enter \"2\" into the textbox for the question \"Edition:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 72
+  testRunner.And("I click the element contains the text \"Save & Add another\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 73
+  testRunner.And("I click to close the form \"Add new record\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 75
+  testRunner.And("I click the element contains the text \"Add Virtualization Platform Details\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 76
+  testRunner.And("I enter \"ABCD\" into the textbox for the question \"Product:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 77
+  testRunner.And("I enter \"1\" into the textbox for the question \"Version:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 78
+  testRunner.And("I enter \"2\" into the textbox for the question \"Edition:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 79
+  testRunner.And("I click the element contains the text \"Save & Add another\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 80
+  testRunner.And("I click to close the form \"Add new record\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 82
+  testRunner.And("I choose \"Option A: Quarterly consumption subscription invoice\" from the dropdown" +
+                        " for the question \"Invoicing frequency:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 83
+  testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +
+                        "-5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 85
+  testRunner.And("I choose \"PDF\" from the dropdown for the question \"Document Type:\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 86
+ testRunner.When("I click the button with the text \"Finish\" identified by the parent class \"heap-fi" +
+                        "nish\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 87
  testRunner.Then("I should see the value of contract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
