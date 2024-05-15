@@ -46,5 +46,8 @@ experience while configuring a new contract for CMDB Health Check solution.
 		And I click the button containing the text "Save"
 		And I click the button with the text "Next" identified by the parent class "heap-next-2"
 #Customer Pricing
+	And I click the button with the text "Next" identified by the parent class "heap-next-3"
+#Questionnaire Page
 	When I click the button with the text "Finish" identified by the parent class "heap-finish"
+#Opportunity Page 
 	Then I should see the value of contract

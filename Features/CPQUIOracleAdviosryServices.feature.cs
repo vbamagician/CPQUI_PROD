@@ -256,8 +256,7 @@ namespace CPQUI.Features
                         "mediation and Optimization\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 55
-  testRunner.And("I choose \"3\" from the radio button group for the question \"Audit and/or Negotiati" +
-                        "on support hours need to be consumed within\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I choose the radio button option \"3\" specifically", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 56
   testRunner.And("I click the button with the text \"Next\" identified by the parent class \"heap-next" +

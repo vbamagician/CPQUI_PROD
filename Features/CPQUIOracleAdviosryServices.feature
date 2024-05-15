@@ -52,7 +52,7 @@ contract for the Oracle Adviosry Services.
 		And I enter "50" into the textbox for the question Number of hours for the "Oracle Audit Support"
 		And I enter "50" into the textbox for the question Number of hours for the "Oracle Negotiation Support"
 		And I enter "50" into the textbox for the question Number of hours for the "Oracle Remediation and Optimization"
-		And I choose "3" from the radio button group for the question "Audit and/or Negotiation support hours need to be consumed within"
+		And I choose the radio button option "3" specifically
 		And I click the button with the text "Next" identified by the parent class "heap-next-2"
 #customer pricing page
 		And I click the button with the text "Next" identified by the parent class "heap-next-3"

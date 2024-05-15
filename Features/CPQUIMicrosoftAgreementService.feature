@@ -29,7 +29,5 @@ contract for the Microsoft Agreement Service.
 		And I choose Remote option for Cloud Cost Optimization Implementation
 		And I click Next on Questionaire Page for MSA
 		And I Select Document Type as PDF
-		And I Add Authorized Contacts
-		And I add Softwareone Contacts
 	When I click Finish on Contacts Page for MSA
 	Then I should see the value of contract
