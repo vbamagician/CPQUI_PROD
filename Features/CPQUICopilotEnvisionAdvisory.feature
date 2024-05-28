@@ -22,6 +22,12 @@ Scenario: Verify UI Health while Configuring Copilot Envision Advisory Service
 		And I click on Next Button From Definition Page
 		
 		#Scoping Page
+		And I click on Three Dots on the table has index "2" and on row index "2" and cell index "1"
+		And I click on element with attribute "class" and value "kk-action-menu-trigger" on the adjacent table has text "1. Project initiation"
+		And I click the button containing the text "Edit" on the adjacent table has text "1. Project initiation"
+		And I choose "India (CPX_IN)" from the dropdown for the question "Country:"
+		And I choose "Associate" from the dropdown for the question "Resource:"
+		And I click the button containing the text "Confirm"
 		And I click the button with the text "Next" identified by the parent class "heap-next-2"
 
 		#Customer Pricing Page

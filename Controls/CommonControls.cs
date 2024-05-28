@@ -69,9 +69,14 @@ namespace CPQUI.Controls
         //-------------------------------------------------------------------------------
         public ILocator LocateSpecialCellFromTableElement(string cellText) => _page.Locator($"//*[contains(text()[normalize-space()],'{cellText}')]/../..//label");
         public ILocator LocateCloseButtonOfSubForm(string subformname) => _page.Locator($"(//h3[text()='{subformname}']/../../../../../../../..//button)[1]");
+        public ILocator LocateElementFromTableUsingRowAndCellIndex(string tableIndex, string rowIndex, string cellIndex) => _page.Locator($"(((//table)[{tableIndex}]//tr)[{rowIndex}]//td)[{cellIndex}]");
 
         // Public Methods
         //Solution Dependent Methods
+        public async Task ClickOnElementFromTableUsingRowAndCellIndex(string tableIndex, string rowIndex, string cellIndex)
+        {
+            await LocateElementFromTableUsingRowAndCellIndex(tableIndex, rowIndex, cellIndex).First.ClickAsync();  
+        }
 
         public async Task UpdateTheAppropriateOrganisationUnitsForTheGivenRolesToProceed()
         {

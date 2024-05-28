@@ -257,5 +257,13 @@ namespace CPQUI.StepDefinitions
             await _commonControls.ClickOnElementByTextOnIt(elementText);
         }
 
+        [Given(@"I click on Three Dots on the table has index ""([^""]*)"" and on row index ""([^""]*)"" and cell index ""([^""]*)""")]
+        public async Task GivenIClickOnThreeDotsOnTheTableHasIndexAndOnRowIndexAndCellIndex(string tableIndex, string rowIndex, string cellIndex)
+        {
+            await _commonControls.ClickOnElementFromTableUsingRowAndCellIndex(tableIndex, rowIndex, cellIndex);
+        }
+
+
+
     }
 }
