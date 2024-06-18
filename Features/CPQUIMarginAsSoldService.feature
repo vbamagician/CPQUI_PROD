@@ -8,8 +8,8 @@ contract for the Margin As Sold Service.
   Scenario: Verify UI Health while Configuring Margin As Sold Service in CPQ UI
 	Given I Navigate to CPQ UI Page
 		And I Enter following Login Details and Click Login Button
-		| Username                            | Password	         |
-		| helpdesk-scg.global@softwareone.com | CPQ.account1708		 |
+		| Username                            | Password		|
+		| helpdesk-scg.global@softwareone.com | CPQ.account1708	|
 		And I click the button containing the text "New Contract"
 		And I enter "walmart" into the textbox with the header labeled "Select an Account" and press "Enter"
 		And I check the "asynchronous" checkbox based on the adjacent table has index "1" having cell that has value "00001614"
